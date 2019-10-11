@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Peersarmalam</title>
+    
+<!-- Favicon (TO ADD) -->
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+
+<!-- Styles -->
+<link href="css/styles.css" rel="stylesheet" type="text/css" />
+<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+<!-- Bootstrap libraries-->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+
+</head>
+
+<body>
+    <!-- Navbar-->
+    <nav class="navbar navbar-expand-md">
+        <div class="navbar-nav mr-auto ">
+            <a href="http://google.com" class="logo">LOGO HERE</a><!-- TO ADD -->
+        </div>
+        <div class="navbar-nav ml-auto ">
+            <a href="http://google.com" class="nav-item nav-link active">Learn more</a>
+            <a href="http://google.com" class="nav-item nav-link">About</a>
+            <a href="http://google.com" class="nav-item nav-link">Contact</a>
+            <a href="http://google.com" class="nav-item nav-link">Blog</a>
+        </div>
+    </nav>
+    
+     <!-- Main Content-->
+    <div class="container">
+        <div class="row_splash">
+            <p class="headline">Revolutionising the way we lend & borrow money</p>
+            <p class="subheadline">Hello world. The quick brown fox jumps over the lazy dog. This is just some dummy text.</p>
+            <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#login">Log in with tBank</button>
+        </div>
+    </div>
+    
+    <!-- Login Pop-up (Normal) -->
+    <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="loginTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header border-bottom-0">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h3 class="modal-title w-100 text-center" id="loginTitle">Log in with tBank</h3>
+                        <form>
+                            <div class="row justify-content-center">
+                                <div class="form-group">
+                                    <label for="username"><i class="fa fa-user"></i>Username</label>
+                                    <input type="text" class="form-control" id="username" aria-describedby="username">
+                                </div>
+                            </div>
+                            <div class="row justify-content-center">
+                                <div class="form-group">
+                                    <label for="pin"><i class="fa fa-lock"></i>6-digit PIN</label>
+                                    <input type="password" class="form-control" id="pin">
+                                </div>
+                            </div><br/>
+                            <div class="col text-center">
+                                <button type="submit" class="btn btn-primary ">Generate OTP</button>
+                            </div>
+                        </form><br/><br/>
+                        <p class="cta text-center">Don't have a tBank account? <a href="http://tbankonline.com/" target="_blank">Sign up</a>.</p><br/>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<!-- Bootstrap JS libraries-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+<!-- Log in form-->
+<script>
+$( () => {
+
+  $('.form-group').each((i,e) => {
+    $('.form-control', e)
+      .focus( function () {
+        e.classList.add('not-empty');
+      })
+      .blur( function () {
+        this.value === '' ? e.classList.remove('not-empty') : null;
+      })
+    ;
+  });
+  
+});     
+</script>
+</html>
