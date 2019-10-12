@@ -1,5 +1,6 @@
 @charset "UTF-8";
 /* CSS Document */
+@import  "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 /* Fixed Background Image */
 body {
