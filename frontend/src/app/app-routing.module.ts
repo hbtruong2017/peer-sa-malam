@@ -5,7 +5,7 @@ import { SplashComponent } from './splash/splash.component';
 
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'home' },  
+  { path: '', pathMatch: 'full', redirectTo: 'splash' },  
   { path: 'home', component: HomeComponent },
   { path: 'splash', component: SplashComponent }
      
