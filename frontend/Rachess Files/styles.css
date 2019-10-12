@@ -1,0 +1,199 @@
+/** STYLESHEET FOR IS444: Peer Sa Malam **/
+/** STYLE for Homepage.html **/
+html,
+body {
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+#coverheader {
+    background: url('splash_bg.jpg') no-repeat;
+    background-size: cover;
+    /**cover -> entire screen**/
+    background-position: center;
+    color: white;
+    height: 100%;
+    text-align: center;
+
+}
+
+#navbuttonchoice {
+    /** Navigation button for 'Be an Investor' and 'Be a Borrower' **/
+    margin-right: 10px;
+    /** Space around button **/
+}
+
+.progress {
+    width: 150px;
+    height: 150px;
+    background: none;
+    position: relative;
+}
+
+.progress::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 6px solid #eee;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.progress > span {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+
+.progress .progress-left {
+    left: 0;
+}
+
+.progress .progress-bar {
+    width: 100%;
+    height: 100%;
+    background: none;
+    border-width: 6px;
+    border-style: solid;
+    position: absolute;
+    top: 0;
+}
+
+.progress .progress-left .progress-bar {
+    left: 100%;
+    border-top-right-radius: 80px;
+    border-bottom-right-radius: 80px;
+    border-left: 0;
+    -webkit-transform-origin: center left;
+    transform-origin: center left;
+}
+
+.progress .progress-right {
+    right: 0;
+}
+
+.progress .progress-right .progress-bar {
+    left: -100%;
+    border-top-left-radius: 80px;
+    border-bottom-left-radius: 80px;
+    border-right: 0;
+    -webkit-transform-origin: center right;
+    transform-origin: center right;
+}
+
+.progress .progress-value {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#referafriend {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    margin-left: 230px;
+    margin-right: 230px;
+    border: 1px solid;
+    border-color: cadetblue;
+
+
+}
+
+#footer {
+    margin-top: 40px;
+    padding: 60px;
+    background-color: #497AFD;
+}
+
+/** STYLE for submitaloan.html **/
+
+
+input[type="text"],
+/** How the input form looks like **/
+select.form-control {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #cecfd0;
+    /** Have an underline **/
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-radius: 0;
+
+}
+
+input[type="text"]:focus,
+/** How the input form looks like when clicked **/
+select.form-control:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.form-group {
+    width: 80%;
+}
+
+.form-group > label {
+    font-size: 11px;
+    color: #a1a2a3;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: scale(1.4);
+    transform: scale(1.4);
+    pointer-events: none;
+    position: relative;
+    z-index: 5;
+}
+
+.form-group > input {
+    width: 100%;
+}
+
+.form-group > label {
+    transition: -webkit-transform 0.4s;
+    transition: transform 0.4s;
+    transition: transform 0.4s, -webkit-transform 0.4s;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: scale(1.4) translateY(20px);
+    transform: scale(1.4) translateY(20px);
+}
+
+.form-group.not-empty > label {
+    -webkit-transform: none;
+    transform: none;
+}
+
+.form-control,
+.form-control:focus,
+.form-control:focus:hover {
+    color: #7532d3 !important;
+    background: none;
+    outline: none;
+}
+
+.form-control:focus,
+.form-control:focus:hover {
+    border-bottom: 1px solid #7532d3 !important;
+}
+
+.fa-lock,
+.fa-user {
+    /** How header for text input looks like **/
+    color: #a1a2a3;
+    margin-right: 8px;
+}
+
+.container-submit {
+    background: no-repeat;
+    background-size: cover;
+    /**cover -> entire screen**/
+    background-position: center;
+}
+.special-card {
+  background-color: rgba(255, 255, 255, 0.5);
+
+}
