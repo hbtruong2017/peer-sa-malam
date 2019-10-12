@@ -107,8 +107,19 @@ export class SplashComponent implements OnInit {
     let header = JSON.stringify(headerObj);
     this.dataService.loginCustomer(header).subscribe((data: any) => {
       if (data.Content.ServiceResponse.ServiceRespHeader.ErrorDetails == "Success") {
+        let personalInfo: any = data.Content.ServiceResponse.Login_OTP_Authenticate-Response["CustomerId"];
+        console.log(personalInfo)
+        window.sessionStorage.setItem("customerId", personalInfo.CustomerId)
+        window.sessionStorage.setItem("bankId", personalInfo.BankID)
+        window.sessionStorage.setItem("userID", this.loginForm.get("username").value)
+        window.sessionStorage.setItem("PIN", this.loginForm.get("pin").value)
+
         this.router.navigate(["/home"])
       }      
     })
+  }
+
+  getCustomerDetails() {
+
   }
 }
