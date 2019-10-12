@@ -106,20 +106,35 @@ export class SplashComponent implements OnInit {
     }
     let header = JSON.stringify(headerObj);
     this.dataService.loginCustomer(header).subscribe((data: any) => {
-      if (data.Content.ServiceResponse.ServiceRespHeader.ErrorDetails == "Success") {
-        let personalInfo: any = data.Content.ServiceResponse.Login_OTP_Authenticate-Response["CustomerId"];
-        console.log(personalInfo)
-        window.sessionStorage.setItem("customerId", personalInfo.CustomerId)
-        window.sessionStorage.setItem("bankId", personalInfo.BankID)
+      if (data.Content.ServiceResponse.ServiceRespHeader.GlobalErrorID == "010000") {
         window.sessionStorage.setItem("userID", this.loginForm.get("username").value)
         window.sessionStorage.setItem("PIN", this.loginForm.get("pin").value)
-
+        this.getCustomerDetails();
         this.router.navigate(["/home"])
+      } else {
+        console.log("Error")
       }      
     })
   }
 
   getCustomerDetails() {
+    let headerObj = {
+      Header: {
+        serviceName: "getCustomerDetails",
+        userID: this.loginForm.get("username").value,
+        PIN: this.loginForm.get("pin").value,
+        OTP: "999999"
+      }
+    }
+    let header = JSON.stringify(headerObj);
 
+    this.dataService.getCustomerDetails(header).subscribe((data: any) => {
+      console.log(data);
+      if (data.Content.ServiceResponse.ServiceRespHeader.GlobalErrorID == "010000") {
+        window.sessionStorage.setItem("customerDetails", JSON.stringify(data.Content.ServiceResponse.CDMCustomer))
+      } else {
+        console.log("Error")
+      }
+    })
   }
 }
