@@ -17,4 +17,9 @@ export class DataService {
   loginCustomer(header: string) {
     return this.httpClient.post(environment.LOGIN_CUSTOMER_URL + header, '');
   }
+
+  getCustomerDetails(header: string) {
+    return this.httpClient.post(environment.GET_CUSTOMER_DETAILS + header, '');
+  }
+
 }
