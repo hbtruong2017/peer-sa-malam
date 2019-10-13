@@ -41,14 +41,8 @@
                                 </div>
                                 <div class="col">
                                     <div class="form-group">
-                                        <label for="middlename"><i class="fa fa-user"></i>Middle Name</label>
+                                        <label for="middlename"><i class="fa fa-user"></i>Given Name</label>
                                         <input type="text" class="form-control" required="required" id="middlename" aria-describedby="middlename">
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="form-group">
-                                        <label for="lastname"><i class="fa fa-user"></i>Last Name</label>
-                                        <input type="text" class="form-control" required="required" id="lastname" aria-describedby="lastname">
                                     </div>
                                 </div>
                             </form>
@@ -116,6 +110,36 @@
                             <label class="custom-file-label" for="image">Upload the image</label>
                         </div>
                         <br>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group" style="width: 100%;">
+                                    <textarea class="form-control" rows="5" id="comment"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group">
+                                    <select class="form-control" id="loancategory" onChange="loancategory_func();">
+                                        <option value="" disabled selected>Select your loan category</option>
+                                        <option>Home Loan</option>
+                                        <option>Car Loan</option>
+                                        <option>Personal Loan</option>
+                                        <option>Education Loan</option>
+                                        <option>Others: please specify</option>
+                                    </select>
+                                    <br>
+                                    <div class="form-group">
+                                        <input class="form-control" id="showothers" placeholder="ie. Wedding loan" style="display:none;">
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+
 
 
                         <div class="row">
@@ -125,16 +149,16 @@
                                     <div class="input-group-prepend">
                                         <div class="input-group-text">$</div>
                                     </div>
-                                    <input type="text" class="form-control" id="amount" placeholder="">
+                                    <input class="form-control" id="amount" placeholder="">
                                 </div>
                             </div>
                             <div class="col">
                                 <label for="interest">Interest</label>
                                 <div class="input-group mb-2 mr-sm-2">
+                                    <input class="form-control" id="interest" placeholder="5">
                                     <div class="input-group-prepend">
                                         <div class="input-group-text">%</div>
                                     </div>
-                                    <input type="text" class="form-control" id="interest" placeholder="5">
                                 </div>
                             </div>
                         </div>
@@ -195,6 +219,14 @@
         });
 
 
+        /**On selecting 'Others' in Loan Category Select Box, show text box**/
+        function loancategory_func() {
+            var loan_cat = document.getElementById('loancategory').value
+            if (loan_cat == "Others: please specify")
+                document.getElementById("showothers").style.display = "block";
+            else
+                document.getElementById("showothers").style.display = "none";
+        }
 
 
 
