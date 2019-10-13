@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var express = require('express');
+var app = express();
+var port = 3000;
+var GetCustInfo_1 = require("./GetCustInfo");
+var GetLoanInfo_1 = require("./GetLoanInfo");
+app.use('/getCustInfo', GetCustInfo_1.getCustInfo);
+app.use('/getLoanInfo', GetLoanInfo_1.loanRouter);
+app.listen(port, function () { return console.log("Example app listening on port " + port + "!"); });
