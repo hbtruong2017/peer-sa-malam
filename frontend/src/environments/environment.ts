@@ -3,7 +3,7 @@
 // The list of file replacements can be found in `angular.json`.
 
 const SERVER_URL = 'http://localhost:4200';
-const TBANK_API_URL = "http://tbankonline.com/SMUtBank_API/Gateway?Header=" 
+const TBANK_API_URL = "https://tbankonline.com/SMUtBank_API/Gateway?Header=" 
 
 export const environment = {
   production: false,

@@ -1,4 +1,4 @@
-const TBANK_API_URL = "http://tbankonline.com/SMUtBank_API/Gateway?Header=" 
+const TBANK_API_URL = "https://tbankonline.com/SMUtBank_API/Gateway?Header=" 
 
 export const environment = {
   production: true,
