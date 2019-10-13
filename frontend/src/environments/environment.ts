@@ -2,8 +2,15 @@
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+const SERVER_URL = 'http://localhost:4200';
+const TBANK_API_URL = "http://tbankonline.com/SMUtBank_API/Gateway?Header=" 
+
 export const environment = {
-  production: false
+  production: false,
+
+  REQUEST_OTP_URL: TBANK_API_URL,
+  LOGIN_CUSTOMER_URL: TBANK_API_URL,
+  GET_CUSTOMER_DETAILS: TBANK_API_URL
 };
 
 /*
