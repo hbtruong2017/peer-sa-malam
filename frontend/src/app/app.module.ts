@@ -8,13 +8,15 @@ import { HomeComponent } from './home/home.component';
 import { SplashComponent } from './splash/splash.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { SubmitLoanComponent } from './submit-loan/submit-loan.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    SplashComponent
+    SplashComponent,
+    SubmitLoanComponent
   ],
   imports: [
     BrowserModule,

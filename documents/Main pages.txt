@@ -62,11 +62,10 @@ UI pages
 		1. Name
 		2. Job title + Company name
 		3. Number of years working at current job
-		(
-			4. Account number
-			5. phoneNumber
-			6. streetAddress1
-		)
+        4. Account number
+        5. phoneNumber
+        6. streetAddress1
+		
 	Loan info:
 		1. Image of desired item
 		2. Amount 
