@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!-- RACHESS Styles -->
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+
+    <!-- Font Awesome Styles -->
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+
+</head>
+
+<body>
+    <div class="container-fluid" style="margin-top: 10px;">
+
+        <div class="row">
+            <div class="col-md-2">
+                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <a class="nav-link active" id="pending-tab" data-toggle="pill" href="#pending" role="tab" aria-controls="pending" aria-selected="true">Pending</a>
+
+                    <a class="nav-link" id="active-tab" data-toggle="pill" href="#active" role="tab" aria-controls="active" aria-selected="false">Active</a>
+
+                    <a class="nav-link" id="defaulted-tab" data-toggle="pill" href="#defaulted" role="tab" aria-controls="defaulted" aria-selected="false">Defaulted</a>
+                    <a class="nav-link" id="completed-tab" data-toggle="pill" href="#completed" role="tab" aria-controls="completed" aria-selected="false">Completed</a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="tab-content" id="v-pills-tabContent">
+                    <!-- PENDING CONTENT -->
+                    <div class="tab-pane fade show active" id="pending" role="tabpanel" aria-labelledby="pending-tab">
+
+                        <!-- button group -->
+                        <div class="row justify-content-center">
+                            <div class="btn-group btn-sm btn-group-toggle" data-toggle="buttons">
+                                <label class="btn btn-outline-info active">
+                                    <input type="radio" name="options" id="borrower-pending" autocomplete="off" checked> Borrower
+                                </label>
+                            </div>
+                        </div>
+                        <!--end-->
+                        <!-- 2 rows of Card content-->
+                        <div class="row">
+                            <div class="card" style="width: 100%; margin: 10px;">
+
+                                <div class="card-header">
+                                    <b>Loans you have requested, awaiting parties</b>
+
+                                </div>
+
+                                <div class="card" style="margin: 10px;">
+                                    <div class="card-body">
+                                        Date of Request: 18th September 2019<br>
+                                        Amount Requested: $500<br>
+                                        Interest rate: 5%<br>
+                                        Monthly Amoritisation: $4.98
+
+                                        <a href="#" class="btn btn-info float-right">View More Information</a>
+                                    </div>
+                                </div>
+                                <div class="card" style="margin: 10px;">
+                                    <div class="card-body">
+                                        Date of Request: 08th January 2019<br>
+                                        Amount Requested: $50,400<br>
+                                        Interest rate: 8%<br>
+                                        Monthly Amoritisation: $50.02
+
+                                        <a href="#" class="btn btn-info float-right">View More Information</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!--end-->
+
+                    </div>
+
+                    <!-- ACTIVE CONTENT -->
+                    <div class="tab-pane fade" id="active" role="tabpanel" aria-labelledby="active-tab">
+                        <!-- button group -->
+                        <div class="row justify-content-center">
+                            <div class="btn-group btn-sm btn-group-toggle" data-toggle="buttons">
+                                <label class="btn btn-outline-info active">
+                                    <input type="radio" name="options" id="borrower-active" autocomplete="off" checked> Borrower
+                                </label>
+                                <label class="btn btn-outline-info">
+                                    <input type="radio" name="options" id="lender-active" autocomplete="off"> Lender
+                                </label>
+                            </div>
+                        </div>
+                        <!--end-->
+                        <!-- 2 rows of Card content-->
+                        <div class="row">
+                            <div class="card" style="width: 100%; margin: 10px;">
+
+                                <div class="card-header">
+                                    <b>Active Loans</b>
+
+                                </div>
+
+                                <div class="card" style="margin: 10px;">
+                                    <div class="card-body">
+                                        Amount Borrowed: $6,800<br>
+                                        Interest rate: 5%<br>
+                                        Monthly Amoritisation: 43.50<br>
+                                        Auto-deduction: {{On/Off}}<br>
+
+
+                                        <a href="#" class="btn btn-info float-right">View More Information</a>
+                                    </div>
+                                </div>
+
+                                <div class="card" style="margin: 10px;">
+                                    <div class="card-body">
+                                        Date of Request: 08th September 2017<br>
+                                        Amount Requested: $50,400<br>
+                                        Interest rate: 8%<br>
+                                        Monthly Amoritisation: $50.02
+
+                                        <a href="#" class="btn btn-info float-right">View More Information</a>
+                                    </div>
+                                </div>
+                                <div class="card-footer text-muted">
+                                    <div class="float-left">Total Pay Out on August 2019: </div>
+                                    <div class="float-right" style="margin-right:80px;"><b>$93.52</b></div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="card" style="width: 100%; margin: 10px;">
+
+                                <div class="card-header">
+                                    <b>Active Loans</b>
+
+                                </div>
+
+                                <div class="card" style="margin: 10px;">
+                                    <div class="card-body">
+                                        Amount Loaned: $800<br>
+                                        Interest rate: 15%<br>
+                                        Monthly Amoritisation: $47.50<br>
+                                        Paid for August 2019: {{Yes/No}}<br>
+
+
+                                        <a href="#" class="btn btn-info float-right">View More Information</a>
+                                    </div>
+                                </div>
+                                  <div class="card-footer text-muted">
+                                    <div class="float-left">Total Receivable on August 2019: </div>
+                                    <div class="float-right" style="margin-right:80px;"><b>$47.50</b></div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <!--end-->
+
+
+
+
+
+                    </div>
+                    <div class="tab-pane fade" id="defaulted" role="tabpanel" aria-labelledby="defaulted-tab">
+
+                        <!-- button group -->
+                        <div class="row justify-content-center">
+                            <div class="btn-group btn-sm btn-group-toggle" data-toggle="buttons">
+                                <label class="btn btn-outline-info active">
+                                    <input type="radio" name="options" id="borrower-defaulted" autocomplete="off" checked> Borrower
+                                </label>
+                                <label class="btn btn-outline-info">
+                                    <input type="radio" name="options" id="lender-defaulted" autocomplete="off"> Lender
+                                </label>
+                            </div>
+                        </div>
+                        <!--end-->
+                        <!-- 2 rows of Card content-->
+                        <div class="row">
+                            <div class="card" style="width: 100%; margin: 10px;">
+
+                                <div class="card-header">
+                                    <b>Loans You Have Defaulted On</b>
+
+                                </div>
+
+                                <div class="card" style="margin: 10px;">
+                                    <div class="card-body">
+                                       Date of Default: 19th January 2019<br>
+                                        Amount Borrowed: $800<br>
+                                        Amount Paid Before Default (including interest): $156.32<br>
+                                        Amount Unpaid: $643.68<br>
+
+
+                                        <a href="#" class="btn btn-info float-right">View More Information</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="card" style="width: 100%; margin: 10px;">
+
+                                <div class="card-header">
+                                    <b>Loans You Funded That Defaulted</b>
+
+                                </div>
+
+                                <div class="card" style="margin: 10px;">
+                                    <div class="card-body">
+                                       Date of Default: 17th January 2018<br>
+                                        Amount Loaned: $73<br>
+                                        Amount Earned Before Default (including interest): $68.32<br>
+                                        Amount Unpaid: $4.68<br>
+
+
+                                        <a href="#" class="btn btn-info float-right">View More Information</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!--end-->
+
+
+                    </div>
+                    <div class="tab-pane fade" id="completed" role="tabpanel" aria-labelledby="completed-tab">
+                        <!-- button group -->
+                        <div class="row justify-content-center">
+                            <div class="btn-group btn-sm btn-group-toggle" data-toggle="buttons">
+                                <label class="btn btn-outline-info active">
+                                    <input type="radio" name="options" id="borrower-completed" autocomplete="off" checked> Borrower
+                                </label>
+                                <label class="btn btn-outline-info">
+                                    <input type="radio" name="options" id="lender-completed" autocomplete="off"> Lender
+                                </label>
+                            </div>
+                        </div>
+                        <!--end-->
+                        <!-- 2 rows of Card content-->
+                        <div class="row">
+                            <div class="card" style="width: 100%; margin: 10px;">
+
+                                <div class="card-header">
+                                    <b>Your Borrowing History</b>
+
+                                </div>
+
+                                <div class="card" style="margin: 10px;">
+                                    <div class="card-body">
+                                       Date of Loan: 18th May 2005<br>
+                                        Amount Borrowed: $800<br>
+                                       Date of full payment: 19th August 2007<br>
+                                        Amount Paid (including interest): $1,043.68<br>
+
+
+                                        <a href="#" class="btn btn-info float-right">View More Information</a>
+                                    </div>
+                                </div>
+                                <div class="card-footer text-muted">
+                                    <div class="float-left">Total Paid Out: </div>
+                                    <div class="float-right" style="margin-right:80px;"><b>$1,043.68</b></div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="card" style="width: 100%; margin: 10px;">
+
+                                <div class="card-header">
+                                    <b>Your Lending History</b>
+
+                                </div>
+
+                                <div class="card" style="margin: 10px;">
+                                    <div class="card-body">
+                                       Date of Loan: 18th June 2001<br>
+                                        Amount Borrowed: $20,500<br>
+                                       Date of full payment: 19th August 2017<br>
+                                        Amount Earned (including interest): $30,443.68<br>
+
+
+                                        <a href="#" class="btn btn-info float-right">View More Information</a>
+                                    </div>
+                                </div>
+                                <div class="card-footer text-muted">
+                                    <div class="float-left">Total Receivable: </div>
+                                    <div class="float-right" style="margin-right:80px;"><b>$30,443.68</b></div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <!--end-->
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script>
+
+
+
+</script>
+
+</html>

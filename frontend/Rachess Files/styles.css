@@ -197,3 +197,14 @@ select.form-control:focus {
   background-color: rgba(255, 255, 255, 0.5);
 
 }
+
+/**STYLE for loan_history.html**/
+
+#v-pills-tab> .nav-link{
+  color: #7532D3; !important;
+}
+
+#v-pills-tab> .active{
+    background-color: #7532D3; !important;
+    color: white; !important;
+}
