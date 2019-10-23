@@ -2,6 +2,7 @@
 /* CSS Document */
 @import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 @import "../node_modules/font-awesome/css/font-awesome.min.css";
+@import "./assets/libraries/fontawesome-5.6.1/css/all.min.css";
 
 html {
   height: 100%;
