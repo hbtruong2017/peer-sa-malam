@@ -3,8 +3,13 @@ const app = express()
 var mysql = require("mysql");
 const port = 3000
 
+var bodyParser     =         require("body-parser");
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
 import {getCustInfo} from './GetCustInfo'
 import {loanRouter} from './GetLoanInfo'
+import {setLoanRouter} from './SetLoanInfo'
 
 
 app.use(function(req, res, next){
@@ -21,6 +26,7 @@ app.use(function(req, res, next){
 });
 app.use('/getCustInfo', getCustInfo);
 app.use('/getLoanInfo', loanRouter);
+app.use('/setLoanRouter', setLoanRouter);
 
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))

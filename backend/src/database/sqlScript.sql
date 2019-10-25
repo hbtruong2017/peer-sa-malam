@@ -50,4 +50,4 @@ values
     ("Jonah","Crinch", "Boss Baby", "",null, 459345,3847598,"777 Purge Street");
     
 
-select loandetails.id, customerinfo.custFirstName, loandetails.borrowerId, loanerId, imgLink, amount, interestRate,duration from loandetails, customerInfo where loandetails.borrowerId = customerInfo.custId;
+select customerInfo.custId, loandetails.id, customerinfo.custFirstName, loandetails.borrowerId, loanerId, imgLink, amount, interestRate,duration from loanDetails inner join customerInfo on loanDetails.borrowerId = customerInfo.custId where 3 = customerInfo.custId;
