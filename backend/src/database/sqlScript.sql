@@ -51,7 +51,13 @@ values
 
 select customerInfo.accountNumber, loandetails.id, customerinfo.custFirstName, loandetails.borrowerAccount, loanerAccount, imgLink, amount, interestRate,duration from loanDetails inner join customerInfo on loanDetails.borrowerAccount = customerInfo.accountNumber where 444 = customerInfo.accountNumber;
 
-INSERT INTO customerInfo (accountNumber, custFirstName, custLastName, jobTitle, companyName, yearsInJob, phoneNumber, Address) VALUES( ) ON DUPLICATE KEY UPDATE    
+INSERT INTO customerInfo (accountNumber, custFirstName, custLastName, jobTitle, companyName, yearsInJob, phoneNumber, Address) VALUES(444, "Jackson", "Replaced", "Replacer", "Reaplced", 7, 666666, "no Address") ON DUPLICATE KEY UPDATE    
 custFirstName ="abc", custLastName = "def" , jobTitle = "ghi", companyName="asd", yearsInJob = 9, phoneNumber=66666, Address = "latvia";
 
-select * from customerInfo;
+select * from loanDetails;
+
+UPDATE loanDetails 
+SET 
+    loanerAccount = 696969
+WHERE
+    id = 1 ;

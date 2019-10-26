@@ -10,6 +10,7 @@ app.use(bodyParser.json());
 import {getCustInfo} from './GetCustInfo'
 import {loanRouter} from './GetLoanInfo'
 import {setLoanRouter} from './SetLoanInfo'
+import {setLoanerInLoan} from './SetLoanerInLoan'
 
 
 app.use(function(req, res, next){
@@ -27,7 +28,8 @@ app.use(function(req, res, next){
 });
 app.use('/getCustInfo', getCustInfo);
 app.use('/getLoanInfo', loanRouter);
-app.use('/setLoanRouter', setLoanRouter);
+app.use('/createLoan', setLoanRouter);
+app.use('/setLoan', setLoanerInLoan);
 
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
