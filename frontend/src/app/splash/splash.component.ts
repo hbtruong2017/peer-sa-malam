@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ɵConsole } from '@angular/core';
 import * as $ from 'jquery';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -110,6 +110,7 @@ export class SplashComponent implements OnInit {
         window.sessionStorage.setItem("userID", this.loginForm.get("username").value)
         window.sessionStorage.setItem("PIN", this.loginForm.get("pin").value)
         this.getCustomerDetails();
+        this.getCustomerAccounts();
         this.router.navigate(["/home"])
       } else {
         console.log("Error")
@@ -132,6 +133,28 @@ export class SplashComponent implements OnInit {
       console.log(data);
       if (data.Content.ServiceResponse.ServiceRespHeader.GlobalErrorID == "010000") {
         window.sessionStorage.setItem("customerDetails", JSON.stringify(data.Content.ServiceResponse.CDMCustomer))
+      } else {
+        console.log("Error")
+      }
+    })
+  }
+
+  getCustomerAccounts() {
+    let headerObj = {
+      Header: {
+        serviceName: "getCustomerAccounts",
+        userID: this.loginForm.get("username").value,
+        PIN: this.loginForm.get("pin").value,
+        OTP: "999999"
+      }
+    }
+    let header = JSON.stringify(headerObj);
+
+    this.dataService.getCustomerAccounts(header).subscribe((data: any) => {
+      console.log(data);
+      if (data.Content.ServiceResponse.ServiceRespHeader.GlobalErrorID == "010000") {
+        window.sessionStorage.setItem("accountID", JSON.stringify(data.Content.ServiceResponse.AccountList.account[0].accountID))
+        window.sessionStorage.setItem("balance", JSON.stringify(data.Content.ServiceResponse.AccountList.account[0].balance))
       } else {
         console.log("Error")
       }

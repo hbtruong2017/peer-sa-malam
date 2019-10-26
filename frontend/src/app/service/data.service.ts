@@ -22,4 +22,7 @@ export class DataService {
     return this.httpClient.post(environment.GET_CUSTOMER_DETAILS + header, '');
   }
 
+  getCustomerAccounts(header: string) {
+    return this.httpClient.post(environment.GET_CUSTOMER_ACCOUNTS + header, '');
+  }
 }
