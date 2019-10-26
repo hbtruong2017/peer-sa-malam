@@ -36,6 +36,7 @@
             </div>
             <div class="col">
                 <div class="tab-content" id="v-pills-tabContent">
+
                     <!-- PENDING CONTENT -->
                     <div class="tab-pane fade show active" id="pending" role="tabpanel" aria-labelledby="pending-tab">
 
@@ -63,10 +64,45 @@
                                         Amount Requested: $500<br>
                                         Interest rate: 5%<br>
                                         Monthly Amoritisation: $4.98
-
-                                        <a href="#" class="btn btn-info float-right">View More Information</a>
+                                         <a href="#" class="btn btn-outline-info float-right" data-toggle="modal" data-target="#pending_1">View More Information</a>
                                     </div>
                                 </div>
+
+                                        <!-- Modal : active_l_1 -->
+                                <div class="modal fade" id="pending_1" tabindex="-1" role="dialog" aria-labelledby="pending_1" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Information</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                            
+                                                
+                                                <b>Date of Request:</b> 18th September 2019<br>
+                                                <b>Amount Requested: </b>$500<br>
+                                                <b>Interest rate:</b> 5%<br>
+                                                <b>Monthly Amoritisation:</b> $4.98<br>
+                                                <b>Late Fee Penalty:</b> $3 per day<br>
+                                                <hr>  
+                                                <b>Category of loan:</b> Housing Loan<br>
+                                                <b>Purpose of loan:</b><br>
+                                                {No image was attached}<br>
+                                                My mum kicked me out<br>
+
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-outline-danger">Withdraw Request</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--End of modal-->
+
+
                                 <div class="card" style="margin: 10px;">
                                     <div class="card-body">
                                         Date of Request: 08th January 2019<br>
@@ -74,15 +110,40 @@
                                         Interest rate: 8%<br>
                                         Monthly Amoritisation: $50.02
 
-                                        <a href="#" class="btn btn-info float-right">View More Information</a>
+                                        <a href="#" class="btn btn-outline-info float-right" data-toggle="modal" data-target="#loan_req_2">View More Information</a>
                                     </div>
                                 </div>
-
+                                <!-- Modal : loan_req_2 -->
+                                <div class="modal fade" id="loan_req_2" tabindex="-1" role="dialog" aria-labelledby="loan_req_2" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Information</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <b>Date of Request:</b> 08th January 2019<br>
+                                                <b>Amount Requested:</b> $50,400<br>
+                                                <b>Interest rate:</b> 8%<br>
+                                                <b>Monthly Amoritisation:</b> $50.02
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-outline-primary">Edit Loan</button>
+                                                <button type="button" class="btn btn-outline-primary">Withdraw Loan</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+
                         <!--end-->
 
                     </div>
+                    <!--end of pending content-->
 
                     <!-- ACTIVE CONTENT -->
                     <div class="tab-pane fade" id="active" role="tabpanel" aria-labelledby="active-tab">
@@ -109,15 +170,53 @@
 
                                 <div class="card" style="margin: 10px;">
                                     <div class="card-body">
-                                        Amount Borrowed: $6,800<br>
-                                        Interest rate: 5%<br>
-                                        Monthly Amoritisation: 43.50<br>
-                                        Auto-deduction: {{On/Off}}<br>
+                                        Date of Acceptance: 08th September 2017<br>
+                                        Amount Requested: $50,400<br>
+                                        Interest rate: 8%<br>
+                                        Monthly Amoritisation: $50.02
 
-
-                                        <a href="#" class="btn btn-info float-right">View More Information</a>
+                                        <a href="#" class="btn btn-outline-info float-right" data-toggle="modal" data-target="#active_b_1">View More Information</a>
                                     </div>
                                 </div>
+                                <!-- Modal : active_b_1 -->
+                                <div class="modal fade" id="active_b_1" tabindex="-1" role="dialog" aria-labelledby="active_b_1" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Information</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="row">
+                                                    <div class=col-2><img src="img/bangthumb.png" style="width:inherit"></div>
+                                                    <div class=col><b>Lender:</b> Truong Hai Bang<br>
+                                                        <b>Date of Acceptance:</b> 08th September 2017<br>
+                                                        <b>Expected Loan Completion Date:</b> 17th August 2019<br>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <b>Amount Requested:</b> $50,400<br>
+                                                <b>Interest rate:</b> 8%<br>
+                                                <b>Monthly Amoritisation:</b> $50.02<br>
+                                                <b>Late Fee Penalty:</b> $5 per day<br>
+                                                <hr>
+                                                <b>Category of loan:</b>Car Loan<br>
+                                                <b>Purpose of loan:</b><br>
+                                                {No image was attached}<br>
+                                                I want a Ferrari but my mum don't want to give me any money<br>
+
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-outline-danger">Default</button>
+                                                <button type="button" class="btn btn-outline-primary">Make Full Payment</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--End of modal-->
 
                                 <div class="card" style="margin: 10px;">
                                     <div class="card-body">
@@ -126,7 +225,7 @@
                                         Interest rate: 8%<br>
                                         Monthly Amoritisation: $50.02
 
-                                        <a href="#" class="btn btn-info float-right">View More Information</a>
+                                        <a href="#" class="btn btn-outline-info float-right">View More Information</a>
                                     </div>
                                 </div>
                                 <div class="card-footer text-muted">
@@ -153,10 +252,59 @@
                                         Paid for August 2019: {{Yes/No}}<br>
 
 
-                                        <a href="#" class="btn btn-info float-right">View More Information</a>
+
+                                        <a href="#" class="btn btn-outline-info float-right" data-toggle="modal" data-target="#active_l_1">View More Information</a>
                                     </div>
                                 </div>
-                                  <div class="card-footer text-muted">
+                                <!-- Modal : active_l_1 -->
+                                <div class="modal fade" id="active_l_1" tabindex="-1" role="dialog" aria-labelledby="active_l_1" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Information</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="row">
+                                                    <div class=col-2><img src="img/bangthumb.png" style="width:inherit"></div>
+                                                    <div class=col><b>Borrower:</b> Truong Hai Bang<br>
+                                                        <b>Date of Acceptance:</b> 08th September 2017<br>
+                                                        <b>Expected Loan Completion Date:</b> 20th April 2017<br>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <b>Amount Loaned:</b> $800<br>
+                                                <b>Interest rate:</b> 15%<br>
+                                                <b>Monthly Amoritisation:</b> $47.50<br>
+                                                <b>Late Fee Penalty:</b> $5 per day<br>
+                                                <hr>
+                                                <b>Performance of loan:</b><br>
+                                                <div class="row mx-auto">
+                                                    <div class="col">
+                                                        <img src="img/active_loans_progress.jpg" style="width:inherit;">
+                                                    </div>
+                                                </div>
+                                                Mr Hai Bang has been making on-time monthly payments in the last 2 months and we have projected that the next 2 months of payment will be on time as well
+                                                <hr>
+                                                <b>Category of loan:</b>Education Loan<br>
+                                                <b>Purpose of loan:</b><br>
+                                                {No image was attached}<br>
+                                                Mum wants me to go university<br>
+
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-outline-danger">Transfer loan</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--End of modal-->
+
+
+                                <div class="card-footer text-muted">
                                     <div class="float-left">Total Receivable on August 2019: </div>
                                     <div class="float-right" style="margin-right:80px;"><b>$47.50</b></div>
 
@@ -196,15 +344,56 @@
 
                                 <div class="card" style="margin: 10px;">
                                     <div class="card-body">
-                                       Date of Default: 19th January 2019<br>
+                                        Date of Default: 19th January 2019<br>
                                         Amount Borrowed: $800<br>
                                         Amount Paid Before Default (including interest): $156.32<br>
                                         Amount Unpaid: $643.68<br>
 
 
-                                        <a href="#" class="btn btn-info float-right">View More Information</a>
+                                        <a href="#" class="btn btn-outline-info float-right" data-toggle="modal" data-target="#default_b_1">View More Information</a>
                                     </div>
                                 </div>
+                                <!-- Modal : default_b_1 -->
+                                <div class="modal fade" id="default_b_1" tabindex="-1" role="dialog" aria-labelledby="default_b_1" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Information</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="row">
+                                                    <div class=col-2><img src="img/timthumb.png" style="width:inherit"></div>
+                                                    <div class=col><b>Lender:</b> Timothy Soh<br>
+                                                        <b>Date of Acceptance:</b> 08th September 2017<br>
+                                                        <b>Date of Default:</b> 17th August 2019<br>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <b>Amount Requested:</b> $50,400<br>
+                                                <b>Interest rate:</b> 8%<br>
+                                                <b>Monthly Amoritisation:</b> $50.02<br>
+                                                <b>Late Fee Penalty:</b> $5 per day<br>
+                                                <b>Total Loan Amount Paid (including interest): </b>$28,190<br>
+                                                <b>Reason for Default:</b><br>
+                                                My wife sued me because I am not buying her a prada bag<br>
+                                                <hr>
+                                                <b>Category of loan:</b>Car Loan<br>
+                                                <b>Purpose of loan:</b><br>
+                                                {No image was attached}<br>
+                                                I want a Ferrari but my mum don't want to give me any money<br>
+                                                
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-outline-primary">Make Full Payment</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--End of modal-->
                             </div>
 
                         </div>
@@ -218,15 +407,57 @@
 
                                 <div class="card" style="margin: 10px;">
                                     <div class="card-body">
-                                       Date of Default: 17th January 2018<br>
+                                        Date of Default: 17th January 2018<br>
                                         Amount Loaned: $73<br>
                                         Amount Earned Before Default (including interest): $68.32<br>
                                         Amount Unpaid: $4.68<br>
 
 
-                                        <a href="#" class="btn btn-info float-right">View More Information</a>
+                                        <a href="#" class="btn btn-outline-info float-right" data-toggle="modal" data-target="#default_l_1">View More Information</a>
                                     </div>
                                 </div>
+                                <!-- Modal : default_b_1 -->
+                                <div class="modal fade" id="default_l_1" tabindex="-1" role="dialog" aria-labelledby="default_l_1" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Information</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="row">
+                                                    <div class=col-2><img src="img/timthumb.png" style="width:inherit"></div>
+                                                    <div class=col><b>Borrower:</b> Timothy Soh<br>
+                                                        <b>Date of Acceptance:</b> 08th September 2017<br>
+                                                        <b>Date of Default:</b> 17th August 2019<br>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <b>Amount Requested:</b> $50,400<br>
+                                                <b>Interest rate:</b> 8%<br>
+                                                <b>Monthly Amoritisation:</b> $50.02<br>
+                                                <b>Late Fee Penalty:</b> $5 per day<br>
+                                                <b>Total Loan Amount Received (including interest): </b>$28,190<br>
+                                                <b>Reason for Default:</b><br>
+                                                I want a fluffy corgi and decided I have no use for this loan<br>
+                                                <hr>
+                                                <b>Category of loan:</b>Car Loan<br>
+                                                <b>Purpose of loan:</b><br>
+                                                {No image was attached}<br>
+                                                I want a Ferrari but my mum don't want to give me any money<br>
+                                                
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-outline-primary">Flag to Admin</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--End of modal-->
+                                
                             </div>
 
                         </div>
@@ -258,15 +489,53 @@
 
                                 <div class="card" style="margin: 10px;">
                                     <div class="card-body">
-                                       Date of Loan: 18th May 2005<br>
+                                        Date of Loan: 18th May 2005<br>
                                         Amount Borrowed: $800<br>
-                                       Date of full payment: 19th August 2007<br>
+                                        Date of full payment: 19th August 2007<br>
                                         Amount Paid (including interest): $1,043.68<br>
 
 
-                                        <a href="#" class="btn btn-info float-right">View More Information</a>
+                                      <a href="#" class="btn btn-outline-info float-right" data-toggle="modal" data-target="#completed_b_1">View More Information</a>
                                     </div>
                                 </div>
+                                <!-- Modal : default_b_1 -->
+                                <div class="modal fade" id="completed_b_1" tabindex="-1" role="dialog" aria-labelledby="completed_b_1" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Information</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="row">
+                                                    <div class=col-2><img src="img/timthumb.png" style="width:inherit"></div>
+                                                    <div class=col><b>Lender:</b> Timothy Soh<br>
+                                                        <b>Date of Acceptance:</b> 18th May 2005<br>
+                                                        <b>Date of Completion:</b> 17th August 2007<br>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <b>Amount Requested:</b> $800<br>
+                                                <b>Interest rate:</b> 8%<br>
+                                                <b>Monthly Amoritisation:</b> $5.02<br>
+                                                <b>Late Fee Penalty:</b> $5 per day<br>
+                                                <b>Total Paid Out (including interest): </b>$1,043.68<br>
+                                                <hr>
+                                                <b>Category of loan:</b>Car Loan<br>
+                                                <b>Purpose of loan:</b><br>
+                                                {No image was attached}<br>
+                                                Give me some moolah for a vroom vroom<br>
+                                                
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--End of modal-->
                                 <div class="card-footer text-muted">
                                     <div class="float-left">Total Paid Out: </div>
                                     <div class="float-right" style="margin-right:80px;"><b>$1,043.68</b></div>
@@ -285,15 +554,54 @@
 
                                 <div class="card" style="margin: 10px;">
                                     <div class="card-body">
-                                       Date of Loan: 18th June 2001<br>
+                                        Date of Loan: 18th June 2001<br>
                                         Amount Borrowed: $20,500<br>
-                                       Date of full payment: 19th August 2017<br>
+                                        Date of full payment: 19th August 2017<br>
                                         Amount Earned (including interest): $30,443.68<br>
 
 
-                                        <a href="#" class="btn btn-info float-right">View More Information</a>
+                                         <a href="#" class="btn btn-outline-info float-right" data-toggle="modal" data-target="#completed_l_1">View More Information</a>
                                     </div>
                                 </div>
+                                <!-- Modal : default_b_1 -->
+                                <div class="modal fade" id="completed_l_1" tabindex="-1" role="dialog" aria-labelledby="completed_l_1" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Information</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="row">
+                                                    <div class=col-2><img src="img/timthumb.png" style="width:inherit"></div>
+                                                    <div class=col><b>Borrower:</b> Timothy Soh<br>
+                                                        <b>Date of Acceptance:</b> 18th May 2005<br>
+                                                        <b>Date of Completion:</b> 17th August 2007<br>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <b>Amount Requested:</b> $800<br>
+                                                <b>Interest rate:</b> 8%<br>
+                                                <b>Monthly Amoritisation:</b> $5.02<br>
+                                                <b>Late Fee Penalty:</b> $5 per day<br>
+                                                <b>Total Received (including interest): </b>$1,043.68<br>
+                                                <hr>
+                                                <b>Category of loan:</b>Car Loan<br>
+                                                <b>Purpose of loan:</b><br>
+                                                {No image was attached}<br>
+                                                Give me some moolah for a vroom vroom<br>
+                                                
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-outline-primary">View All Timothy Soh Requests</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--End of modal-->
                                 <div class="card-footer text-muted">
                                     <div class="float-left">Total Receivable: </div>
                                     <div class="float-right" style="margin-right:80px;"><b>$30,443.68</b></div>
