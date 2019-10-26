@@ -4,6 +4,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { environment } from '../../environments/environment'
 import { DataService } from '../service/data.service';
+import { LocationStrategy } from '@angular/common';
 
 @Component({
   selector: 'app-submit-loan',
@@ -12,6 +13,7 @@ import { DataService } from '../service/data.service';
 })
 export class SubmitLoanComponent implements OnInit {
   loanForm: FormGroup;
+  loanList: any;
 
   constructor(private formBuilder: FormBuilder, private router: Router, private dataService: DataService) { }
 
@@ -22,10 +24,11 @@ export class SubmitLoanComponent implements OnInit {
       firstname: [customerDetails.givenName, Validators.required],
       lastname: [customerDetails.familyName, Validators.required], 
       jobtitle: [customerDetails.profile.occupation, Validators.required],
+      address: [customerDetails.address.streetAddress1 + ", " + customerDetails.address.country + " " + customerDetails.address.postalCode, Validators.required],
       company: ['', Validators.required],
       years: ['', Validators.required],
-      phonenumber: [customerDetails.phone.localNumber, Validators.required],
-      accountnumber: ['', Validators.required],
+      phonenumber: [customerDetails.cellphone.phoneNumber, Validators.required],
+      accountnumber: [window.sessionStorage.getItem("accountID"), Validators.required],
       description: ['', Validators.required],
       loancategory: ['', Validators.required],
       amount: ['', Validators.required],
@@ -59,6 +62,33 @@ export class SubmitLoanComponent implements OnInit {
   }
 
   submitLoan() {
-    
+    let loanRequest = {
+     borrowerAccount: this.loanForm.get("accountnumber").value,
+     imgLink: "https://images.financialexpress.com/2018/12/HOME_LOAN_.jpg",
+     loanCategory: this.loanForm.get("loancategory").value,
+     loanDescription: this.loanForm.get("description").value,
+     amount: this.loanForm.get("amount").value,
+     interestRate: this.loanForm.get("interest").value,
+     duration: this.loanForm.get("duration").value,
+     borrowerFirstName: this.loanForm.get("firstname").value,
+     borrowerLastName: this.loanForm.get("lastname").value,
+     jobTitle: this.loanForm.get("jobtitle").value,
+     companyName: this.loanForm.get("company").value,
+     yearsInJob: this.loanForm.get("years").value,
+     phoneNumber: this.loanForm.get("phonenumber").value,
+     address: this.loanForm.get("address").value,
+    }
+    this.dataService.postLoan(loanRequest).subscribe((data: any) => {
+    console.log(data)
+
+
+    }, error => {
+      console.log(error)
+
+    })
+
+    this.dataService.getLoan(loanRequest).subscribe((data: any) => {
+      this.loanList = data.LoanInfo;
+    })
   }
 }
