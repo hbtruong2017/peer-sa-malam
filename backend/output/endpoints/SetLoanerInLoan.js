@@ -3,9 +3,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var express5 = require('express');
 var router = express5.Router();
 router.post('/', function (req, res) {
-    var _a = req.body, loanerAccount = _a.loanerAccount, loanId = _a.loanId;
+    var _a = req.body, loanerAccount = _a.loanerAccount, loanId = _a.loanId, loanStatus = _a.loanStatus;
     var sql = "UPDATE loanDetails "
-        + ("SET loanerAccount = " + loanerAccount + " ")
+        + ("SET loanerAccount = " + loanerAccount + ", loanStatus = \"" + loanStatus + "\" ")
         + ("WHERE id = " + loanId + " ;");
     res.locals.connection.query(sql, function (error, results, fields) {
         if (error) {
