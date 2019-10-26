@@ -9,6 +9,7 @@ import { SplashComponent } from './splash/splash.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { SubmitLoanComponent } from './submit-loan/submit-loan.component';
+import { LoanDetailComponent } from './loan-detail/loan-detail.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { SubmitLoanComponent } from './submit-loan/submit-loan.component';
     HeaderComponent,
     HomeComponent,
     SplashComponent,
-    SubmitLoanComponent
+    SubmitLoanComponent,
+    LoanDetailComponent
   ],
   imports: [
     BrowserModule,
