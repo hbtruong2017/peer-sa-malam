@@ -10,6 +10,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { SubmitLoanComponent } from './submit-loan/submit-loan.component';
 import { LoanDetailComponent } from './loan-detail/loan-detail.component';
+import { HistoryComponent } from './history/history.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { LoanDetailComponent } from './loan-detail/loan-detail.component';
     HomeComponent,
     SplashComponent,
     SubmitLoanComponent,
-    LoanDetailComponent
+    LoanDetailComponent,
+    HistoryComponent
   ],
   imports: [
     BrowserModule,
