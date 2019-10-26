@@ -7,7 +7,7 @@ router.get('/:loanStatus-:loanerAccount', function (req, res) {
 
     const {loanStatus, loanerAccount} = req.params
 
-    const sql = `select * from loanDetails where loanStatus = "${loanStatus}" and loanerAccount =  "${loanerAccount}";`;
+    const sql = `select * from loanDetails where loanStatus = "${loanStatus}" and loanerAccount = "${loanerAccount}";`;
 
     res.locals.connection.query(sql, function (error, results, fields) {
         if(error){
@@ -15,7 +15,7 @@ router.get('/:loanStatus-:loanerAccount', function (req, res) {
             //If there is error, we send the error in the error section with 500 status
         } else {
             console.log("Updated Loaner Id");
-            res.send({"Loaned Loans": results});
+            res.send({"loanedLoans": results});
             //If there is no error, all is good and response is 200OK.
         }
     });

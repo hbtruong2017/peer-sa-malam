@@ -13,10 +13,10 @@ router.get('/:loanStatus', function (req, res) {
     res.locals.connection.query(sql, function (error, results, fields) {
         if(error){
             res.send(JSON.stringify({"status": 500, "error": error, "response": null})); 
-            //If there is error, we send the error in the error section with 500 status
+            //If there is error, we send the errorin the error section with 500 status
         } else {
             console.log("Updated Loaner Id");
-            res.send({"AllLoans": results});
+            res.send({"allLoans": results});
             //If there is no error, all is good and response is 200OK.
         }
     });
