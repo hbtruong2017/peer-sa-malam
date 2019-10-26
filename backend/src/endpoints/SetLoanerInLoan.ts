@@ -4,10 +4,10 @@ var router = express5.Router();
 
 router.post('/', function (req, res) {
 
-    const {loanerAccount, loanId} = req.body
+    const {loanerAccount, loanId, loanStatus} = req.body
 
     const sql = `UPDATE loanDetails `
-                + `SET loanerAccount = ${loanerAccount} `
+                + `SET loanerAccount = ${loanerAccount}, loanStatus = "${loanStatus}" `
                 + `WHERE id = ${loanId} ;`;
 
     res.locals.connection.query(sql, function (error, results, fields) {
