@@ -153,11 +153,12 @@ export class SplashComponent implements OnInit {
     this.dataService.getCustomerAccounts(header).subscribe((data: any) => {
       console.log(data);
       if (data.Content.ServiceResponse.ServiceRespHeader.GlobalErrorID == "010000") {
-        window.sessionStorage.setItem("accountID", JSON.stringify(data.Content.ServiceResponse.AccountList.account[0].accountID))
-        window.sessionStorage.setItem("balance", JSON.stringify(data.Content.ServiceResponse.AccountList.account[0].balance))
+        window.sessionStorage.setItem("accountID", data.Content.ServiceResponse.AccountList.account[0].accountID)
+        window.sessionStorage.setItem("balance", data.Content.ServiceResponse.AccountList.account[0].balance)
       } else {
         console.log("Error")
       }
     })
   }
+
 }

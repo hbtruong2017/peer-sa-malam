@@ -25,4 +25,23 @@ export class DataService {
   getCustomerAccounts(header: string) {
     return this.httpClient.post(environment.GET_CUSTOMER_ACCOUNTS + header, '');
   }
+ 
+  // added for the new APIs
+  getCustomer(req: any) {
+    return this.httpClient.post(environment.GET_CUSTOMER_URL, req);
+  }
+
+  getLoan(req: any) {
+    return this.httpClient.post(environment.GET_LOAN_URL, req);
+  }
+
+  postLoan(req: any) {
+    return this.httpClient.post(environment.SET_LOAN_URL, req);
+  }
+
+  postSubmitLoan(req: any) {
+    return this.httpClient.post(environment.SUBMIT_LOAN_URL, req);
+  }
+
+  // get will be similar to the post as well 
 }

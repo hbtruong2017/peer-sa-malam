@@ -784,5 +784,14 @@ select.form-control:focus {
     padding-bottom: 8px !important;
 }
 
+/*LOAN HISTORY: /HISTORY */
 
+#v-pills-tab> .nav-link{
+  color: #7532D3 !important;
+}
+
+#v-pills-tab> .active{
+    background-color: #7532D3 !important;
+    color: white !important;
+}
 
