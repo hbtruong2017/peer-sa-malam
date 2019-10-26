@@ -22,7 +22,7 @@ export class SubmitLoanComponent implements OnInit {
 
     this.loanForm = this.formBuilder.group({
       firstname: [customerDetails.givenName, Validators.required],
-      lastname: [customerDetails.familyName, Validators.required], 
+      lastname: [customerDetails.familyName, Validators.required],
       jobtitle: [customerDetails.profile.occupation, Validators.required],
       address: [customerDetails.address.streetAddress1 + ", " + customerDetails.address.country + " " + customerDetails.address.postalCode, Validators.required],
       company: ['', Validators.required],
@@ -48,6 +48,11 @@ export class SubmitLoanComponent implements OnInit {
         ;
     });
 
+    $('#loadingbutton').hide()
+    $('#submitbutton, #loadingbutton').on('click', this.clickHandler);
+
+
+
     console.log(customerDetails)
     console.log(customerDetails.givenName)
     console.log(customerDetails.familyName)
@@ -63,23 +68,23 @@ export class SubmitLoanComponent implements OnInit {
 
   submitLoan() {
     let loanRequest = {
-     borrowerAccount: this.loanForm.get("accountnumber").value,
-     imgLink: "https://images.financialexpress.com/2018/12/HOME_LOAN_.jpg",
-     loanCategory: this.loanForm.get("loancategory").value,
-     loanDescription: this.loanForm.get("description").value,
-     amount: this.loanForm.get("amount").value,
-     interestRate: this.loanForm.get("interest").value,
-     duration: this.loanForm.get("duration").value,
-     borrowerFirstName: this.loanForm.get("firstname").value,
-     borrowerLastName: this.loanForm.get("lastname").value,
-     jobTitle: this.loanForm.get("jobtitle").value,
-     companyName: this.loanForm.get("company").value,
-     yearsInJob: this.loanForm.get("years").value,
-     phoneNumber: this.loanForm.get("phonenumber").value,
-     address: this.loanForm.get("address").value,
+      borrowerAccount: this.loanForm.get("accountnumber").value,
+      imgLink: "https://images.financialexpress.com/2018/12/HOME_LOAN_.jpg",
+      loanCategory: this.loanForm.get("loancategory").value,
+      loanDescription: this.loanForm.get("description").value,
+      amount: this.loanForm.get("amount").value,
+      interestRate: this.loanForm.get("interest").value,
+      duration: this.loanForm.get("duration").value,
+      borrowerFirstName: this.loanForm.get("firstname").value,
+      borrowerLastName: this.loanForm.get("lastname").value,
+      jobTitle: this.loanForm.get("jobtitle").value,
+      companyName: this.loanForm.get("company").value,
+      yearsInJob: this.loanForm.get("years").value,
+      phoneNumber: this.loanForm.get("phonenumber").value,
+      address: this.loanForm.get("address").value,
     }
     this.dataService.postLoan(loanRequest).subscribe((data: any) => {
-    console.log(data)
+      console.log(data)
 
 
     }, error => {
@@ -90,5 +95,20 @@ export class SubmitLoanComponent implements OnInit {
     this.dataService.getLoan(loanRequest).subscribe((data: any) => {
       this.loanList = data.LoanInfo;
     })
+  }
+
+  loancategory_func() {
+    var loan_cat = (document.getElementById('loancategory')  as HTMLInputElement).value;
+    if (loan_cat == "Others: please specify")
+      document.getElementById("showothers").style.display = "block";
+    else
+      document.getElementById("showothers").style.display = "none";
+  }
+
+  clickHandler() {
+
+
+    $('#submitbutton').toggle('slow');
+    $('#loadingbutton').toggle('slow');
   }
 }

@@ -174,7 +174,7 @@
                 <div class="row">
                     <div class="col">
                         <div class="form-group">
-                            <select class="form-control" id="loancategory" onChange="loancategory_func();">
+                            <select class="form-control" id="loancategory" (change)="loancategory_func()">
                                 <option value="" disabled selected>Select your loan category</option>
                                 <option>Home Loan</option>
                                 <option>Car Loan</option>
@@ -241,7 +241,7 @@
     </div>
     <br>
     <button class="btn btn-outline-success float-right" id="submitbutton" type="submit" style="margin-bottom: 10px"
-        onclick="loadingbutton()">Submit Loan</button>
+       >Submit Loan</button>
 
     <button class="btn btn-outline-success float-right" type="button" id="loadingbutton" disabled
         style="margin-bottom: 10px" (click)="submitLoan()">
