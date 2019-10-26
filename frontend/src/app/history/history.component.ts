@@ -6,10 +6,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./history.component.css']
 })
 export class HistoryComponent implements OnInit {
+  isBorrower: boolean = true;
 
   constructor() { }
 
   ngOnInit() {
+
   }
 
+  ActiveLender() {
+    this.isBorrower = false;
+    console.log("HELLO IT WORKS")
+  }
+  ActiveBorrower(){
+    this.isBorrower = true;
+    console.log("PURE JOY")
+  }
 }
