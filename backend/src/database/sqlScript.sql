@@ -10,6 +10,7 @@ create table loanDetails (
 	id INT primary key auto_increment,
     borrowerAccount int not null,
     loanerAccount int,
+    loanStatus varchar(255) not null default "pending",
     imgLink varchar(255) not null,
     loanCategory varchar(255) not null,
     loanDescription varchar(255) not null,

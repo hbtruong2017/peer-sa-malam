@@ -48,7 +48,8 @@ Output:
         {
             "accountNumber": 444,
             "id": 5,
-            "custFirstName": "Becky",
+            "loanStatus": "pending",
+            "custFirstName": "Jonah",
             "loanerAccount": null,
             "imgLink": "www.google.com",
             "amount": 20,
@@ -68,7 +69,8 @@ Input:
 ```
 {
 	"loanerAccount": 24324,
-	"loanId": 2
+	"loanId": 2,
+    "loanStatus": "complete" #complete, pending, default
 }
 ```
 

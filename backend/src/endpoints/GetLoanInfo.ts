@@ -5,7 +5,7 @@ var router = express3.Router();
 router.get('/:borrowerId', function (req, res) {
     const borrowerAccount = req.params.borrowerId;
 
-    const sql = `select customerInfo.accountNumber, loandetails.id, customerinfo.custFirstName, loanerAccount, imgLink, amount, interestRate,duration from loanDetails inner join customerInfo on loanDetails.borrowerAccount = customerInfo.accountNumber where customerInfo.accountNumber = ${borrowerAccount};`;
+    const sql = `select customerInfo.accountNumber, loandetails.id, loanStatus,customerinfo.custFirstName, loanerAccount, imgLink, amount, interestRate,duration from loanDetails inner join customerInfo on loanDetails.borrowerAccount = customerInfo.accountNumber where customerInfo.accountNumber = ${borrowerAccount};`;
 
     res.locals.connection.query(sql, function (error, results, fields) {
         if(error){
