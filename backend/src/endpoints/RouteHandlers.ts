@@ -19,7 +19,8 @@ app.use(function(req, res, next){
         user: "root",
         password: "",
         connectionLimit: 5, //mysql connection pool length
-        database: "proj_444"
+        database: "proj_444",
+        multipleStatements: true
       });
 	res.locals.connection.connect();
 	next();

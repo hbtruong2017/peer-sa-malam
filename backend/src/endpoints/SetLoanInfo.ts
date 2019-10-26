@@ -1,15 +1,20 @@
 
-var express3 = require('express');
-var router = express3.Router();
+var express4 = require('express');
+var router = express4.Router();
 
 router.post('/', function (req, res) {
 
-    const {borrowerId, imgLink, loanCategory, loanDescription, amount, interestRate, duration} = req.body
+    const {borrowerAccount, imgLink, loanCategory, loanDescription, amount, interestRate, duration, borrowerFirstName, borrowerLastName, jobTitle, companyName, yearsInJob, phoneNumber, address} = req.body
 
     const sql = `insert into loandetails` 
-                + `(borrowerId, imgLink,loanCategory, loanDescription, amount, interestRate, duration)`
+                + `(borrowerAccount, imgLink,loanCategory, loanDescription, amount, interestRate, duration)`
                 + `values `
-                +`(${borrowerId}, "${imgLink}", "${loanCategory}", "${loanDescription}", ${amount}, ${interestRate}, ${duration})`;
+                +`(${borrowerAccount}, "${imgLink}", "${loanCategory}", "${loanDescription}", ${amount}, ${interestRate}, ${duration});`
+                + `INSERT INTO customerInfo`
+                + `(accountNumber, custFirstName, custLastName, jobTitle, companyName, yearsInJob, phoneNumber, Address) `
+                + `VALUES(${borrowerAccount}, "${borrowerFirstName}", "${borrowerLastName}", "${jobTitle}", "${companyName}", ${yearsInJob}, ${phoneNumber}, "${address}") ON DUPLICATE KEY UPDATE `    
+                +`custFirstName ="${borrowerFirstName}", custLastName = "${borrowerLastName}" , jobTitle = "${jobTitle}", companyName="${jobTitle}", yearsInJob = ${yearsInJob}, phoneNumber=${phoneNumber}, Address = "${address}";`;
+                
 
     res.locals.connection.query(sql, function (error, results, fields) {
         if(error){
