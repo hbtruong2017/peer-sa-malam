@@ -1,1 +1,437 @@
-<p>loan-detail works!</p>
+<body style="padding-top: 100px">
+    <!-- NAVBAR -->
+    <nav class="navbar fixed-top navbar-white bg-white navbar-expand">
+      <div class="container">
+        <!-- NAVBAR LOGO -->
+        <div class="col col-lg-2">
+          <a class="navbar-brand" href="#">
+            <strong>LOGO HERE</strong>
+          </a>
+        </div>
+        <!-- NAVBAR LOGO -->
+  
+        <!-- NAVBAR SEARCH -->
+        <div class="col">
+          <div class="site-header__search">
+            <div class="p-1 bg-light rounded-pill shadow-sm">
+              <div class="input-group">
+                <input
+                  type="search"
+                  placeholder="Search for loans"
+                  aria-describedby="button"
+                  class="form-control border-0 bg-light"
+                />
+                <div class="input-group-append">
+                  <button
+                    id="button"
+                    type="submit"
+                    class="btn btn-link text-primary"
+                  >
+                    <i class="fa fa-search"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- NAVBAR SEARCH -->
+  
+        <!-- NAVBAR PROFILE DROPDOWN & LOAN REQUEST CTA-->
+        <div class="col-md-auto">
+          <div class="row">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbar-list-4"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+  
+            <div class="collapse navbar-collapse" id="navbar-list-4">
+              <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    <img
+                      src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/fox.jpg"
+                      width="40"
+                      height="40"
+                      class="rounded-circle border"
+                      alt=""
+                    />
+                  </a>
+                  <div
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                    <a class="dropdown-item" href="#">Activity</a>
+                    <a class="dropdown-item" href="#">Edit Profile</a>
+                    <a class="dropdown-item" href="#">Log Out</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+  
+            <button type="button" class="btn btn-primary">
+              <i class="fa fa-chevron-circle-up"></i>New loan request
+            </button>
+          </div>
+        </div>
+        <!-- NAVBAR PROFILE DROPDOWN & LOAN REQUEST CTA-->
+      </div>
+    </nav>
+    <!-- NAVBAR --><br /><br />
+  
+    <!-- LOAN DETAILS & SIDEBAR -->
+    <div class="container">
+        <div class="row">
+            <div class="col-9">
+                <div class="loan">
+                <div class="row">
+                    <div class="publisheddate align-self-center">
+                        <span>Posted 2 weeks ago in <a href="">Car Loan</a></span>
+                    </div>
+                    <div class="cta ml-auto">
+                         <button class="btn btn-primary" data-toggle="modal" data-target="#fundloan">Fund loan</button>
+                    </div>
+                </div><br/>
+                <div class="row">
+                    <div class="loanamount">
+                        <h2>$23,500</h2>
+                    </div>
+                    <div class="loandetails ml-auto align-self-center">
+                        <span class="interestrate"><i class="fa fa-search-dollar"></i>3.20%</span>
+                        <span class="loanperiod"><i class="far fa-clock"></i>5 years</span>
+                    </div>
+                </div><br/>
+                <div class="row">
+                    <div class="loantitle">
+                        <h5>Second-hand Toyota Prius with 1.3L engine</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur enim augue, porttitor vel purus nec, fringilla sodales nibh. Donec sagittis nibh facilisis lacus sollicitudin condimentum. Aenean eget consectetur risus.</p>
+                            
+                        <p>In et dolor massa. Etiam pretium lacus eget ligula auctor, nec sollicitudin quam euismod. Mauris accumsan bibendum pellentesque. Vestibulum et magna nisi.</p>
+                        
+                        <p>Donec risus felis, vehicula vitae purus aliquet, posuere cursus justo.</p>
+                    </div>
+                    <div class="loanimage ml-auto">
+                        <img src="../../assets/images/thumbnail.jpg" width="200px" height="200px" alt="">
+                    </div>
+                </div><br/><hr/><br/>
+                <div class="returns">
+                    <h5>Expected returns</h5>
+                    <div class="row">
+                        <div class="col text-center"><br>
+                            <p><strong>Principal amount</strong></p>
+                            <span class="returns-text">$23,500.00</span>
+                        </div>
+                        <div class="col text-center"><br>
+                            <p><strong>Interest earned per month</strong></p>
+                            <span class="returns-text">$32.69</span>
+                        </div>
+                        <div class="col text-center"><br>
+                            <p><strong>Overall interest earned</strong></p>
+                            <span class="returns-text">$1,961.36</span>
+                        </div>
+                    </div>
+                </div><br/>
+            </div></div>
+            <!-- SIDEBAR -->
+            <div class="col-3">
+                <div class="container">
+                    <div class="sidebar">
+                        <br/>
+                        <div class="title">Borrower's Info</div>
+                        <div class="profile">
+                            <div class="row">
+                                <div class="name align-self-center">
+                                    <h5>Xavier Lur</h5>
+                                </div>
+                                <div class="avatar ml-auto align-self-center">
+                                    <img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/fox.jpg" width="50" height="50" class="rounded-circle border" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rating">
+                            <h5>4.3 <small>/ 5</small></h5>
+                            <button type="button" class="btn btn-warning btn-sm">
+                              <i class="fas fa-star" style="color:#fff;"></i>
+                            </button>
+                            <button type="button" class="btn btn-warning btn-sm">
+                              <i class="fas fa-star" style="color:#fff;"></i>
+                            </button>
+                            <button type="button" class="btn btn-warning btn-sm">
+                              <i class="fas fa-star" style="color:#fff;"></i>
+                            </button>
+                            <button type="button" class="btn btn-warning btn-sm">
+                              <i class="fas fa-star" style="color:#fff;"></i>
+                            </button>
+                            <button type="button" class="btn btn-grey btn-sm">
+                              <i class="fas fa-star" style="color:#b2b2b2; align:center"></i>
+                            </button>
+                        </div><br/>
+                        
+                        <div class="sidebar_text"><span class="creditscore"><a href="">How the credit score is calculated?</a></span></div>
+                        <hr/>
+                            <i class="fas fa-briefcase"></i><strong>Job title</strong>
+                                <div class="sidebar_text">Web Developer</div><br/>
+                            <i class="fas fa-building"></i><strong>Company</strong>
+                                <div class="sidebar_text">Facebook</div><br/>
+                            <i class="fas fa-clock"></i><strong>Years on Job</strong>
+                                <div class="sidebar_text">5 years</div><br/>
+                        <button type="button" class="btn btn-outline-primary">Message Borrower</button>
+                    </div><br/>
+                </div>
+            </div>
+            <!-- SIDEBAR-->
+        </div><hr/><br/>
+        
+        <!-- FUND LOAN MODAL -->
+        <div class="modal fade" id="fundloan" tabindex="-1" role="dialog" aria-labelledby="fundloanTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Fund loan</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row col-12">
+                            <div class="modal-loanitem">
+                                <strong>Loan item</strong><br/>
+                                Second-hand Toyota Prius with 1.3L engine
+                            </div>
+                        </div>
+                        
+                        <div class="row col-12">
+                            <div class="modal-loanamount">
+                                <strong>Loan amount</strong><br/>
+                                <span class="returns-text">$23,500.00</span>
+                            </div>
+                        </div>
+                        
+                        <div class="row col-12">
+                            <div class="modal-interestrate">
+                                <strong>Annual interest rate</strong><br/>
+                                3.20%
+                            </div>
+                        </div>
+                        
+                        <div class="row col-12">
+                            <div class="modal-loanperiod">
+                                <strong>Loan period</strong><br/>
+                                5 years
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary">Confirm</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- FUND LOAN MODAL -->
+        
+        <div class="row">
+            <div class="container">
+                <div class="loans-carousel">
+                    <h5>Loans you may be interested in</h5><br/>
+                    <div class="row">
+                        <div class="col">
+                            <div class="loans-carousel__cell">
+                                <div class="loan-card ">
+                                    <div class="loan-card__badges-list">
+                                        <div class="loan-card__badge loan-card__badge--studyloan">Study loan</div>
+                                    </div>
+                                    <div class="loan-card__image">
+                                        <a href="loandetails.html"><img src="../../assets/images/thumbnail.jpg" alt=""></a>
+                                    </div>
+                                    <div class="loan-card__info">
+                                        <div class="loan-card__loanamount">
+                                            $5,800.00
+                                        </div>
+                                        <div class="row">
+                                        <div class="loan-card__interestrate">
+                                             <i class="fa fa-search-dollar"></i>2.50%
+                                        </div>
+                                        <div class="loan-card__loantenure">
+                                            <i class="far fa-clock"></i>3 years
+                                        </div>
+                                        </div>
+                                        <div class="loan-card__loantitle">
+                                            One semester of SMU 2019 tuition fees
+                                        </div>
+                                    </div>
+                                    <div class="loan-card__actions">
+                                        <div class="loan-card__buttons">
+                                            <button class="btn btn-primary" type="button">Fund</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="loans-carousel__cell">
+                                <div class="loan-card ">
+                                    <div class="loan-card__badges-list">
+                                        <div class="loan-card__badge loan-card__badge--carloan">Car loan</div>
+                                    </div>
+                                    <div class="loan-card__image">
+                                        <a href="loandetails.html"><img src="../../assets/images/thumbnail.jpg" alt=""></a>
+                                    </div>
+                                    <div class="loan-card__info">
+                                        <div class="loan-card__loanamount">
+                                            $23,500.00
+                                        </div>
+                                        <div class="row">
+                                        <div class="loan-card__interestrate">
+                                             <i class="fa fa-search-dollar"></i>3.20%
+                                        </div>
+                                        <div class="loan-card__loantenure">
+                                            <i class="far fa-clock"></i>5 years
+                                        </div>
+                                        </div>
+                                        <div class="loan-card__loantitle">
+                                            Second-hand Toyota Prius with 1.3L engine
+                                        </div>
+                                    </div>
+                                    <div class="loan-card__actions">
+                                        <div class="loan-card__buttons">
+                                            <button class="btn btn-primary" type="button">Fund</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="loans-carousel__cell">
+                                <div class="loan-card ">
+                                    <div class="loan-card__badges-list">
+                                        <div class="loan-card__badge loan-card__badge--studyloan">Study loan</div>
+                                    </div>
+                                    <div class="loan-card__image">
+                                        <a href="loandetails.html"><img src="../../assets/images/thumbnail.jpg" alt=""></a>
+                                    </div>
+                                    <div class="loan-card__info">
+                                        <div class="loan-card__loanamount">
+                                            $4,500.00
+                                        </div>
+                                        <div class="row">
+                                        <div class="loan-card__interestrate">
+                                             <i class="fa fa-search-dollar"></i>2.30%
+                                        </div>
+                                        <div class="loan-card__loantenure">
+                                            <i class="far fa-clock"></i>1 year
+                                        </div>
+                                        </div>
+                                        <div class="loan-card__loantitle">
+                                            One semester of NTU 2019 tuition fees
+                                        </div>
+                                    </div>
+                                    <div class="loan-card__actions">
+                                        <div class="loan-card__buttons">
+                                            <button class="btn btn-primary" type="button">Fund</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="loans-carousel__cell">
+                                <div class="loan-card ">
+                                    <div class="loan-card__badges-list">
+                                        <div class="loan-card__badge loan-card__badge--SMEloan">SME loan</div>
+                                    </div>
+                                    <div class="loan-card__image">
+                                        <a href="loandetails.html"><img src="../../assets/images/thumbnail.jpg" alt=""></a>
+                                    </div>
+                                    <div class="loan-card__info">
+                                        <div class="loan-card__loanamount">
+                                            $35,300.00
+                                        </div>
+                                        <div class="row">
+                                        <div class="loan-card__interestrate">
+                                             <i class="fa fa-search-dollar"></i>3.50%
+                                        </div>
+                                        <div class="loan-card__loantenure">
+                                            <i class="far fa-clock"></i>6 years
+                                        </div>
+                                        </div>
+                                        <div class="loan-card__loantitle">
+                                            To purchase kitchen equipment for new cafe
+                                        </div>
+                                    </div>
+                                    <div class="loan-card__actions">
+                                        <div class="loan-card__buttons">
+                                            <button class="btn btn-primary" type="button">Fund</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="loans-carousel__cell">
+                                <div class="loan-card ">
+                                    <div class="loan-card__badges-list">
+                                        <div class="loan-card__badge loan-card__badge--SMEloan">SME loan</div>
+                                    </div>
+                                    <div class="loan-card__image">
+                                        <a href="loandetails.html"><img src="../../assets/images/thumbnail.jpg" alt=""></a>
+                                    </div>
+                                    <div class="loan-card__info">
+                                        <div class="loan-card__loanamount">
+                                            $35,300.00
+                                        </div>
+                                        <div class="row">
+                                        <div class="loan-card__interestrate">
+                                             <i class="fa fa-search-dollar"></i>3.50%
+                                        </div>
+                                        <div class="loan-card__loantenure">
+                                            <i class="far fa-clock"></i>6 years
+                                        </div>
+                                        </div>
+                                        <div class="loan-card__loantitle">
+                                            To purchase kitchen equipment for new cafe
+                                        </div>
+                                    </div>
+                                    <div class="loan-card__actions">
+                                        <div class="loan-card__buttons">
+                                            <button class="btn btn-primary" type="button">Fund</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><br/>
+    <!-- LOAN DETAILS & SIDEBAR -->
+  
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__bottom">
+          Peersarmalam is an IS444 projected developed by Group 4.
+        </div>
+      </div>
+    </footer>
+    <!-- FOOTER -->
+  </body>
+  
