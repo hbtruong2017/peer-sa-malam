@@ -35,7 +35,7 @@ a {
 }
 
 a:hover {
-  color: #1a66ff;
+  color: #5c28a5;
   text-decoration: none;
 }
 
@@ -809,6 +809,8 @@ select.form-control:focus {
 
 .rating .btn-warning, .btn-grey {
   margin-right:2px;
+  width:30px;
+  height:30px;
 }
 
 .rating .btn-warning:hover {
