@@ -59,6 +59,73 @@ Output:
     ]
 }
 ```
+## /getAllLoan/:loanStatus
+E.g. URL: localhost:3000/getAllLoan/pending
+
+output:
+```
+{
+    "AllLoans": [
+        {
+            "id": 1,
+            "borrowerAccount": 777,
+            "loanerAccount": null,
+            "loanStatus": "pending",
+            "imgLink": "www.google.com",
+            "loanCategory": "Vehicle",
+            "loanDescription": "Buying a Ferrari",
+            "amount": 200,
+            "interestRate": 5.1,
+            "duration": 32
+        }
+    ]
+}
+```
+
+## /getBorrowerLoans/:loanStatus-:borrowerId
+E.g. Url : localhost:3000/getAllLoan/pending-444
+```
+{
+    "borrowedLoans": [
+        {
+            "id": 5,
+            "borrowerAccount": 444,
+            "loanerAccount": null,
+            "loanStatus": "pending",
+            "imgLink": "www.google.com",
+            "loanCategory": "Material",
+            "loanDescription": "Buying  Gold",
+            "amount": 20,
+            "interestRate": 5.1,
+            "duration": 3
+        }
+    ]
+}
+```
+
+## /getLoanerLoans/:loanStatus-:loanerId
+E.g. Url: localhost:3000/getLoanerLoans/pending-696969
+
+output
+```
+{
+    "Loaned Loans": [
+        {
+            "id": 1,
+            "borrowerAccount": 777,
+            "loanerAccount": 696969,
+            "loanStatus": "pending",
+            "imgLink": "www.google.com",
+            "loanCategory": "Vehicle",
+            "loanDescription": "Buying a Ferrari",
+            "amount": 200,
+            "interestRate": 5.1,
+            "duration": 32
+        }
+    ]
+}
+```
+
 
 # POST services
 

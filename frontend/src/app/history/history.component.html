@@ -128,17 +128,17 @@
                         <!-- button group -->
                         <div class="row justify-content-center">
                             <div class="btn-group btn-sm btn-group-toggle" data-toggle="buttons">
-                                <label class="btn btn-outline-info active">
+                                <label class="btn btn-outline-info active" (click)="ActiveBorrower()">
                                     <input type="radio" name="options" id="borrower-active" autocomplete="off" checked> Borrower
                                 </label>
-                                <label class="btn btn-outline-info">
-                                    <input type="radio" name="options" id="lender-active" autocomplete="off"> Lender
+                                <label class="btn btn-outline-info" (click)="ActiveLender()" >
+                                    <input type="radio" name="options" id="lender-active" autocomplete="off" > Lender
                                 </label>
                             </div>
                         </div>
                         <!--end-->
                         <!-- 2 rows of Card content-->
-                        <div class="row">
+                        <div *ngIf="isBorrower" class="row">
                             <div class="card" style="width: 100%; margin: 10px;">
 
                                 <div class="card-header">
@@ -214,7 +214,7 @@
                             </div>
 
                         </div>
-                        <div class="row">
+                        <div *ngIf="!isBorrower" class="row">
                             <div class="card" style="width: 100%; margin: 10px;">
 
                                 <div class="card-header">
@@ -299,20 +299,20 @@
                     </div>
                     <div class="tab-pane fade" id="defaulted" role="tabpanel" aria-labelledby="defaulted-tab">
 
-                        <!-- button group -->
+                        <!-- DEFAULTED TAB -->
                         <div class="row justify-content-center">
                             <div class="btn-group btn-sm btn-group-toggle" data-toggle="buttons">
-                                <label class="btn btn-outline-info active">
+                                <label class="btn btn-outline-info active" (click)="ActiveBorrower()">
                                     <input type="radio" name="options" id="borrower-defaulted" autocomplete="off" checked> Borrower
                                 </label>
-                                <label class="btn btn-outline-info">
+                                <label class="btn btn-outline-info" (click)="ActiveLender()">
                                     <input type="radio" name="options" id="lender-defaulted" autocomplete="off"> Lender
                                 </label>
                             </div>
                         </div>
                         <!--end-->
                         <!-- 2 rows of Card content-->
-                        <div class="row">
+                        <div class="row" *ngIf="isBorrower">
                             <div class="card" style="width: 100%; margin: 10px;">
 
                                 <div class="card-header">
@@ -375,7 +375,7 @@
                             </div>
 
                         </div>
-                        <div class="row">
+                        <div class="row" *ngIf="!isBorrower">
                             <div class="card" style="width: 100%; margin: 10px;">
 
                                 <div class="card-header">
@@ -450,17 +450,17 @@
                         <!-- button group -->
                         <div class="row justify-content-center">
                             <div class="btn-group btn-sm btn-group-toggle" data-toggle="buttons">
-                                <label class="btn btn-outline-info active">
+                                <label class="btn btn-outline-info active" (click)="ActiveBorrower()">
                                     <input type="radio" name="options" id="borrower-completed" autocomplete="off" checked> Borrower
                                 </label>
-                                <label class="btn btn-outline-info">
+                                <label class="btn btn-outline-info" (click)="ActiveLender()">
                                     <input type="radio" name="options" id="lender-completed" autocomplete="off"> Lender
                                 </label>
                             </div>
                         </div>
                         <!--end-->
                         <!-- 2 rows of Card content-->
-                        <div class="row">
+                        <div class="row" *ngIf="isBorrower">
                             <div class="card" style="width: 100%; margin: 10px;">
 
                                 <div class="card-header">
@@ -525,7 +525,7 @@
                             </div>
 
                         </div>
-                        <div class="row">
+                        <div class="row" *ngIf="!isBorrower">
                             <div class="card" style="width: 100%; margin: 10px;">
 
                                 <div class="card-header">

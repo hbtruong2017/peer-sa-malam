@@ -35,7 +35,7 @@ a {
 }
 
 a:hover {
-  color: #1a66ff;
+  color: #5c28a5;
   text-decoration: none;
 }
 
@@ -467,18 +467,18 @@ h6 {
     border: 1px solid #e5e5e5;
 }
 
-.col-3 .filters {
+.col-3 .sidebar {
     margin-left:10px;
     margin-right:10px;
 }
 
-.col-3 .filters .title {
+.col-3 .sidebar .title {
     font-size:20px;
     font-weight: 700;
     margin-bottom:25px;
 }
 
-.col-3 .filters .btn {
+.col-3 .sidebar .btn {
     margin-right:10px;
 }
 
@@ -775,13 +775,11 @@ select.form-control:focus {
 .btn-primary, .btn-primary:active, .btn-primary:visited {
     background-color: #7532d3 !important;
     border-color: #7532d3 !important;
-    padding-bottom: 8px !important;
 }
 
 .btn-primary:hover {
     background-color: #5e27aa !important;
     border-color: #5e27aa !important;
-    padding-bottom: 8px !important;
 }
 
 /*LOAN HISTORY: /HISTORY */
@@ -793,5 +791,122 @@ select.form-control:focus {
 #v-pills-tab> .active{
     background-color: #7532D3 !important;
     color: white !important;
+}
+
+/* Loan Detail */
+.rating {
+  margin-top:5px;
+}
+
+.fa-star{
+  font-size:10px;
+  justify-content: center;
+}
+
+.rating .btn-grey {
+  background-color:#d8d8d8;
+}
+
+.rating .btn-warning, .btn-grey {
+  margin-right:2px;
+  width:30px;
+  height:30px;
+}
+
+.rating .btn-warning:hover {
+  background-color:#ffc107 !important;
+  text-decoration: none;
+}
+
+.sidebar_text {
+font-size: 15px;
+color: #686868;
+}
+
+.sidebar hr {
+  margin-top:30px;
+  margin-bottom:30px;
+}
+
+.sidebar .fa-briefcase, .fa-building, .fa-clock, .fa-envelope {
+  margin-right:8px;
+  color:#3d464d;
+}
+
+.sidebar .profile {
+  width:100%;
+}
+
+.sidebar .row {
+  margin-left:0px;
+  margin-right:0px;
+}
+
+.col-9 .loan .row {
+  margin:0;
+}
+
+.loanimage {
+  width:200px;
+  height:200px;
+}
+
+.loandescription {
+  width:580px;
+}
+
+.loandetails .fa-search-dollar, .fa-clock {
+  margin-right:6px;
+  color: #686868;
+}
+
+.loandetails .interestrate, .loanperiod {
+  margin-right:15px;
+  font-size:18px;
+  font-weight:bold;
+  color: #686868;
+}
+
+.publisheddate {
+  font-size:15px;
+  color: #686868;
+}
+
+.loanamount h2 {
+  color:#642ab4;
+}
+
+.loantitle {
+  width:580px;
+}
+
+.sidebar_text .creditscore {
+  font-size:13px;
+}
+
+.returns-text {
+  color:#642ab4;
+  font-weight:bold;
+  font-size:20px;
+}
+
+.sidebar .btn-outline-primary, .btn-outline-primary:active, .btn-primary:visited {
+  background-color: #fff !important;
+  color:#7532d3;
+  border-color: #7532d3 !important;
+}
+
+.btn-outline-primary:hover {
+  background-color: #7532d3 !important;
+  color:#fff;
+  border-color: #7532d3 !important;
+}
+
+.modal-body .row {
+  margin:0;
+}
+
+.modal-loanitem, .modal-loanamount, .modal-interestrate, .modal-loanperiod {
+  margin-bottom:20px;
 }
 

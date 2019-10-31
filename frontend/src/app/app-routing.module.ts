@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { SplashComponent } from './splash/splash.component';
 import { SubmitLoanComponent } from './submit-loan/submit-loan.component';
 import { HistoryComponent } from './history/history.component';
+import { LoanDetailComponent } from './loan-detail/loan-detail.component';
 
 
 const routes: Routes = [
@@ -11,7 +12,8 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'splash', component: SplashComponent },
   { path: 'request', component: SubmitLoanComponent },
-  { path: 'history', component:  HistoryComponent }
+  { path: 'history', component:  HistoryComponent },
+  { path: 'loandetails', component:  LoanDetailComponent }
 ];
 
 @NgModule({
