@@ -14,6 +14,7 @@ var SetLoanerInLoan_1 = require("./SetLoanerInLoan");
 var ListOfAvailableLoans_1 = require("./ListOfAvailableLoans");
 var ListOfBorrowedLoans_1 = require("./ListOfBorrowedLoans");
 var ListOfLoanedLoans_1 = require("./ListOfLoanedLoans");
+var getLoanDetailsByLoanId_1 = require("./getLoanDetailsByLoanId");
 app.use(function (req, res, next) {
     res.locals.connection = mysql.createConnection({
         host: "localhost",
@@ -34,4 +35,5 @@ app.use('/setLoan', SetLoanerInLoan_1.setLoanerInLoan);
 app.use('/getAllLoan', ListOfAvailableLoans_1.listAvailableLoans);
 app.use('/getBorrowerLoans', ListOfBorrowedLoans_1.listBorrowerdLoans);
 app.use('/getLoanerLoans', ListOfLoanedLoans_1.listLoanedLoans);
+app.use('/getLoanInfoByLoanId', getLoanDetailsByLoanId_1.loanInfoByLoanId);
 app.listen(port, function () { return console.log("Example app listening on port " + port + "!"); });

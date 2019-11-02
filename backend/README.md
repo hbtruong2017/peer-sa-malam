@@ -102,6 +102,29 @@ E.g. Url : localhost:3000/getAllLoan/pending-444
     ]
 }
 ```
+## /getLoanInfoByLoanId/:loanId
+E.g. Url: localhost:3000/getLoanerLoans/1  
+This is the loanId not Loaner's Id  
+
+Output
+````
+{
+    "loanInfo": [
+        {
+            "id": 1,
+            "borrowerAccount": 777,
+            "loanerAccount": 696969,
+            "loanStatus": "pending",
+            "imgLink": "www.google.com",
+            "loanCategory": "Vehicle",
+            "loanDescription": "Buying a Ferrari",
+            "amount": 200,
+            "interestRate": 5.1,
+            "duration": 32
+        }
+    ]
+}
+````
 
 ## /getLoanerLoans/:loanStatus-:loanerId
 E.g. Url: localhost:3000/getLoanerLoans/pending-696969

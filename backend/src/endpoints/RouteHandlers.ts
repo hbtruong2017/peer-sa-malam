@@ -14,6 +14,7 @@ import {setLoanerInLoan} from './SetLoanerInLoan'
 import {listAvailableLoans} from './ListOfAvailableLoans'
 import {listBorrowerdLoans} from './ListOfBorrowedLoans'
 import {listLoanedLoans} from './ListOfLoanedLoans'
+import {loanInfoByLoanId} from './getLoanDetailsByLoanId'
 
 app.use(function(req, res, next){
 	res.locals.connection = mysql.createConnection({
@@ -35,6 +36,7 @@ app.use('/setLoan', setLoanerInLoan);
 app.use('/getAllLoan', listAvailableLoans);
 app.use('/getBorrowerLoans', listBorrowerdLoans);
 app.use('/getLoanerLoans', listLoanedLoans);
+app.use('/getLoanInfoByLoanId', loanInfoByLoanId);
 
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
