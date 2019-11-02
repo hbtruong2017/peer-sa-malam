@@ -83,17 +83,13 @@ export class SubmitLoanComponent implements OnInit {
       phoneNumber: this.loanForm.get("phonenumber").value,
       address: this.loanForm.get("address").value,
     }
-    this.dataService.postLoan(loanRequest).subscribe((data: any) => {
+    this.dataService.postSubmitLoan(loanRequest).subscribe((data: any) => {
       console.log(data)
 
 
     }, error => {
       console.log(error)
 
-    })
-
-    this.dataService.getLoan(loanRequest).subscribe((data: any) => {
-      this.loanList = data.LoanInfo;
     })
   }
 

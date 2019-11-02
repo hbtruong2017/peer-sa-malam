@@ -174,7 +174,7 @@
                 <div class="row">
                     <div class="col">
                         <div class="form-group">
-                            <select class="form-control" id="loancategory" (change)="loancategory_func()">
+                            <select class="form-control" id="loancategory" (change)="loancategory_func()" formControlName="loancategory" >
                                 <option value="" disabled selected>Select your loan category</option>
                                 <option>Home Loan</option>
                                 <option>Car Loan</option>
@@ -202,7 +202,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text">$</span>
                             </div>
-                            <input type="number" min="1" style="margin-left: -1px;" class="form-control"
+                            <input type="number" min="1" style="margin-left: -1px;" formControlName="amount" class="form-control"
                                 aria-label="Amount (to the nearest dollar)">
                         </div>
                     </div>
@@ -210,7 +210,7 @@
                         <h6 class="font-weight-light">Interest Rate</h6>
                         <div class="input-group mb-3">
                             <input type="number" step="0.01" min="0.25" class="form-control" aria-label="Interest rate"
-                                placeholder="1.25">
+                                placeholder="1.25" formControlName="interest">
                             <div class="input-group-prepend">
                                 <span class="input-group-text">%</span>
                             </div>
@@ -223,7 +223,7 @@
                         <h6 class="font-weight-light">Loan Duration</h6>
                         <div class="input-group mb-3">
                             <input type="number" min="1" placeholder="30" style="margin-left: -1px;"
-                                class="form-control" aria-label="Months">
+                                class="form-control" formControlName="duration" aria-label="Months">
                         </div>
                     </div>
                     <div class="col">
