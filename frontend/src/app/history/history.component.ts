@@ -10,15 +10,22 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class HistoryComponent implements OnInit {
   isBorrower: boolean = true;
   borrowerPendingLoanList: any;
+  borrowerCompleteLoanList: any;
 
   constructor(private router: Router, private dataService: DataService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.dataService.getBorrowerPendingLoans().subscribe((data:any) => {
+    this.dataService.getBorrowerPendingLoans(444).subscribe((data:any) => {
       console.log(data);
       this.borrowerPendingLoanList = data.borrowedLoans.reverse();
     }, error => {
       console.log(error)
+    })
+    this.dataService.getBorrowerCompleteLoans(777).subscribe((data:any) => {
+        console.log(data);
+        this.borrowerCompleteLoanList = data.borrowedLoans.reverse();
+      }, error => {
+        console.log(error)
     })
 
     

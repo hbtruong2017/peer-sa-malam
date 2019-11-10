@@ -29,6 +29,7 @@ export class LoanDetailComponent implements OnInit {
         this.borrowerAccount = this.borrowerInfo.accountNumber;
       })
     })
+    
     this.dataService.getAllPendingLoans().subscribe((data:any) => {
       this.pendingLoanList = data.allLoans.reverse();
     }, error => {

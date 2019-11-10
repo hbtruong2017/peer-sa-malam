@@ -39,14 +39,14 @@
                                 <div class="card" style="margin: 10px;">
                                     <div class="card-body">
                                     <div *ngFor="let loan of borrowerPendingLoanList; let i = index" class="col">
-                                        <b>Loan Name:</b> 18th September 2019<br>
+                                        <b>Loan Name:</b> 18th September 2019<br> 
                                         <b>Amount Requested:</b> {{loan.amount}}<br>
                                         <b>Interest rate:</b> {{loan.interestRate}}%<br>
                                         <b>Monthly Payment:</b> ${{loan.duration}}
                                          <a href="#" class="btn btn-outline-info float-right" data-toggle="modal" data-target="#pending_1">View More Information</a>
                                     </div>
+                                    </div>
                                 </div>
-                            </div>
 
                                         <!-- Modal : active_l_1 -->
                                 <div class="modal fade" id="pending_1" tabindex="-1" role="dialog" aria-labelledby="pending_1" aria-hidden="true">
@@ -437,7 +437,19 @@
                                 </div>
 
                                 <div class="card" style="margin: 10px;">
-                                    <div class="card-body">
+                                    
+                                    <div class="card" style="margin: 10px;">
+                                        <div class="card-body">
+                                        <div *ngFor="let loan of borrowerCompleteLoanList; let i = index" class="col">
+                                            <b>Loan Name:</b> {{loan.loanCategory}}<br> 
+                                            <b>Amount Requested:</b> {{loan.amount}}<br>
+                                            <b>Interest rate:</b> {{loan.interestRate}}%<br>
+                                            <b>Monthly Payment:</b> ${{loan.duration}}
+                                             <a href="#" class="btn btn-outline-info float-right" data-toggle="modal" data-target="#pending_1">View More Information</a>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="card-body">
                                         <b>Date of Loan:</b> 18th May 2005<br>
                                         <b>Amount Borrowed:</b> $800<br>
                                         <b>Date of full payment:</b> 19th August 2007<br>
@@ -445,7 +457,9 @@
 
 
                                       <a href="#" class="btn btn-outline-info float-right" data-toggle="modal" data-target="#completed_b_1">View More Information</a>
-                                    </div>
+                                    </div> -->
+
+
                                 </div>
                                 <!-- Modal : default_b_1 -->
                                 <div class="modal fade" id="completed_b_1" tabindex="-1" role="dialog" aria-labelledby="completed_b_1" aria-hidden="true">

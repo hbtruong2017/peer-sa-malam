@@ -41,8 +41,13 @@ export class DataService {
   }
 
   // Borrower's pending loans
-  getBorrowerPendingLoans() {
-    return this.httpClient.get(environment.GET_BORROWER_PENDING_LOANS_URL)
+  getBorrowerPendingLoans(id: number) {
+    return this.httpClient.get(environment.GET_BORROWER_PENDING_LOANS_URL + id)
+  }
+
+  // Borrower's Complete loans
+  getBorrowerCompleteLoans(id: number) {
+    return this.httpClient.get(environment.GET_BORROWER_COMPLETE_LOANS_URL + id)
   }
 
   // Loan details page
