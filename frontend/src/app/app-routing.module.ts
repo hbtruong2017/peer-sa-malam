@@ -13,7 +13,7 @@ const routes: Routes = [
   { path: 'splash', component: SplashComponent },
   { path: 'request', component: SubmitLoanComponent },
   { path: 'history', component:  HistoryComponent },
-  { path: 'loandetails', component:  LoanDetailComponent }
+  { path: 'loan', component:  LoanDetailComponent }
 ];
 
 @NgModule({
