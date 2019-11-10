@@ -25,14 +25,25 @@ export class DataService {
   getCustomerAccounts(header: string) {
     return this.httpClient.post(environment.GET_CUSTOMER_ACCOUNTS + header, '');
   }
- 
+
   // added for the new APIs
-  getCustomer(req: any) {
-    return this.httpClient.post(environment.GET_CUSTOMER_URL, req);
+  getCustomerDetailsFromServer(id: number) {
+    return this.httpClient.get(environment.GET_CUSTOMER_URL + id);
   }
 
-  getLoan(req: any) {
-    return this.httpClient.post(environment.GET_LOAN_URL, req);
+  // getLoanDetailsByIdforLoaner(req: any) {
+  //   return this.httpClient.get(environment.GET_LOAN_DETAILS_FOR_LOANER_URL + "pending");
+  // }
+
+  
+  // Home page
+  getAllPendingLoans() {
+    return this.httpClient.get(environment.GET_ALL_PENDING_LOANS_URL)
+  }
+
+  // Loan details page
+  getLoanInfoByLoanId(id: number) {
+    return this.httpClient.get(environment.GET_LOAN_INFO_BY_LOAN_ID + id)
   }
 
   postLoan(req: any) {

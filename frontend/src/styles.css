@@ -271,6 +271,11 @@ h6 {
   color: #fff;
 }
 
+.loan-card__badge--homeloan {
+  background: orange;
+  color: #fff;
+}
+
 .loan-card__badge--SMEloan {
   background: #3377ff;
   color: #fff;

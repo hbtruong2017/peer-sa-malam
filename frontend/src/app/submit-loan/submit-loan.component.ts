@@ -69,7 +69,7 @@ export class SubmitLoanComponent implements OnInit {
   submitLoan() {
     let loanRequest = {
       borrowerAccount: this.loanForm.get("accountnumber").value,
-      imgLink: "https://images.financialexpress.com/2018/12/HOME_LOAN_.jpg",
+      imgLink: "https://brain-images-ssl.cdn.dixons.com/8/6/10193468/u_10193468.jpg",
       loanCategory: this.loanForm.get("loancategory").value,
       loanDescription: this.loanForm.get("description").value,
       amount: this.loanForm.get("amount").value,

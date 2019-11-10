@@ -1,0 +1,970 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>peer-sar-malam documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">peer-sar-malam documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>SubmitLoanComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/submit-loan/submit-loan.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-submit-loan</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./submit-loan.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./submit-loan.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#loanForm">loanForm</a>
+                            </li>
+                            <li>
+                                <a href="#loanList">loanList</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#clickHandler">clickHandler</a>
+                            </li>
+                            <li>
+                                <a href="#loancategory_func">loancategory_func</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#submitLoan">submitLoan</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(formBuilder: <a href="https://angular.io/api/forms/FormBuilder" target="_blank">FormBuilder</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, dataService: <a href="../injectables/DataService.html">DataService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/submit-loan/submit-loan.component.ts:16</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>formBuilder</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/forms/FormBuilder" target="_blank" >FormBuilder</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>dataService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/DataService.html" target="_self" >DataService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="clickHandler"></a>
+                    <span class="name">
+                        <b>
+                            clickHandler
+                        </b>
+                        <a href="#clickHandler"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>clickHandler()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="104"
+                            class="link-to-prism">src/app/submit-loan/submit-loan.component.ts:104</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loancategory_func"></a>
+                    <span class="name">
+                        <b>
+                            loancategory_func
+                        </b>
+                        <a href="#loancategory_func"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>loancategory_func()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="96"
+                            class="link-to-prism">src/app/submit-loan/submit-loan.component.ts:96</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="20"
+                            class="link-to-prism">src/app/submit-loan/submit-loan.component.ts:20</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="submitLoan"></a>
+                    <span class="name">
+                        <b>
+                            submitLoan
+                        </b>
+                        <a href="#submitLoan"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>submitLoan()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="69"
+                            class="link-to-prism">src/app/submit-loan/submit-loan.component.ts:69</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="loanForm"></a>
+                        <span class="name">
+                            <b>
+                            loanForm</b>
+                            <a href="#loanForm"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://angular.io/api/forms/FormGroup" target="_blank" >FormGroup</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/submit-loan/submit-loan.component.ts:15</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="loanList"></a>
+                        <span class="name">
+                            <b>
+                            loanList</b>
+                            <a href="#loanList"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/submit-loan/submit-loan.component.ts:16</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import * as $ from &#x27;jquery&#x27;;
+import { FormBuilder, FormGroup, Validators } from &#x27;@angular/forms&#x27;;
+import { Router } from &#x27;@angular/router&#x27;;
+import { environment } from &#x27;../../environments/environment&#x27;
+import { DataService } from &#x27;../service/data.service&#x27;;
+import { LocationStrategy } from &#x27;@angular/common&#x27;;
+
+@Component({
+  selector: &#x27;app-submit-loan&#x27;,
+  templateUrl: &#x27;./submit-loan.component.html&#x27;,
+  styleUrls: [&#x27;./submit-loan.component.css&#x27;]
+})
+export class SubmitLoanComponent implements OnInit {
+  loanForm: FormGroup;
+  loanList: any;
+
+  constructor(private formBuilder: FormBuilder, private router: Router, private dataService: DataService) { }
+
+  ngOnInit() {
+    var customerDetails &#x3D; JSON.parse(window.sessionStorage.getItem(&quot;customerDetails&quot;));
+
+    this.loanForm &#x3D; this.formBuilder.group({
+      firstname: [customerDetails.givenName, Validators.required],
+      lastname: [customerDetails.familyName, Validators.required],
+      jobtitle: [customerDetails.profile.occupation, Validators.required],
+      address: [customerDetails.address.streetAddress1 + &quot;, &quot; + customerDetails.address.country + &quot; &quot; + customerDetails.address.postalCode, Validators.required],
+      company: [&#x27;&#x27;, Validators.required],
+      years: [&#x27;&#x27;, Validators.required],
+      phonenumber: [customerDetails.cellphone.phoneNumber, Validators.required],
+      accountnumber: [window.sessionStorage.getItem(&quot;accountID&quot;), Validators.required],
+      description: [&#x27;&#x27;, Validators.required],
+      loancategory: [&#x27;&#x27;, Validators.required],
+      amount: [&#x27;&#x27;, Validators.required],
+      interest: [&#x27;&#x27;, Validators.required],
+      duration: [&#x27;&#x27;, Validators.required],
+      monthlyinstallment: [&#x27;&#x27;, Validators.required],
+    })
+
+    $(&#x27;.form-group&#x27;).each((i, e) &#x3D;&gt; {
+      $(&#x27;.form-control&#x27;, e)
+        .focus(function () {
+          e.classList.add(&#x27;not-empty&#x27;);
+        })
+        .blur(function () {
+          this.value &#x3D;&#x3D;&#x3D; &#x27;&#x27; ? e.classList.remove(&#x27;not-empty&#x27;) : null;
+        })
+        ;
+    });
+
+    $(&#x27;#loadingbutton&#x27;).hide()
+    $(&#x27;#submitbutton, #loadingbutton&#x27;).on(&#x27;click&#x27;, this.clickHandler);
+
+
+
+    console.log(customerDetails)
+    console.log(customerDetails.givenName)
+    console.log(customerDetails.familyName)
+    console.log(customerDetails.profile.occupation)
+    console.log(customerDetails.phone.localNumber)
+    // need to get the customer account number as well 
+
+    // this.loanForm.patchValue({&quot;firstname&quot;: customerDetails.givenName})
+    // this.loanForm.setValue({&quot;lastname&quot;: customerDetails.familyName})
+    // this.loanForm.setValue({&quot;jobtitle&quot;: customerDetails.profile.occupation})
+    // this.loanForm.setValue({&quot;phonenumber&quot;: customerDetails.phone.localNumber})
+  }
+
+  submitLoan() {
+    let loanRequest &#x3D; {
+      borrowerAccount: this.loanForm.get(&quot;accountnumber&quot;).value,
+      imgLink: &quot;https://images.financialexpress.com/2018/12/HOME_LOAN_.jpg&quot;,
+      loanCategory: this.loanForm.get(&quot;loancategory&quot;).value,
+      loanDescription: this.loanForm.get(&quot;description&quot;).value,
+      amount: this.loanForm.get(&quot;amount&quot;).value,
+      interestRate: this.loanForm.get(&quot;interest&quot;).value,
+      duration: this.loanForm.get(&quot;duration&quot;).value,
+      borrowerFirstName: this.loanForm.get(&quot;firstname&quot;).value,
+      borrowerLastName: this.loanForm.get(&quot;lastname&quot;).value,
+      jobTitle: this.loanForm.get(&quot;jobtitle&quot;).value,
+      companyName: this.loanForm.get(&quot;company&quot;).value,
+      yearsInJob: this.loanForm.get(&quot;years&quot;).value,
+      phoneNumber: this.loanForm.get(&quot;phonenumber&quot;).value,
+      address: this.loanForm.get(&quot;address&quot;).value,
+    }
+    this.dataService.postSubmitLoan(loanRequest).subscribe((data: any) &#x3D;&gt; {
+      console.log(data)
+
+
+    }, error &#x3D;&gt; {
+      console.log(error)
+
+    })
+  }
+
+  loancategory_func() {
+    var loan_cat &#x3D; (document.getElementById(&#x27;loancategory&#x27;)  as HTMLInputElement).value;
+    if (loan_cat &#x3D;&#x3D; &quot;Others: please specify&quot;)
+      document.getElementById(&quot;showothers&quot;).style.display &#x3D; &quot;block&quot;;
+    else
+      document.getElementById(&quot;showothers&quot;).style.display &#x3D; &quot;none&quot;;
+  }
+
+  clickHandler() {
+
+
+    $(&#x27;#submitbutton&#x27;).toggle(&#x27;slow&#x27;);
+    $(&#x27;#loadingbutton&#x27;).toggle(&#x27;slow&#x27;);
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;body id&#x3D;&quot;request&quot; style&#x3D;&quot;padding-top: 100px&quot;&gt;
+    &lt;nav class&#x3D;&quot;navbar fixed-top navbar-white bg-white navbar-expand&quot;&gt;
+        &lt;div class&#x3D;&quot;container&quot;&gt;
+            &lt;!-- NAVBAR LOGO --&gt;
+            &lt;div class&#x3D;&quot;col col-lg-2&quot;&gt;
+                &lt;a class&#x3D;&quot;navbar-brand&quot; href&#x3D;&quot;#&quot;&gt;
+                    &lt;strong&gt;LOGO HERE&lt;/strong&gt;
+                &lt;/a&gt;
+            &lt;/div&gt;
+            &lt;!-- NAVBAR LOGO --&gt;
+
+            &lt;!-- NAVBAR SEARCH --&gt;
+            &lt;div class&#x3D;&quot;col&quot;&gt;
+                &lt;div class&#x3D;&quot;site-header__search&quot;&gt;
+                    &lt;div class&#x3D;&quot;p-1 bg-light rounded-pill shadow-sm&quot;&gt;
+                        &lt;div class&#x3D;&quot;input-group&quot;&gt;
+                            &lt;input type&#x3D;&quot;search&quot; placeholder&#x3D;&quot;Search for loans&quot; aria-describedby&#x3D;&quot;button&quot;
+                                class&#x3D;&quot;form-control border-0 bg-light&quot;&gt;
+                            &lt;div class&#x3D;&quot;input-group-append&quot;&gt;
+                                &lt;button id&#x3D;&quot;button&quot; type&#x3D;&quot;submit&quot; class&#x3D;&quot;btn btn-link text-primary&quot;&gt;&lt;i
+                                        class&#x3D;&quot;fa fa-search&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;!-- NAVBAR SEARCH --&gt;
+
+            &lt;!-- NAVBAR PROFILE DROPDOWN &amp; LOAN REQUEST CTA--&gt;
+            &lt;div class&#x3D;&quot;col-md-auto&quot;&gt;
+                &lt;div class&#x3D;&quot;row&quot;&gt;
+                    &lt;button class&#x3D;&quot;navbar-toggler&quot; type&#x3D;&quot;button&quot; data-toggle&#x3D;&quot;collapse&quot; data-target&#x3D;&quot;#navbar-list-4&quot;
+                        aria-controls&#x3D;&quot;navbarNav&quot; aria-expanded&#x3D;&quot;false&quot; aria-label&#x3D;&quot;Toggle navigation&quot;&gt;
+                        &lt;span class&#x3D;&quot;navbar-toggler-icon&quot;&gt;&lt;/span&gt;
+                    &lt;/button&gt;
+
+                    &lt;div class&#x3D;&quot;collapse navbar-collapse&quot; id&#x3D;&quot;navbar-list-4&quot;&gt;
+                        &lt;ul class&#x3D;&quot;navbar-nav&quot;&gt;
+                            &lt;li class&#x3D;&quot;nav-item dropdown&quot;&gt;
+                                &lt;a class&#x3D;&quot;nav-link dropdown-toggle&quot; href&#x3D;&quot;#&quot; id&#x3D;&quot;navbarDropdownMenuLink&quot; role&#x3D;&quot;button&quot;
+                                    data-toggle&#x3D;&quot;dropdown&quot; aria-haspopup&#x3D;&quot;true&quot; aria-expanded&#x3D;&quot;false&quot;&gt;
+                                    &lt;img src&#x3D;&quot;https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/fox.jpg&quot;
+                                        width&#x3D;&quot;40&quot; height&#x3D;&quot;40&quot; class&#x3D;&quot;rounded-circle border&quot; alt&#x3D;&quot;&quot;&gt;
+                                &lt;/a&gt;
+                                &lt;div class&#x3D;&quot;dropdown-menu&quot; aria-labelledby&#x3D;&quot;navbarDropdownMenuLink&quot;&gt;
+                                    &lt;a class&#x3D;&quot;dropdown-item&quot; href&#x3D;&quot;#&quot;&gt;Activity&lt;/a&gt;
+                                    &lt;a class&#x3D;&quot;dropdown-item&quot; href&#x3D;&quot;#&quot;&gt;Edit Profile&lt;/a&gt;
+                                    &lt;a class&#x3D;&quot;dropdown-item&quot; href&#x3D;&quot;#&quot;&gt;Log Out&lt;/a&gt;
+                                &lt;/div&gt;
+                            &lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+
+                    &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-primary&quot;&gt;&lt;i class&#x3D;&quot;fa fa-chevron-circle-up&quot;&gt;&lt;/i&gt;New loan
+                        request&lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;!-- NAVBAR PROFILE DROPDOWN &amp; LOAN REQUEST CTA--&gt;
+        &lt;/div&gt;
+    &lt;/nav&gt;
+
+    &lt;div class&#x3D;&quot;container-submit mx-auto&quot; style&#x3D;&quot;width: 600px;&quot;&gt;
+        &lt;form style&#x3D;&quot;margin-top: 30px&quot; [formGroup]&#x3D;&quot;loanForm&quot;&gt;
+            &lt;div class&#x3D;&quot;row mx-auto&quot;&gt;
+                &lt;img src&#x3D;&quot;../../assets/images/one.png&quot; style&#x3D;&quot;width: 40px; height: 40px;&quot;&gt;
+                &lt;h5 class&#x3D;&quot;font-weight-light&quot; style&#x3D;&quot;margin-top: 10px; margin-left: 30px;&quot;&gt;PERSONAL INFORMATION&lt;/h5&gt;
+            &lt;/div&gt;
+            &lt;br&gt;
+            &lt;div class&#x3D;&quot;card special-card&quot;&gt;
+                &lt;div class&#x3D;&quot;card-body&quot;&gt;
+                    &lt;div class&#x3D;&quot;container form-fix&quot;&gt;
+                        &lt;fieldset disabled&gt;
+                            &lt;div class&#x3D;&quot;row&quot;&gt;
+                                &lt;div class&#x3D;&quot;col&quot;&gt;
+                                    &lt;h6 class&#x3D;&quot;font-weight-light&quot;&gt;First Name&lt;/h6&gt;
+                                    &lt;input class&#x3D;&quot;form-control&quot; id&#x3D;&quot;firstname&quot; required&#x3D;&quot;firstname&quot; placeholder&#x3D;&quot;Truong&quot;
+                                        formControlName&#x3D;&quot;firstname&quot;&gt;
+                                &lt;/div&gt;
+                                &lt;div class&#x3D;&quot;col&quot;&gt;
+                                    &lt;h6 class&#x3D;&quot;font-weight-light&quot;&gt;Last Name&lt;/h6&gt;
+                                    &lt;input class&#x3D;&quot;form-control&quot; id&#x3D;&quot;lastname&quot; required&#x3D;&quot;lastname&quot; placeholder&#x3D;&quot;Hai Bang&quot;
+                                        formControlName&#x3D;&quot;lastname&quot;&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/fieldset&gt;
+                            &lt;br&gt;
+
+                            &lt;div class&#x3D;&quot;row&quot;&gt;
+                            &lt;fieldset disabled&gt;
+                                &lt;div class&#x3D;&quot;col&quot;&gt;
+                                    &lt;h6 class&#x3D;&quot;font-weight-light&quot;&gt;Job Title&lt;/h6&gt;
+                                    &lt;input class&#x3D;&quot;form-control&quot; id&#x3D;&quot;jobtitle&quot; required&#x3D;&quot;jobtitle&quot;
+                                        placeholder&#x3D;&quot;Senior Engineer&quot; formControlName&#x3D;&quot;jobtitle&quot;&gt;
+                                &lt;/div&gt;
+                        &lt;/fieldset&gt;
+
+                        &lt;div class&#x3D;&quot;col&quot;&gt;
+                            &lt;h6 class&#x3D;&quot;font-weight-light&quot;&gt;Company&lt;/h6&gt;
+                            &lt;input class&#x3D;&quot;form-control&quot; id&#x3D;&quot;company&quot; required&#x3D;&quot;company&quot; placeholder&#x3D;&quot;&quot;
+                                formControlName&#x3D;&quot;company&quot;&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;fieldset disabled&gt;
+                        &lt;div class&#x3D;&quot;row&quot;&gt;
+                            &lt;div class&#x3D;&quot;col&quot;&gt;
+                                &lt;h6 class&#x3D;&quot;font-weight-light&quot;&gt;Address&lt;/h6&gt;
+                                &lt;input class&#x3D;&quot;form-control&quot; id&#x3D;&quot;address&quot; required&#x3D;&quot;address&quot; placeholder&#x3D;&quot;&quot;
+                                    formControlName&#x3D;&quot;address&quot;&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/fieldset&gt;
+                    &lt;br&gt;
+
+                    &lt;div class&#x3D;&quot;row&quot;&gt;
+                        &lt;div class&#x3D;&quot;col-4&quot;&gt;
+                            &lt;h6 class&#x3D;&quot;font-weight-light&quot;&gt;Years on job&lt;/h6&gt;
+                            &lt;input class&#x3D;&quot;form-control&quot; type&#x3D;&quot;number&quot; value&#x3D;&quot;2&quot; id&#x3D;&quot;yearsonjob&quot; formControlName&#x3D;&quot;years&quot;&gt;
+                        &lt;/div&gt;
+                        &lt;div class&#x3D;&quot;col&quot;&gt;
+                            &lt;h6 class&#x3D;&quot;font-weight-light&quot;&gt;Phone Number&lt;/h6&gt;
+                            &lt;input class&#x3D;&quot;form-control&quot; id&#x3D;&quot;phonenumber&quot; required&#x3D;&quot;required&quot; placeholder&#x3D;&quot;&quot;
+                                formControlName&#x3D;&quot;phonenumber&quot;&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;br&gt;
+                    &lt;div class&#x3D;&quot;row&quot;&gt;
+                        &lt;div class&#x3D;&quot;col&quot;&gt;
+
+                            &lt;h6 class&#x3D;&quot;font-weight-light&quot;&gt;Account Number&lt;/h6&gt;
+                            &lt;fieldset disabled&gt;
+                                &lt;input class&#x3D;&quot;form-control&quot; id&#x3D;&quot;accountno&quot; required&#x3D;&quot;required&quot;
+                                    placeholder&#x3D;&quot;1234 5678 898&quot; formControlName&#x3D;&quot;accountnumber&quot;&gt;
+                            &lt;/fieldset&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;br&gt;
+
+                    &lt;br&gt;
+
+                &lt;/div&gt;
+            &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;br&gt;
+
+    &lt;!--LOAN CARD --&gt;
+    &lt;div class&#x3D;&quot;row mx-auto&quot;&gt;
+        &lt;img src&#x3D;&quot;../../assets/images/two.png&quot; style&#x3D;&quot;width: 40px; height: 40px;&quot;&gt;
+        &lt;h5 class&#x3D;&quot;font-weight-light&quot; style&#x3D;&quot;margin-top: 10px; margin-left: 30px;&quot;&gt;LOAN INFORMATION&lt;/h5&gt;
+    &lt;/div&gt;
+    &lt;br&gt;
+    &lt;div class&#x3D;&quot;card&quot;&gt;
+        &lt;div class&#x3D;&quot;card-body&quot;&gt;
+            &lt;div class&#x3D;&quot;container form-fix&quot;&gt;
+                &lt;h6 class&#x3D;&quot;font-weight-light&quot;&gt;Image of desired item&lt;/h6&gt;
+                &lt;div class&#x3D;&quot;custom-file&quot;&gt;
+                    &lt;label for&#x3D;&quot;uploadfile&quot;&gt;&lt;/label&gt;
+                    &lt;input type&#x3D;&quot;file&quot; class&#x3D;&quot;custom-file-input&quot; id&#x3D;&quot;image&quot;&gt;
+                    &lt;label class&#x3D;&quot;custom-file-label&quot; for&#x3D;&quot;image&quot;&gt;Upload the image&lt;/label&gt;
+                &lt;/div&gt;
+                &lt;br&gt;
+                &lt;div class&#x3D;&quot;row&quot;&gt;
+                    &lt;div class&#x3D;&quot;col&quot;&gt;
+                        &lt;div class&#x3D;&quot;form-group&quot; style&#x3D;&quot;width: 100%; margin-left: -10px;&quot;&gt;
+                            &lt;label for&#x3D;&quot;comment&quot; style&#x3D;&quot;margin-left:20px;&quot;&gt;Detailed description of your desired
+                                item&lt;/label&gt;
+                            &lt;textarea class&#x3D;&quot;form-control&quot; rows&#x3D;&quot;5&quot; id&#x3D;&quot;comment&quot;
+                                formControlName&#x3D;&quot;description&quot;&gt;&lt;/textarea&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;br&gt;
+
+                &lt;div class&#x3D;&quot;row&quot;&gt;
+                    &lt;div class&#x3D;&quot;col&quot;&gt;
+                        &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                            &lt;select class&#x3D;&quot;form-control&quot; id&#x3D;&quot;loancategory&quot; (change)&#x3D;&quot;loancategory_func()&quot; formControlName&#x3D;&quot;loancategory&quot; &gt;
+                                &lt;option value&#x3D;&quot;&quot; disabled selected&gt;Select your loan category&lt;/option&gt;
+                                &lt;option&gt;Home Loan&lt;/option&gt;
+                                &lt;option&gt;Car Loan&lt;/option&gt;
+                                &lt;option&gt;Personal Loan&lt;/option&gt;
+                                &lt;option&gt;Education Loan&lt;/option&gt;
+                                &lt;option&gt;Others: please specify&lt;/option&gt;
+                            &lt;/select&gt;
+                            &lt;br&gt;
+                            &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                                &lt;input class&#x3D;&quot;form-control&quot; id&#x3D;&quot;showothers&quot; placeholder&#x3D;&quot;ie. Wedding loan&quot;
+                                    style&#x3D;&quot;display:none;&quot; formControlName&#x3D;&quot;loancategory&quot;&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+
+
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+
+
+                &lt;div class&#x3D;&quot;row&quot;&gt;
+                    &lt;div class&#x3D;&quot;col&quot;&gt;
+                        &lt;h6 class&#x3D;&quot;font-weight-light&quot;&gt;Amount Request&lt;/h6&gt;
+                        &lt;div class&#x3D;&quot;input-group mb-3&quot;&gt;
+                            &lt;div class&#x3D;&quot;input-group-prepend&quot;&gt;
+                                &lt;span class&#x3D;&quot;input-group-text&quot;&gt;$&lt;/span&gt;
+                            &lt;/div&gt;
+                            &lt;input type&#x3D;&quot;number&quot; min&#x3D;&quot;1&quot; style&#x3D;&quot;margin-left: -1px;&quot; formControlName&#x3D;&quot;amount&quot; class&#x3D;&quot;form-control&quot;
+                                aria-label&#x3D;&quot;Amount (to the nearest dollar)&quot;&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;col&quot;&gt;
+                        &lt;h6 class&#x3D;&quot;font-weight-light&quot;&gt;Interest Rate&lt;/h6&gt;
+                        &lt;div class&#x3D;&quot;input-group mb-3&quot;&gt;
+                            &lt;input type&#x3D;&quot;number&quot; step&#x3D;&quot;0.01&quot; min&#x3D;&quot;0.25&quot; class&#x3D;&quot;form-control&quot; aria-label&#x3D;&quot;Interest rate&quot;
+                                placeholder&#x3D;&quot;1.25&quot; formControlName&#x3D;&quot;interest&quot;&gt;
+                            &lt;div class&#x3D;&quot;input-group-prepend&quot;&gt;
+                                &lt;span class&#x3D;&quot;input-group-text&quot;&gt;%&lt;/span&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;br&gt;
+                &lt;div class&#x3D;&quot;row&quot;&gt;
+                    &lt;div class&#x3D;&quot;col&quot;&gt;
+                        &lt;h6 class&#x3D;&quot;font-weight-light&quot;&gt;Loan Duration&lt;/h6&gt;
+                        &lt;div class&#x3D;&quot;input-group mb-3&quot;&gt;
+                            &lt;input type&#x3D;&quot;number&quot; min&#x3D;&quot;1&quot; placeholder&#x3D;&quot;30&quot; style&#x3D;&quot;margin-left: -1px;&quot;
+                                class&#x3D;&quot;form-control&quot; formControlName&#x3D;&quot;duration&quot; aria-label&#x3D;&quot;Months&quot;&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;col&quot;&gt;
+                        &lt;h6 class&#x3D;&quot;font-weight-light&quot;&gt;Monthly Amoritization&lt;/h6&gt;
+                        &lt;fieldset disabled&gt;&lt;input type&#x3D;&quot;text&quot; style&#x3D;&quot;text-align: center; margin-top:20px;&quot;&gt;
+
+                        &lt;/fieldset&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;br&gt;
+    &lt;button class&#x3D;&quot;btn btn-outline-success float-right&quot; id&#x3D;&quot;submitbutton&quot; type&#x3D;&quot;submit&quot; style&#x3D;&quot;margin-bottom: 10px&quot; (click)&#x3D;&quot;submitLoan()&quot;
+       &gt;Submit Loan&lt;/button&gt;
+
+    &lt;button class&#x3D;&quot;btn btn-outline-success float-right&quot; type&#x3D;&quot;button&quot; id&#x3D;&quot;loadingbutton&quot; disabled
+        style&#x3D;&quot;margin-bottom: 10px&quot; (click)&#x3D;&quot;submitLoan()&quot;&gt;
+        &lt;span class&#x3D;&quot;spinner-border spinner-border-sm&quot; role&#x3D;&quot;status&quot; aria-hidden&#x3D;&quot;true&quot;&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;/form&gt;
+    &lt;/div&gt;
+
+    &lt;div *ngFor&#x3D;&quot;let loan of loanList&quot;&gt;
+        &lt;p&gt;{{loan.accountNumber}}&lt;/p&gt;
+        &lt;p&gt;{{loan.id}}&lt;/p&gt;
+        &lt;p&gt;{{loan.loanStatus}}&lt;/p&gt;
+        &lt;p&gt;{{loan.custFirstName}}&lt;/p&gt;
+        &lt;p&gt;{{loan.loanerAccount}}&lt;/p&gt;
+        &lt;p&gt;{{loan.imgLink}}&lt;/p&gt;
+        &lt;p&gt;{{loan.amount}}&lt;/p&gt;
+        &lt;p&gt;{{loan.interestRate}}&lt;/p&gt;
+        &lt;p&gt;{{loan.duration}}&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;!-- FOOTER --&gt;
+    &lt;footer class&#x3D;&quot;footer&quot;&gt;
+        &lt;div class&#x3D;&quot;container&quot;&gt;
+            &lt;div class&#x3D;&quot;footer__bottom&quot;&gt;
+                Peersarmalam is an IS444 project developed by Group 4.
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/footer&gt;
+    &lt;!-- FOOTER --&gt;
+&lt;/body&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./submit-loan.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss"></code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><body id="request" style="padding-top: 100px">    <nav class="navbar fixed-top navbar-white bg-white navbar-expand">        <div class="container">            <!-- NAVBAR LOGO -->            <div class="col col-lg-2">                <a class="navbar-brand" href="#">                    <strong>LOGO HERE</strong>                </a>            </div>            <!-- NAVBAR LOGO -->            <!-- NAVBAR SEARCH -->            <div class="col">                <div class="site-header__search">                    <div class="p-1 bg-light rounded-pill shadow-sm">                        <div class="input-group">                            <input type="search" placeholder="Search for loans" aria-describedby="button"                                class="form-control border-0 bg-light">                            <div class="input-group-append">                                <button id="button" type="submit" class="btn btn-link text-primary"><i                                        class="fa fa-search"></i></button>                            </div>                        </div>                    </div>                </div>            </div>            <!-- NAVBAR SEARCH -->            <!-- NAVBAR PROFILE DROPDOWN & LOAN REQUEST CTA-->            <div class="col-md-auto">                <div class="row">                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-list-4"                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">                        <span class="navbar-toggler-icon"></span>                    </button>                    <div class="collapse navbar-collapse" id="navbar-list-4">                        <ul class="navbar-nav">                            <li class="nav-item dropdown">                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">                                    <img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/fox.jpg"                                        width="40" height="40" class="rounded-circle border" alt="">                                </a>                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">                                    <a class="dropdown-item" href="#">Activity</a>                                    <a class="dropdown-item" href="#">Edit Profile</a>                                    <a class="dropdown-item" href="#">Log Out</a>                                </div>                            </li>                        </ul>                    </div>                    <button type="button" class="btn btn-primary"><i class="fa fa-chevron-circle-up"></i>New loan                        request</button>                </div>            </div>            <!-- NAVBAR PROFILE DROPDOWN & LOAN REQUEST CTA-->        </div>    </nav>    <div class="container-submit mx-auto" style="width: 600px;">        <form style="margin-top: 30px" [formGroup]="loanForm">            <div class="row mx-auto">                <img src="../../assets/images/one.png" style="width: 40px; height: 40px;">                <h5 class="font-weight-light" style="margin-top: 10px; margin-left: 30px;">PERSONAL INFORMATION</h5>            </div>            <br>            <div class="card special-card">                <div class="card-body">                    <div class="container form-fix">                        <fieldset disabled>                            <div class="row">                                <div class="col">                                    <h6 class="font-weight-light">First Name</h6>                                    <input class="form-control" id="firstname" required="firstname" placeholder="Truong"                                        formControlName="firstname">                                </div>                                <div class="col">                                    <h6 class="font-weight-light">Last Name</h6>                                    <input class="form-control" id="lastname" required="lastname" placeholder="Hai Bang"                                        formControlName="lastname">                                </div>                            </div>                        </fieldset>                            <br>                            <div class="row">                            <fieldset disabled>                                <div class="col">                                    <h6 class="font-weight-light">Job Title</h6>                                    <input class="form-control" id="jobtitle" required="jobtitle"                                        placeholder="Senior Engineer" formControlName="jobtitle">                                </div>                        </fieldset>                        <div class="col">                            <h6 class="font-weight-light">Company</h6>                            <input class="form-control" id="company" required="company" placeholder=""                                formControlName="company">                        </div>                    </div>                    <fieldset disabled>                        <div class="row">                            <div class="col">                                <h6 class="font-weight-light">Address</h6>                                <input class="form-control" id="address" required="address" placeholder=""                                    formControlName="address">                            </div>                        </div>                    </fieldset>                    <br>                    <div class="row">                        <div class="col-4">                            <h6 class="font-weight-light">Years on job</h6>                            <input class="form-control" type="number" value="2" id="yearsonjob" formControlName="years">                        </div>                        <div class="col">                            <h6 class="font-weight-light">Phone Number</h6>                            <input class="form-control" id="phonenumber" required="required" placeholder=""                                formControlName="phonenumber">                        </div>                    </div>                    <br>                    <div class="row">                        <div class="col">                            <h6 class="font-weight-light">Account Number</h6>                            <fieldset disabled>                                <input class="form-control" id="accountno" required="required"                                    placeholder="1234 5678 898" formControlName="accountnumber">                            </fieldset>                        </div>                    </div>                    <br>                    <br>                </div>            </div>    </div>    <br>    <!--LOAN CARD -->    <div class="row mx-auto">        <img src="../../assets/images/two.png" style="width: 40px; height: 40px;">        <h5 class="font-weight-light" style="margin-top: 10px; margin-left: 30px;">LOAN INFORMATION</h5>    </div>    <br>    <div class="card">        <div class="card-body">            <div class="container form-fix">                <h6 class="font-weight-light">Image of desired item</h6>                <div class="custom-file">                    <label for="uploadfile"></label>                    <input type="file" class="custom-file-input" id="image">                    <label class="custom-file-label" for="image">Upload the image</label>                </div>                <br>                <div class="row">                    <div class="col">                        <div class="form-group" style="width: 100%; margin-left: -10px;">                            <label for="comment" style="margin-left:20px;">Detailed description of your desired                                item</label>                            <textarea class="form-control" rows="5" id="comment"                                formControlName="description"></textarea>                        </div>                    </div>                </div>                <br>                <div class="row">                    <div class="col">                        <div class="form-group">                            <select class="form-control" id="loancategory" (change)="loancategory_func()" formControlName="loancategory" >                                <option value="" disabled selected>Select your loan category</option>                                <option>Home Loan</option>                                <option>Car Loan</option>                                <option>Personal Loan</option>                                <option>Education Loan</option>                                <option>Others: please specify</option>                            </select>                            <br>                            <div class="form-group">                                <input class="form-control" id="showothers" placeholder="ie. Wedding loan"                                    style="display:none;" formControlName="loancategory">                            </div>                        </div>                    </div>                </div>                <div class="row">                    <div class="col">                        <h6 class="font-weight-light">Amount Request</h6>                        <div class="input-group mb-3">                            <div class="input-group-prepend">                                <span class="input-group-text">$</span>                            </div>                            <input type="number" min="1" style="margin-left: -1px;" formControlName="amount" class="form-control"                                aria-label="Amount (to the nearest dollar)">                        </div>                    </div>                    <div class="col">                        <h6 class="font-weight-light">Interest Rate</h6>                        <div class="input-group mb-3">                            <input type="number" step="0.01" min="0.25" class="form-control" aria-label="Interest rate"                                placeholder="1.25" formControlName="interest">                            <div class="input-group-prepend">                                <span class="input-group-text">%</span>                            </div>                        </div>                    </div>                </div>                <br>                <div class="row">                    <div class="col">                        <h6 class="font-weight-light">Loan Duration</h6>                        <div class="input-group mb-3">                            <input type="number" min="1" placeholder="30" style="margin-left: -1px;"                                class="form-control" formControlName="duration" aria-label="Months">                        </div>                    </div>                    <div class="col">                        <h6 class="font-weight-light">Monthly Amoritization</h6>                        <fieldset disabled><input type="text" style="text-align: center; margin-top:20px;">                        </fieldset>                    </div>                </div>            </div>        </div>    </div>    <br>    <button class="btn btn-outline-success float-right" id="submitbutton" type="submit" style="margin-bottom: 10px" (click)="submitLoan()"       >Submit Loan</button>    <button class="btn btn-outline-success float-right" type="button" id="loadingbutton" disabled        style="margin-bottom: 10px" (click)="submitLoan()">        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>    </button>    </form>    </div>    <div *ngFor="let loan of loanList">        <p>{{loan.accountNumber}}</p>        <p>{{loan.id}}</p>        <p>{{loan.loanStatus}}</p>        <p>{{loan.custFirstName}}</p>        <p>{{loan.loanerAccount}}</p>        <p>{{loan.imgLink}}</p>        <p>{{loan.amount}}</p>        <p>{{loan.interestRate}}</p>        <p>{{loan.duration}}</p>    </div>    <!-- FOOTER -->    <footer class="footer">        <div class="container">            <div class="footer__bottom">                Peersarmalam is an IS444 project developed by Group 4.            </div>        </div>    </footer>    <!-- FOOTER --></body></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'HistoryComponent', 'selector': 'app-history'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoanDetailComponent', 'selector': 'app-loan-detail'},{'name': 'SplashComponent', 'selector': 'app-splash'},{'name': 'SubmitLoanComponent', 'selector': 'app-submit-loan'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'SubmitLoanComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'SubmitLoanComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

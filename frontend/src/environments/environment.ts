@@ -12,11 +12,21 @@ export const environment = {
   LOGIN_CUSTOMER_URL: TBANK_API_URL,
   GET_CUSTOMER_DETAILS: TBANK_API_URL,
   GET_CUSTOMER_ACCOUNTS: TBANK_API_URL,
+  GET_CUSTOMER_URL: SERVER_URL + "/getCustInfo/",
 
-  GET_CUSTOMER_URL: SERVER_URL + "/getCustInfo/:customerId",
-  GET_LOAN_URL: SERVER_URL + "/getLoanInfo/:borrowerId",
+  // Home page
+  GET_ALL_PENDING_LOANS_URL: SERVER_URL + "/getAllLoan/pending",
+
+  // Loan details page
+  GET_LOAN_DETAILS_FOR_LOANER_URL: SERVER_URL + "/getLoanerLoans/",
+
   SET_LOAN_URL: SERVER_URL + "/setLoan",
-  SUBMIT_LOAN_URL: SERVER_URL + "/createLoan"
+  SUBMIT_LOAN_URL: SERVER_URL + "/createLoan",
+
+  GET_LOAN_INFO_BY_LOAN_ID: SERVER_URL + "/getLoanInfoByLoanId/"
+  // GET_LOAN_INFO_BY_LOAN_ID: SERVER_URL + "/getLoanInfoByLoanId/"
+
+
 };
 
 /*
