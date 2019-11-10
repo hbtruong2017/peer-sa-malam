@@ -51,8 +51,6 @@ export class SubmitLoanComponent implements OnInit {
     $('#loadingbutton').hide()
     $('#submitbutton, #loadingbutton').on('click', this.clickHandler);
 
-
-
     console.log(customerDetails)
     console.log(customerDetails.givenName)
     console.log(customerDetails.familyName)
@@ -86,7 +84,6 @@ export class SubmitLoanComponent implements OnInit {
     this.dataService.postSubmitLoan(loanRequest).subscribe((data: any) => {
       console.log(data)
 
-
     }, error => {
       console.log(error)
 
@@ -102,7 +99,6 @@ export class SubmitLoanComponent implements OnInit {
   }
 
   clickHandler() {
-
 
     $('#submitbutton').toggle('slow');
     $('#loadingbutton').toggle('slow');
