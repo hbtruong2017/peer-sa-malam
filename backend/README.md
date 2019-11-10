@@ -83,7 +83,7 @@ output:
 ```
 
 ## /getBorrowerLoans/:loanStatus-:borrowerId
-E.g. Url : localhost:3000/getAllLoan/pending-444
+E.g. Url : localhost:3000/getBorrowerLoans/pending-444
 ```
 {
     "borrowedLoans": [
@@ -103,7 +103,7 @@ E.g. Url : localhost:3000/getAllLoan/pending-444
 }
 ```
 ## /getLoanInfoByLoanId/:loanId
-E.g. Url: localhost:3000/getLoanerLoans/1  
+E.g. Url: localhost:3000/getLoanInfoByLoanId/1  
 This is the loanId not Loaner's Id  
 
 Output
