@@ -7,7 +7,8 @@ router.get('/:loanStatus-:loanerAccount', function (req, res) {
 
     const {loanStatus, loanerAccount} = req.params
 
-    const sql = `select * from loanDetails where loanStatus = "${loanStatus}" and loanerAccount = "${loanerAccount}";`;
+    const sql = `select * from loanDetails inner join customerinfo on loanDetails.borrowerAccount = customerinfo.accountNumber where loanDetails.loanStatus = "${loanStatus}" and loanDetails.loanerAccount =  "${loanerAccount}";`;
+
 
     res.locals.connection.query(sql, function (error, results, fields) {
         if(error){
