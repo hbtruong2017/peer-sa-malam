@@ -11,6 +11,9 @@ export class LoanDetailComponent implements OnInit {
   loanId: number;
   loanInfo: any;
   pendingLoanList: any;
+  borrowerId: number;
+  borrowerInfo: any;
+  borrowerAccount: any;
 
   constructor(private router: Router, private dataService: DataService, private route: ActivatedRoute) { }
 
@@ -20,11 +23,14 @@ export class LoanDetailComponent implements OnInit {
     })
     this.dataService.getLoanInfoByLoanId(this.loanId).subscribe((data: any) => {
       this.loanInfo = data.loanInfo[0];
+      this.borrowerId = this.loanInfo.borrowerAccount;
+      this.dataService.getCustomerDetailsFromServer(this.borrowerId).subscribe((data: any) => {
+        this.borrowerInfo = data.customerInfo[0];
+        this.borrowerAccount = this.borrowerInfo.accountNumber;
+      })
     })
     this.dataService.getAllPendingLoans().subscribe((data:any) => {
-      console.log(data)
       this.pendingLoanList = data.allLoans.reverse();
-      console.log(this.pendingLoanList)
     }, error => {
       console.log(error)
     })

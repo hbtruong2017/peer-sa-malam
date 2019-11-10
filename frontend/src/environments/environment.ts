@@ -12,7 +12,7 @@ export const environment = {
   LOGIN_CUSTOMER_URL: TBANK_API_URL,
   GET_CUSTOMER_DETAILS: TBANK_API_URL,
   GET_CUSTOMER_ACCOUNTS: TBANK_API_URL,
-  GET_CUSTOMER_URL: SERVER_URL + "/getCustInfo/:customerId",
+  GET_CUSTOMER_URL: SERVER_URL + "/getCustInfo/",
 
   // Home page
   GET_ALL_PENDING_LOANS_URL: SERVER_URL + "/getAllLoan/pending",

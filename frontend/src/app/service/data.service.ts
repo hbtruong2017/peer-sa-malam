@@ -27,8 +27,8 @@ export class DataService {
   }
 
   // added for the new APIs
-  getCustomer(req: any) {
-    return this.httpClient.post(environment.GET_CUSTOMER_URL, req);
+  getCustomerDetailsFromServer(id: number) {
+    return this.httpClient.get(environment.GET_CUSTOMER_URL + id);
   }
 
   // getLoanDetailsByIdforLoaner(req: any) {
