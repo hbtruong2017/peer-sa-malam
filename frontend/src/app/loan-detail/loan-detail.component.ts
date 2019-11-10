@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../service/data.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-loan-detail',
@@ -10,8 +10,9 @@ import { ActivatedRoute } from '@angular/router';
 export class LoanDetailComponent implements OnInit {
   loanId: number;
   loanInfo: any;
+  pendingLoanList: any;
 
-  constructor(private dataService: DataService, private route: ActivatedRoute) { }
+  constructor(private router: Router, private dataService: DataService, private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.route.queryParams.subscribe(params => {
@@ -19,9 +20,18 @@ export class LoanDetailComponent implements OnInit {
     })
     this.dataService.getLoanInfoByLoanId(this.loanId).subscribe((data: any) => {
       this.loanInfo = data.loanInfo[0];
-      console.log(this.loanInfo)
-      
     })
+    this.dataService.getAllPendingLoans().subscribe((data:any) => {
+      console.log(data)
+      this.pendingLoanList = data.allLoans.reverse();
+      console.log(this.pendingLoanList)
+    }, error => {
+      console.log(error)
+    })
+  }
+
+  goToLoan(id: number) {
+    this.router.navigate(['/loan'], { queryParams: { id: id } })
   }
 
 }
