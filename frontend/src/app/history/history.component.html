@@ -439,22 +439,22 @@
                                             <div *ngFor="let loan of borrowerCompleteLoanList; let i = index" class="modal-body">
                                                 <div class="row">
                                                     <div class=col-2><img src="../../assets/images/timthumb.png" style="width:inherit"></div>
-                                                    <div class=col><b>Lender:</b> {{loan.loanCategory}}<br>
+                                                    <div class=col><b>Lender:</b> {{loan.custFirstName}} {{loan.custLastName}}<br>
                                                         <b>Date of Acceptance:</b> 11th November 2019<br>
                                                         <b>Date of Completion:</b> 11th August 2020<br>
                                                     </div>
                                                 </div>
                                                 <hr>
-                                                <b>Amount Requested:</b> $800<br>
-                                                <b>Interest rate:</b> 8%<br>
-                                                <b>Monthly Amoritisation:</b> $5.02<br>
+                                                <b>Amount Requested:</b> ${{loan.amount}}<br>
+                                                <b>Interest rate:</b> ${{loan.interestRate}}%<br>
+                                                <b>Monthly Amoritisation:</b> ${{(loan.amount/loan.duration/12).toFixed(2)}}<br>
                                                 <b>Late Fee Penalty:</b> $5 per day<br>
                                                 <b>Total Paid Out (including interest): </b>$1,043.68<br>
                                                 <hr>
-                                                <b>Category of loan:</b>Car Loan<br>
+                                                <b>Category of loan:</b> {{loan.loanCategory}}<br>
                                                 <b>Purpose of loan:</b><br>
-                                                No image was attached<br>
-                                                Give me some moolah for a vroom vroom<br>
+                                                {{loan.loanDescription}}<br>
+                                                <br>
                                                 
                                             </div>
                                             <div class="modal-footer">
