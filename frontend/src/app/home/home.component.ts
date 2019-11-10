@@ -41,4 +41,8 @@ export class HomeComponent implements OnInit {
   goToLoan(id: number) {
     this.router.navigate(['/loan'], { queryParams: { id: id } })
   }
+
+  gotoTbank() {
+    window.location.href = "http://tbankonline.com/SMUtBank_RIB2/#/login?redirect=%2F";
+  }
 }

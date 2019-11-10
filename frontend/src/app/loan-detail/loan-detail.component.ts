@@ -14,6 +14,9 @@ export class LoanDetailComponent implements OnInit {
   borrowerId: number;
   borrowerInfo: any;
   borrowerAccount: any;
+  borrowerName: string;
+  loanAmount: any;
+  loanCategory: any;
 
   constructor(private router: Router, private dataService: DataService, private route: ActivatedRoute) { }
 
@@ -23,22 +26,89 @@ export class LoanDetailComponent implements OnInit {
     })
     this.dataService.getLoanInfoByLoanId(this.loanId).subscribe((data: any) => {
       this.loanInfo = data.loanInfo[0];
+      this.loanAmount = this.loanInfo.amount;
       this.borrowerId = this.loanInfo.borrowerAccount;
+      this.loanCategory = this.loanInfo.loanCategory;
+
       this.dataService.getCustomerDetailsFromServer(this.borrowerId).subscribe((data: any) => {
         this.borrowerInfo = data.customerInfo[0];
         this.borrowerAccount = this.borrowerInfo.accountNumber;
+        console.log("borrowerAccount: " + this.borrowerAccount)
+        this.borrowerName = this.borrowerInfo.custFirstName + " " + this.borrowerInfo.custLastName;
       })
     })
-    
-    this.dataService.getAllPendingLoans().subscribe((data:any) => {
+    this.dataService.getAllPendingLoans().subscribe((data: any) => {
       this.pendingLoanList = data.allLoans.reverse();
     }, error => {
       console.log(error)
     })
   }
 
+
   goToLoan(id: number) {
     this.router.navigate(['/loan'], { queryParams: { id: id } })
   }
 
+  fundLoan() {
+    console.log("Start adding Beneficiary List")
+    this.addToBeneficiaryList();
+  }
+
+  addToBeneficiaryList() {
+    let header = JSON.stringify({
+      serviceName: "addBeneficiary",
+      userID: window.sessionStorage.getItem("userID"),
+      PIN: window.sessionStorage.getItem("PIN"),
+      OTP: "999999"
+    });
+
+    // let content = JSON.stringify(contentObj);
+    let content = JSON.stringify({
+      AccountID: this.borrowerAccount,
+      Description: this.borrowerName
+    });
+
+    this.dataService.addBeneficiary(header, content).subscribe((data: any) => {
+      console.log(data);
+      this.transferFund();
+    })
+  }
+
+  transferFund() {
+    let header = JSON.stringify({
+      serviceName: "creditTransfer",
+      userID: window.sessionStorage.getItem("userID"),
+      PIN: window.sessionStorage.getItem("PIN"),
+      OTP: "999999"
+    });
+
+    // let content = JSON.stringify(contentObj);
+    let content = JSON.stringify({
+      accountFrom: window.sessionStorage.getItem("accountID"),
+      accountTo: this.borrowerAccount,
+      transactionAmount: this.loanAmount,
+      transactionReferenceNumber: new Date().getTime(),
+      narrative: this.loanCategory
+    });
+
+    this.dataService.transferAmount(header, content).subscribe((data: any) => {
+      this.updateLoanStatus();
+    })
+  }
+
+  updateLoanStatus() {
+    let statusReq = {
+      loanerAccount: window.sessionStorage.getItem("accountID"),
+      loanId: this.loanId,
+      loanStatus: "complete"
+    }
+
+    this.dataService.setLoanStatus(statusReq).subscribe((data: any) => {
+      console.log(data);
+    })
+  }
+
+  gotoTbank() {
+    window.location.href = "http://tbankonline.com/SMUtBank_RIB2/#/login?redirect=%2F";
+  }
 }
