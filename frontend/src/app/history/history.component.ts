@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../service/data.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-history',
@@ -7,11 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HistoryComponent implements OnInit {
   isBorrower: boolean = true;
+  borrowerPendingLoanList: any;
 
-  constructor() { }
+  constructor(private router: Router, private dataService: DataService, private route: ActivatedRoute) { }
 
   ngOnInit() {
+    this.dataService.getBorrowerPendingLoans().subscribe((data:any) => {
+      console.log(data);
+      this.borrowerPendingLoanList = data.borrowedLoans.reverse();
+    }, error => {
+      console.log(error)
+    })
 
+    
   }
 
   ActiveLender() {

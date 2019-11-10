@@ -17,6 +17,9 @@ export const environment = {
   // Home page
   GET_ALL_PENDING_LOANS_URL: SERVER_URL + "/getAllLoan/pending",
 
+  // Borrower's pending loans
+  GET_BORROWER_PENDING_LOANS_URL: SERVER_URL + "/getBorrowerLoans/pending-5717",
+ 
   // Loan details page
   GET_LOAN_DETAILS_FOR_LOANER_URL: SERVER_URL + "/getLoanerLoans/",
 
@@ -25,7 +28,6 @@ export const environment = {
 
   GET_LOAN_INFO_BY_LOAN_ID: SERVER_URL + "/getLoanInfoByLoanId/"
   // GET_LOAN_INFO_BY_LOAN_ID: SERVER_URL + "/getLoanInfoByLoanId/"
-
 
 };
 

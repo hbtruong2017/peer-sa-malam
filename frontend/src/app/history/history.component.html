@@ -38,13 +38,15 @@
 
                                 <div class="card" style="margin: 10px;">
                                     <div class="card-body">
-                                        <b>Date of Request:</b> 18th September 2019<br>
-                                        <b>Amount Requested:</b> $500<br>
-                                        <b>Interest rate:</b> 5%<br>
-                                        <b>Monthly Amoritisation:</b> $4.98
+                                    <div *ngFor="let loan of borrowerPendingLoanList; let i = index" class="col">
+                                        <b>Loan Name:</b> 18th September 2019<br>
+                                        <b>Amount Requested:</b> {{loan.amount}}<br>
+                                        <b>Interest rate:</b> {{loan.interestRate}}%<br>
+                                        <b>Monthly Payment:</b> ${{loan.duration}}
                                          <a href="#" class="btn btn-outline-info float-right" data-toggle="modal" data-target="#pending_1">View More Information</a>
                                     </div>
                                 </div>
+                            </div>
 
                                         <!-- Modal : active_l_1 -->
                                 <div class="modal fade" id="pending_1" tabindex="-1" role="dialog" aria-labelledby="pending_1" aria-hidden="true">
@@ -80,40 +82,7 @@
                                 </div>
                                 <!--End of modal-->
 
-                                <div class="card" style="margin: 10px;">
-                                    <div class="card-body">
-                                        <b>Date of Request:</b> 08th January 2019<br>
-                                        <b>Amount Requested:</b> $50,400<br>
-                                        <b>Interest rate:</b> 8%<br>
-                                        <b>Monthly Amoritisation:</b> $50.02
-
-                                        <a href="#" class="btn btn-outline-info float-right" data-toggle="modal" data-target="#loan_req_2">View More Information</a>
-                                    </div>
-                                </div>
-                                <!-- Modal : loan_req_2 -->
-                                <div class="modal fade" id="loan_req_2" tabindex="-1" role="dialog" aria-labelledby="loan_req_2" aria-hidden="true">
-                                    <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLabel">Information</h5>
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span>
-                                                </button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <b>Date of Request:</b> 08th January 2019<br>
-                                                <b>Amount Requested:</b> $50,400<br>
-                                                <b>Interest rate:</b> 8%<br>
-                                                <b>Monthly Amoritisation:</b> $50.02
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
-                                                <button type="button" class="btn btn-outline-primary">Edit Loan</button>
-                                                <button type="button" class="btn btn-outline-primary">Withdraw Loan</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                            
                             </div>
                         </div>
 

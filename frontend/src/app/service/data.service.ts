@@ -35,10 +35,14 @@ export class DataService {
   //   return this.httpClient.get(environment.GET_LOAN_DETAILS_FOR_LOANER_URL + "pending");
   // }
 
-  
   // Home page
   getAllPendingLoans() {
     return this.httpClient.get(environment.GET_ALL_PENDING_LOANS_URL)
+  }
+
+  // Borrower's pending loans
+  getBorrowerPendingLoans() {
+    return this.httpClient.get(environment.GET_BORROWER_PENDING_LOANS_URL)
   }
 
   // Loan details page
