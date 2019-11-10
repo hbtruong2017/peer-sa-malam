@@ -134,7 +134,7 @@
                                                 <div class="row">
                                                     <div class=col-2><img src="../../assets/images/bangthumb.png" style="width:inherit"></div>
                                                     <div class=col>
-                                                        <b>Lender:</b> Prof Alan<br>
+                                                        <b>Lender:</b> {{loan.custFirstName}} {{loan.custLastName}}<br>
                                                         <b>Date of Acceptance:</b> 11th November 2019                                                        <br>
                                                         <b>Expected Loan Completion Date:</b> 11th August 2020<br>
                                                     </div>
@@ -291,19 +291,19 @@
                                             <div class="modal-body">
                                                 <div class="row">
                                                     <div class=col-2><img src="../../assets/images/timthumb.png" style="width:inherit"></div>
-                                                    <div class=col><b>Lender:</b> Timothy Soh<br>
+                                                    <div class=col><b>Lender:</b> {{loan.custFirstName}} {{loan.custLastName}}<br>
                                                         <b>Date of Acceptance:</b> 11th November 2019<br>
                                                         <b>Date of Default:</b> 11th August 2020<br>
                                                     </div>
                                                 </div>
                                                 <hr>
-                                                <b>Amount Requested:</b> $50,400<br>
-                                                <b>Interest rate:</b> 8%<br>
-                                                <b>Monthly Amoritisation:</b> $50.02<br>
+                                                <b>Amount Requested:</b> ${{loan.amount}}<br>
+                                                <b>Interest rate:</b> ${{loan.interestRate}}%<br>
+                                                <b>Monthly Amoritisation:</b> $${{(loan.amount/loan.duration/12).toFixed(2)}}<br>
                                                 <b>Late Fee Penalty:</b> $5 per day<br>
                                                 <b>Total Loan Amount Paid (including interest): </b>$28,190<br>
                                                 <b>Reason for Default:</b>
-                                                My wife sued me because I am not buying her a prada bag<br>
+                                                Ran out of savings from not working<br>
                                                 <hr>
                                                 <b>Category of loan:</b> {{loan.loanCategory}}<br>
                                                 <b>Purpose of loan:</b> {{loan.loanDescription}}
