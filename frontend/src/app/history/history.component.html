@@ -40,7 +40,7 @@
                                     <div class="card-body">
                                     <div *ngFor="let loan of borrowerPendingLoanList; let i = index" class="col">
                                         <b>Loan Name:</b> {{loan.loanCategory}}<br> 
-                                        <b>Amount Requested:</b> {{loan.amount}}<br>
+                                        <b>Amount Requested:</b> ${{loan.amount}}<br>
                                         <b>Interest rate:</b> {{loan.interestRate}}%<br>
                                         <b>Monthly Payment:</b> ${{loan.amount/loan.duration/12}}
                                          <a href="#" class="btn btn-outline-info float-right" data-toggle="modal" data-target="#pending_1">View More Information</a>
@@ -61,7 +61,7 @@
                                             <div *ngFor="let loan of borrowerPendingLoanList; let i = index" class="col" class="modal-body">
                                                                                             
                                                 <b>Loan Name:</b> {{loan.loanCategory}}<br>
-                                                <b>Amount Requested: </b> {{loan.amount}}<br>
+                                                <b>Amount Requested: </b> ${{loan.amount}}<br>
                                                 <b>Interest rate:</b> {{loan.interestRate}}%<br>
                                                 <b>Monthly Payment:</b> ${{loan.amount/loan.duration/12}}<br>
                                                 <b>Late Fee Penalty:</b> $3 per day<br>
@@ -79,7 +79,6 @@
                                 </div>
                                 <!--End of modal-->
 
-                            
                             </div>
                         </div>
 
@@ -104,7 +103,7 @@
                         <!--end-->
                         <!-- 2 rows of Card content-->
                         <div *ngIf="isBorrower" class="row">
-                            <div class="card" style="width: 100%; margin: 10px;">
+                            <div *ngFor="let loan of borrowerActiveLoanList; let i = index" class="card" style="width: 100%; margin: 10px;">
 
                                 <div class="card-header">
                                     <b>Active Loans</b>
@@ -113,9 +112,9 @@
 
                                 <div class="card" style="margin: 10px;">
                                     <div class="card-body">
-                                    <div *ngFor="let loan of borrowerActiveLoanList; let i = index" class="col">
+                                    <div  class="col">
                                         <b>Loan Name:</b> {{loan.loanCategory}}<br> 
-                                        <b>Amount Requested:</b> {{loan.amount}}<br>
+                                        <b>Amount Requested:</b> ${{loan.amount}}<br>
                                         <b>Interest rate:</b> {{loan.interestRate}}%<br>
                                         <b>Monthly Payment:</b> ${{loan.amount/loan.duration/12}}
 
@@ -136,22 +135,20 @@
                                             <div class="modal-body">
                                                 <div class="row">
                                                     <div class=col-2><img src="../../assets/images/bangthumb.png" style="width:inherit"></div>
-                                                    <div *ngFor="let loan of borrowerActiveLoanList; let i = index" class=col>
-                                                        <b>Lender:</b> Truong Hai Bang<br>
+                                                    <div class=col>
+                                                        <b>Lender:</b> Prof Alan<br>
                                                         <b>Date of Acceptance:</b> 08th September 2017<br>
                                                         <b>Expected Loan Completion Date:</b> 17th August 2019<br>
                                                     </div>
                                                 </div>
                                                 <hr>
-                                                <b>Amount Requested:</b> {{loan.amount}}<br>
-                                                <b>Interest rate:</b> 8%<br>
-                                                <b>Monthly Amoritisation:</b> $50.02<br>
+                                                <b>Amount Requested:</b> ${{loan.amount}}<br>
+                                                <b>Interest rate:</b> {{loan.interestRate}}%<br>
+                                                <b>Monthly Amoritisation:</b> ${{loan.amount/loan.duration/12}}<br>
                                                 <b>Late Fee Penalty:</b> $5 per day<br>
                                                 <hr>
-                                                <b>Category of loan:</b>Car Loan<br>
-                                                <b>Purpose of loan:</b><br>
-                                                No image was attached<br>
-                                                I want a Ferrari but my mum don't want to give me any money<br>
+                                                <b>Category of loan:</b> {{loan.loanCategory}}<br>
+                                                <b>Purpose of loan:</b> {{loan.loanDescription}}
 
                                             </div>
                                             <div class="modal-footer">
@@ -214,7 +211,7 @@
                                                     </div>
                                                 </div>
                                                 <hr>
-                                                <b>Amount Loaned:</b> $800<br>
+                                                <b>Amount Loaned:</b> {{loan.amount}}<br>
                                                 <b>Interest rate:</b> 15%<br>
                                                 <b>Monthly Amoritisation:</b> $47.50<br>
                                                 <b>Late Fee Penalty:</b> $5 per day<br>
