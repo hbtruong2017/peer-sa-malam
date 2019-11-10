@@ -111,7 +111,9 @@ export class SplashComponent implements OnInit {
         window.sessionStorage.setItem("PIN", this.loginForm.get("pin").value)
         this.getCustomerDetails();
         this.getCustomerAccounts();
-        this.router.navigate(["/home"])
+        this.router.navigate(["/home"]).then(()=>{
+          window.location.reload(true);
+        })
       } else {
         console.log("Error")
       }      

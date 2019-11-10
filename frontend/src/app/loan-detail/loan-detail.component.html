@@ -83,7 +83,7 @@
               </ul>
             </div>
   
-            <button type="button" class="btn btn-primary">
+            <button type="button" class="btn btn-primary" routerLink="/request">
               <i class="fa fa-chevron-circle-up"></i>New loan request
             </button>
           </div>
@@ -220,7 +220,8 @@
                         <div class="row col-12">
                             <div class="modal-interestrate">
                                 <strong>Annual interest rate</strong><br/>
-                                {{loanInfo.interestRate}}                            </div>
+                                {{loanInfo.interestRate}}%                            
+                              </div>
                         </div>
                         
                         <div class="row col-12">
@@ -258,7 +259,7 @@
                                         </div>
                                         <div class="row">
                                         <div class="loan-card__interestrate">
-                                             <i class="fa fa-search-dollar"></i>{{loan.interestRate}}%
+                                            <i class="fa fa-search-dollar"></i>{{loan.interestRate}}%
                                         </div>
                                         <div class="loan-card__loantenure">
                                             <i class="far fa-clock"></i>{{loan.duration}} years
@@ -283,6 +284,18 @@
     </div><br/>
     <!-- LOAN DETAILS & SIDEBAR -->
   
+  <!-- TBANK BANNER -->
+  <div class="banner">
+      <div class="container">
+        <a href=""></a>
+          <!-- <a href="http://tbankonline.com" target="_blank" class="banner__body">
+              <div class="banner__image" style="background-image: url('../../assets/images/tbankbanner.jpg')"></div>
+          </a> -->
+          <img src="../../assets/images/tbankbanner.jpg" width="100%" (click)="gotoTbank()">
+      </div>1
+  </div>
+  <!-- TBANK BANNER --><br/>
+
     <!-- FOOTER -->
     <footer class="footer">
       <div class="container">

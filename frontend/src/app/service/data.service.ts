@@ -26,6 +26,14 @@ export class DataService {
     return this.httpClient.post(environment.GET_CUSTOMER_ACCOUNTS + header, '');
   }
 
+  addBeneficiary(header: string, content: string) {
+    return this.httpClient.post(environment.ADD_BENEFICIARY_URL + header + "&Content=" + content, '');
+  }
+
+  transferAmount(header: string, content: string) {
+    return this.httpClient.post(environment.CREDIT_TRANSFER_URL + header + "&Content=" + content, ''); 
+  }
+
   // added for the new APIs
   getCustomerDetailsFromServer(id: number) {
     return this.httpClient.get(environment.GET_CUSTOMER_URL + id);
@@ -71,6 +79,10 @@ export class DataService {
 
   postSubmitLoan(req: any) {
     return this.httpClient.post(environment.SUBMIT_LOAN_URL, req);
+  }
+
+  setLoanStatus(req: any) {
+    return this.httpClient.post(environment.SET_LOAN_URL, req);
   }
 
   // get will be similar to the post as well 
