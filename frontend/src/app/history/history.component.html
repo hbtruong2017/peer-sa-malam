@@ -39,10 +39,10 @@
                                 <div class="card" style="margin: 10px;">
                                     <div class="card-body">
                                     <div *ngFor="let loan of borrowerPendingLoanList; let i = index" class="col">
-                                        <b>Loan Name:</b> 18th September 2019<br> 
+                                        <b>Loan Name:</b> {{loan.loanCategory}}<br> 
                                         <b>Amount Requested:</b> {{loan.amount}}<br>
                                         <b>Interest rate:</b> {{loan.interestRate}}%<br>
-                                        <b>Monthly Payment:</b> ${{loan.duration}}
+                                        <b>Monthly Payment:</b> ${{loan.amount/loan.duration/12}}
                                          <a href="#" class="btn btn-outline-info float-right" data-toggle="modal" data-target="#pending_1">View More Information</a>
                                     </div>
                                     </div>
@@ -58,20 +58,19 @@
                                                     <span aria-hidden="true">&times;</span>
                                                 </button>
                                             </div>
-                                            <div class="modal-body">
+                                            <div *ngFor="let loan of borrowerPendingLoanList; let i = index" class="col" class="modal-body">
                                             
                                                 
-                                                <b>Date of Request:</b> 18th September 2019<br>
-                                                <b>Amount Requested: </b>$500<br>
-                                                <b>Interest rate:</b> 5%<br>
-                                                <b>Monthly Amoritisation:</b> $4.98<br>
+                                                <b>Loan Name:</b> {{loan.loanCategory}}<br>
+                                                <b>Amount Requested: </b> {{loan.amount}}<br>
+                                                <b>Interest rate:</b> {{loan.interestRate}}%<br>
+                                                <b>Monthly Payment:</b> ${{loan.amount/loan.duration/12}}<br>
                                                 <b>Late Fee Penalty:</b> $3 per day<br>
                                                 <hr>  
-                                                <b>Category of loan:</b> Housing Loan<br>
-                                                <b>Purpose of loan:</b><br>
-                                                No image was attached<br>
-                                                My mum kicked me out<br>
+                                                <b>Category of loan:</b> {{loan.loanCategory}}<br>
+                                                <b>Purpose of loan:</b> {{loan.loanDescription}}
 
+                                            
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
@@ -449,15 +448,7 @@
                                         </div>
                                         </div>
                                     </div>
-                                    <!-- <div class="card-body">
-                                        <b>Date of Loan:</b> 18th May 2005<br>
-                                        <b>Amount Borrowed:</b> $800<br>
-                                        <b>Date of full payment:</b> 19th August 2007<br>
-                                        <b>Amount Paid (including interest):</b> $1,043.68<br>
-
-
-                                      <a href="#" class="btn btn-outline-info float-right" data-toggle="modal" data-target="#completed_b_1">View More Information</a>
-                                    </div> -->
+                                    
 
 
                                 </div>
