@@ -444,12 +444,15 @@
                                             <b>Amount Requested:</b> {{loan.amount}}<br>
                                             <b>Interest rate:</b> {{loan.interestRate}}%<br>
                                             <b>Monthly Payment:</b> ${{loan.duration}}
-                                             <a href="#" class="btn btn-outline-info float-right" data-toggle="modal" data-target="#pending_1">View More Information</a>
+                                             <a href="#" class="btn btn-outline-info float-right" data-toggle="modal" data-target="#completed_b_1">View More Information</a>
                                         </div>
                                         </div>
                                     </div>
+<<<<<<< HEAD
                                     
 
+=======
+>>>>>>> f70b2668f486af5b2eb820ec615f719063b95fe8
 
                                 </div>
                                 <!-- Modal : default_b_1 -->
@@ -462,10 +465,10 @@
                                                     <span aria-hidden="true">&times;</span>
                                                 </button>
                                             </div>
-                                            <div class="modal-body">
+                                            <div *ngFor="let loan of borrowerCompleteLoanList; let i = index" class="modal-body">
                                                 <div class="row">
                                                     <div class=col-2><img src="../../assets/images/timthumb.png" style="width:inherit"></div>
-                                                    <div class=col><b>Lender:</b> Timothy Soh<br>
+                                                    <div class=col><b>Lender:</b> {{loan.loanCategory}}<br>
                                                         <b>Date of Acceptance:</b> 18th May 2005<br>
                                                         <b>Date of Completion:</b> 17th August 2007<br>
                                                     </div>
