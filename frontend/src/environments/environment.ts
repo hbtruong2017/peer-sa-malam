@@ -20,7 +20,13 @@ export const environment = {
   // Borrower's pending loans
   GET_BORROWER_PENDING_LOANS_URL: SERVER_URL + "/getBorrowerLoans/pending-",
 
-   // Borrower's pending loans
+  // Borrower's active loans
+  GET_BORROWER_ACTIVE_LOANS_URL: SERVER_URL + "/getBorrowerLoans/active-",
+
+  // Borrower's defaulted loans
+  GET_BORROWER_DEFAULTED_LOANS_URL: SERVER_URL + "/getBorrowerLoans/defaulted-",
+
+   // Borrower's complete loans
    GET_BORROWER_COMPLETE_LOANS_URL: SERVER_URL + "/getBorrowerLoans/complete-",
 
   // Loan details page

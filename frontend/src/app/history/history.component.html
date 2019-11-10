@@ -59,8 +59,7 @@
                                                 </button>
                                             </div>
                                             <div *ngFor="let loan of borrowerPendingLoanList; let i = index" class="col" class="modal-body">
-                                            
-                                                
+                                                                                            
                                                 <b>Loan Name:</b> {{loan.loanCategory}}<br>
                                                 <b>Amount Requested: </b> {{loan.amount}}<br>
                                                 <b>Interest rate:</b> {{loan.interestRate}}%<br>
@@ -69,7 +68,6 @@
                                                 <hr>  
                                                 <b>Category of loan:</b> {{loan.loanCategory}}<br>
                                                 <b>Purpose of loan:</b> {{loan.loanDescription}}
-
                                             
                                             </div>
                                             <div class="modal-footer">
@@ -115,13 +113,15 @@
 
                                 <div class="card" style="margin: 10px;">
                                     <div class="card-body">
-                                        <b>Date of Acceptance:</b> 08th September 2017<br>
-                                        <b>Amount Requested:</b> $50,400<br>
-                                        <b>Interest rate:</b> 8%<br>
-                                        <b>Monthly Amoritisation:</b> $50.02
+                                    <div *ngFor="let loan of borrowerActiveLoanList; let i = index" class="col">
+                                        <b>Loan Name:</b> {{loan.loanCategory}}<br> 
+                                        <b>Amount Requested:</b> {{loan.amount}}<br>
+                                        <b>Interest rate:</b> {{loan.interestRate}}%<br>
+                                        <b>Monthly Payment:</b> ${{loan.amount/loan.duration/12}}
 
                                         <a href="#" class="btn btn-outline-info float-right" data-toggle="modal" data-target="#active_b_1">View More Information</a>
                                     </div>
+                                </div>
                                 </div>
                                 <!-- Modal : active_b_1 -->
                                 <div class="modal fade" id="active_b_1" tabindex="-1" role="dialog" aria-labelledby="active_b_1" aria-hidden="true">
@@ -136,13 +136,14 @@
                                             <div class="modal-body">
                                                 <div class="row">
                                                     <div class=col-2><img src="../../assets/images/bangthumb.png" style="width:inherit"></div>
-                                                    <div class=col><b>Lender:</b> Truong Hai Bang<br>
+                                                    <div *ngFor="let loan of borrowerActiveLoanList; let i = index" class=col>
+                                                        <b>Lender:</b> Truong Hai Bang<br>
                                                         <b>Date of Acceptance:</b> 08th September 2017<br>
                                                         <b>Expected Loan Completion Date:</b> 17th August 2019<br>
                                                     </div>
                                                 </div>
                                                 <hr>
-                                                <b>Amount Requested:</b> $50,400<br>
+                                                <b>Amount Requested:</b> {{loan.amount}}<br>
                                                 <b>Interest rate:</b> 8%<br>
                                                 <b>Monthly Amoritisation:</b> $50.02<br>
                                                 <b>Late Fee Penalty:</b> $5 per day<br>
@@ -165,12 +166,7 @@
 
                                 <div class="card" style="margin: 10px;">
                                     <div class="card-body">
-                                        <b>Date of Request:</b> 08th September 2017<br>
-                                        <b>Amount Requested:</b> $50,400<br>
-                                        <b>Interest rate:</b> 8%<br>
-                                        <b>Monthly Amoritisation:</b> $50.02<br>
-
-                                        <a href="#" class="btn btn-outline-info float-right">View More Information</a>
+     
                                     </div>
                                 </div>
                                 <div class="card-footer text-muted">
@@ -195,8 +191,6 @@
                                         <b>Interest rate:</b> 15%<br>
                                         <b>Monthly Amoritisation:</b> $47.50<br>
                                         <b>Paid for August 2019:</b> Yes/No<br>
-
-
 
                                         <a href="#" class="btn btn-outline-info float-right" data-toggle="modal" data-target="#active_l_1">View More Information</a>
                                     </div>

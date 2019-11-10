@@ -45,6 +45,16 @@ export class DataService {
     return this.httpClient.get(environment.GET_BORROWER_PENDING_LOANS_URL + id)
   }
 
+  // Borrower's active loans
+  getBorrowerActiveLoans(id: number) {
+    return this.httpClient.get(environment.GET_BORROWER_ACTIVE_LOANS_URL + id)
+  }
+
+  // Borrower's defaulted loans
+  getBorrowerDefaultedLoans(id: number) {
+    return this.httpClient.get(environment.GET_BORROWER_DEFAULTED_LOANS_URL + id)
+  }
+
   // Borrower's Complete loans
   getBorrowerCompleteLoans(id: number) {
     return this.httpClient.get(environment.GET_BORROWER_COMPLETE_LOANS_URL + id)
