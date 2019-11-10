@@ -5,9 +5,7 @@
             <div class="col-md-2">
                 <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                     <a class="nav-link active" id="pending-tab" data-toggle="pill" href="#pending" role="tab" aria-controls="pending" aria-selected="true">Pending</a>
-
                     <a class="nav-link" id="active-tab" data-toggle="pill" href="#active" role="tab" aria-controls="active" aria-selected="false">Active</a>
-
                     <a class="nav-link" id="defaulted-tab" data-toggle="pill" href="#defaulted" role="tab" aria-controls="defaulted" aria-selected="false">Defaulted</a>
                     <a class="nav-link" id="completed-tab" data-toggle="pill" href="#completed" role="tab" aria-controls="completed" aria-selected="false">Completed</a>
                 </div>
@@ -161,11 +159,6 @@
                                 </div>
                                 <!--End of modal-->
 
-                                <div class="card" style="margin: 10px;">
-                                    <div class="card-body">
-     
-                                    </div>
-                                </div>
                                 <div class="card-footer text-muted">
                                     <div class="float-left">Total Pay Out on August 2019: </div>
                                     <div class="float-right" style="margin-right:80px;"><b>$93.52</b></div>
@@ -175,7 +168,7 @@
 
                         </div>
                         <div *ngIf="!isBorrower" class="row">
-                            <div class="card" style="width: 100%; margin: 10px;">
+                            <div *ngFor="let loan of borrowerActiveLoanList; let i = index" class="card" style="width: 100%; margin: 10px;">
 
                                 <div class="card-header">
                                     <b>Active Loans</b>
@@ -184,7 +177,7 @@
 
                                 <div class="card" style="margin: 10px;">
                                     <div class="card-body">
-                                       <b>Amount Loaned:</b> $800<br>
+                                       <b>Amount Loaned:</b> ${{loan.amount}}<br>
                                         <b>Interest rate:</b> 15%<br>
                                         <b>Monthly Amoritisation:</b> $47.50<br>
                                         <b>Paid for August 2019:</b> Yes/No<br>
@@ -250,10 +243,6 @@
                         </div>
                         <!--end-->
 
-
-
-
-
                     </div>
                     <div class="tab-pane fade" id="defaulted" role="tabpanel" aria-labelledby="defaulted-tab">
 
@@ -271,7 +260,7 @@
                         <!--end-->
                         <!-- 2 rows of Card content-->
                         <div class="row" *ngIf="isBorrower">
-                            <div class="card" style="width: 100%; margin: 10px;">
+                            <div *ngFor="let loan of borrowerDefaultedLoanList; let i = index" class="card" style="width: 100%; margin: 10px;">
 
                                 <div class="card-header">
                                     <b>Loans You Have Defaulted On</b>
@@ -281,8 +270,8 @@
                                 <div class="card" style="margin: 10px;">
                                     <div class="card-body">
                                         <b>Date of Default: </b>19th January 2019<br>
-                                        <b>Amount Borrowed:</b> $800<br>
-                                        <b>Amount Paid Before Default (including interest):</b> $156.32<br>
+                                        <b>Amount Borrowed:</b> ${{loan.amount}}<br>
+                                        <b>Amount Paid Before Default (including interest):</b> ${{loan.amount/loan.duration/12}}<br>
                                         <b>Amount Unpaid:</b> $643.68<br>
 
 
@@ -313,14 +302,11 @@
                                                 <b>Monthly Amoritisation:</b> $50.02<br>
                                                 <b>Late Fee Penalty:</b> $5 per day<br>
                                                 <b>Total Loan Amount Paid (including interest): </b>$28,190<br>
-                                                <b>Reason for Default:</b><br>
+                                                <b>Reason for Default:</b>
                                                 My wife sued me because I am not buying her a prada bag<br>
                                                 <hr>
-                                                <b>Category of loan:</b>Car Loan<br>
-                                                <b>Purpose of loan:</b><br>
-                                                No image was attached<br>
-                                                I want a Ferrari but my mum don't want to give me any money<br>
-                                                
+                                                <b>Category of loan:</b> {{loan.loanCategory}}<br>
+                                                <b>Purpose of loan:</b> {{loan.loanDescription}}
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
@@ -384,9 +370,8 @@
                                                 No image was attached<br>
                                                 I want a Ferrari but my mum don't want to give me any money<br>
                                                 <hr>
-                                                <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d63819.65445324532!2d103.76639235937499!3d1.3392685594354337!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e3!4m5!1s0x31da11c07469f947%3A0x70ee0caef9b52341!2sSingapore%20680002!3m2!1d1.3819949999999999!2d103.75186599999999!4m5!1s0x31da19a38341d719%3A0xfe9bafb35b312b00!2sSingapore%20Management%20University%2C%2081%20Victoria%20St%2C%20Singapore%20188065!3m2!1d1.2962726999999998!2d103.85015779999999!5e0!3m2!1sen!2ssg!4v1572068583142!5m2!1sen!2ssg" width="450" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
                                                 
-                                                
+                                                <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d127638.29499780557!2d103.74083467327036!3d1.358596735242859!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e3!4m5!1s0x31da19a38341d719%3A0xfe9bafb35b312b00!2sSingapore%20Management%20University%2C%2081%20Victoria%20St%2C%20Singapore%20188065!3m2!1d1.2962726999999998!2d103.85015779999999!4m5!1s0x31da13e9f41e55f1%3A0xff703221d20b0f6c!2sMandai%20Zoo%2C%20Singapore!3m2!1d1.4043907999999998!2d103.7930452!5e0!3m2!1sen!2ssg!4v1573388167021!5m2!1sen!2ssg" width="450" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
