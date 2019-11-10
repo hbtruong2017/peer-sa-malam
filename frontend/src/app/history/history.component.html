@@ -40,7 +40,7 @@
                                         <b>Loan Name:</b> {{loan.loanCategory}}<br> 
                                         <b>Amount Requested:</b> ${{loan.amount}}<br>
                                         <b>Interest rate:</b> {{loan.interestRate}}%<br>
-                                        <b>Monthly Payment:</b> ${{loan.amount/loan.duration/12}}
+                                        <b>Monthly Payment:</b> ${{(loan.amount/loan.duration/12).toFixed(2)}}
                                          <a href="#" class="btn btn-outline-info float-right" data-toggle="modal" data-target="#pending_1">View More Information</a>
                                     </div>
                                     </div>
@@ -61,7 +61,7 @@
                                                 <b>Loan Name:</b> {{loan.loanCategory}}<br>
                                                 <b>Amount Requested: </b> ${{loan.amount}}<br>
                                                 <b>Interest rate:</b> {{loan.interestRate}}%<br>
-                                                <b>Monthly Payment:</b> ${{loan.amount/loan.duration/12}}<br>
+                                                <b>Monthly Payment:</b> ${{(loan.amount/loan.duration/12).toFixed(2)}}<br>
                                                 <b>Late Fee Penalty:</b> $3 per day<br>
                                                 <hr>  
                                                 <b>Category of loan:</b> {{loan.loanCategory}}<br>
@@ -114,7 +114,7 @@
                                         <b>Loan Name:</b> {{loan.loanCategory}}<br> 
                                         <b>Amount Requested:</b> ${{loan.amount}}<br>
                                         <b>Interest rate:</b> {{loan.interestRate}}%<br>
-                                        <b>Monthly Payment:</b> ${{loan.amount/loan.duration/12}}
+                                        <b>Monthly Payment:</b> ${{(loan.amount/loan.duration/12).toFixed(2)}}
 
                                         <a href="#" class="btn btn-outline-info float-right" data-toggle="modal" data-target="#active_b_1">View More Information</a>
                                     </div>
@@ -135,14 +135,14 @@
                                                     <div class=col-2><img src="../../assets/images/bangthumb.png" style="width:inherit"></div>
                                                     <div class=col>
                                                         <b>Lender:</b> Prof Alan<br>
-                                                        <b>Date of Acceptance:</b> 08th September 2017<br>
-                                                        <b>Expected Loan Completion Date:</b> 17th August 2019<br>
+                                                        <b>Date of Acceptance:</b> 11th November 2019                                                        <br>
+                                                        <b>Expected Loan Completion Date:</b> 11th August 2020<br>
                                                     </div>
                                                 </div>
                                                 <hr>
                                                 <b>Amount Requested:</b> ${{loan.amount}}<br>
                                                 <b>Interest rate:</b> {{loan.interestRate}}%<br>
-                                                <b>Monthly Amoritisation:</b> ${{loan.amount/loan.duration/12}}<br>
+                                                <b>Monthly Amoritisation:</b> ${{(loan.amount/loan.duration/12).toFixed(2)}}<br>
                                                 <b>Late Fee Penalty:</b> $5 per day<br>
                                                 <hr>
                                                 <b>Category of loan:</b> {{loan.loanCategory}}<br>
@@ -199,8 +199,8 @@
                                                 <div class="row">
                                                     <div class=col-2><img src="../../assets/images/bangthumb.png" style="width:inherit"></div>
                                                     <div class=col><b>Borrower:</b> Truong Hai Bang<br>
-                                                        <b>Date of Acceptance:</b> 08th September 2017<br>
-                                                        <b>Expected Loan Completion Date:</b> 20th April 2017<br>
+                                                        <b>Date of Acceptance:</b> 11th November 2019<br>
+                                                        <b>Expected Loan Completion Date:</b> 11th April 2020<br>
                                                     </div>
                                                 </div>
                                                 <hr>
@@ -269,9 +269,9 @@
 
                                 <div class="card" style="margin: 10px;">
                                     <div class="card-body">
-                                        <b>Date of Default: </b>19th January 2019<br>
+                                        <b>Date of Default: </b>19th January 2020<br>
                                         <b>Amount Borrowed:</b> ${{loan.amount}}<br>
-                                        <b>Amount Paid Before Default (including interest):</b> ${{loan.amount/loan.duration/12}}<br>
+                                        <b>Amount Paid Before Default (including interest):</b> ${{(loan.amount/loan.duration/12).toFixed(2)}}<br>
                                         <b>Amount Unpaid:</b> $643.68<br>
 
 
@@ -292,8 +292,8 @@
                                                 <div class="row">
                                                     <div class=col-2><img src="../../assets/images/timthumb.png" style="width:inherit"></div>
                                                     <div class=col><b>Lender:</b> Timothy Soh<br>
-                                                        <b>Date of Acceptance:</b> 08th September 2017<br>
-                                                        <b>Date of Default:</b> 17th August 2019<br>
+                                                        <b>Date of Acceptance:</b> 11th November 2019<br>
+                                                        <b>Date of Default:</b> 11th August 2020<br>
                                                     </div>
                                                 </div>
                                                 <hr>
@@ -329,7 +329,7 @@
 
                                 <div class="card" style="margin: 10px;">
                                     <div class="card-body">
-                                        <b>Date of Default:</b> 17th January 2018<br>
+                                        <b>Date of Default:</b> 17th January 2020<br>
                                         <b>Amount Loaned:</b> $73<br>
                                         <b>Amount Earned Before Default (including interest):</b> $68.32<br>
                                         <b>Amount Unpaid:</b> $4.68<br>
@@ -352,8 +352,8 @@
                                                 <div class="row">
                                                     <div class=col-2><img src="../../assets/images/timthumb.png" style="width:inherit"></div>
                                                     <div class=col><b>Borrower:</b> Timothy Soh<br>
-                                                        <b>Date of Acceptance:</b> 08th September 2017<br>
-                                                        <b>Date of Default:</b> 17th August 2019<br>
+                                                        <b>Date of Acceptance:</b> 11th November 2019<br>
+                                                        <b>Date of Default:</b> 11th August 2020<br>
                                                     </div>
                                                 </div>
                                                 <hr>
@@ -440,8 +440,8 @@
                                                 <div class="row">
                                                     <div class=col-2><img src="../../assets/images/timthumb.png" style="width:inherit"></div>
                                                     <div class=col><b>Lender:</b> {{loan.loanCategory}}<br>
-                                                        <b>Date of Acceptance:</b> 18th May 2005<br>
-                                                        <b>Date of Completion:</b> 17th August 2007<br>
+                                                        <b>Date of Acceptance:</b> 11th November 2019<br>
+                                                        <b>Date of Completion:</b> 11th August 2020<br>
                                                     </div>
                                                 </div>
                                                 <hr>
@@ -482,9 +482,9 @@
 
                                 <div class="card" style="margin: 10px;">
                                     <div class="card-body">
-                                        <b>Date of Loan:</b> 18th June 2001<br>
+                                        <b>Date of Loan:</b> 11th November 2019<br>
                                         <b>Amount Borrowed:</b> $20,500<br>
-                                        <b>Date of full payment:</b> 19th August 2017<br>
+                                        <b>Date of full payment:</b> 11th August 2020<br>
                                         <b>Amount Earned (including interest):</b> $30,443.68<br>
 
 
@@ -505,8 +505,8 @@
                                                 <div class="row">
                                                     <div class=col-2><img src="../../assets/images/timthumb.png" style="width:inherit"></div>
                                                     <div class=col><b>Borrower:</b> Timothy Soh<br>
-                                                        <b>Date of Acceptance:</b> 18th May 2005<br>
-                                                        <b>Date of Completion:</b> 17th August 2007<br>
+                                                        <b>Date of Acceptance:</b> 11th November 2019<br>
+                                                        <b>Date of Completion:</b> 11th August 2020<br>
                                                     </div>
                                                 </div>
                                                 <hr>
