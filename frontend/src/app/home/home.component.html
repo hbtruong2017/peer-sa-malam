@@ -103,158 +103,38 @@
         <div class="col-9">
           <!-- ROW #1 OF LOANS -->
           <div class="row">
-            <div class="col-md-3">
+            <div *ngFor="let loan of pendingLoanList; let i = index" class="col-md-3">
               <div class="loans-carousel__cell">
                 <div class="loan-card ">
                   <div class="loan-card__badges-list">
-                    <div class="loan-card__badge loan-card__badge--studyloan">
-                      Study loan
+                    <div class="loan-card__badge loan-card__badge--{{loan.loanCategory.toLowerCase().split(' ').join('')}}">
+                      {{loan.loanCategory}}  
                     </div>
                   </div>
                   <div class="loan-card__image">
                     <a href="loandetails.html"
-                      ><img src="../../assets/images/thumbnail.jpg" alt=""
+                      ><img src="{{loan.imgLink}}" alt=""
                     /></a>
                   </div>
                   <div class="loan-card__info">
                     <div class="loan-card__loanamount">
-                      $5,800.00
+                      ${{loan.amount}}
                     </div>
                     <div class="row">
                       <div class="loan-card__interestrate">
-                        <i class="fa fa-search-dollar"></i>2.50%
+                        <i class="fa fa-search-dollar"></i>{{loan.interestRate}}%
                       </div>
                       <div class="loan-card__loantenure">
-                        <i class="far fa-clock"></i>3 years
+                        <i class="far fa-clock"></i>{{loan.duration}} years
                       </div>
                     </div>
                     <div class="loan-card__loantitle">
-                      One semester of SMU 2019 tuition fees
+                      {{loan.loanDescription}}
                     </div>
                   </div>
                   <div class="loan-card__actions">
                     <div class="loan-card__buttons">
-                      <button class="btn btn-primary" type="button">
-                        Invest
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-3">
-              <div class="loans-carousel__cell">
-                <div class="loan-card ">
-                  <div class="loan-card__badges-list">
-                    <div class="loan-card__badge loan-card__badge--carloan">
-                      Car loan
-                    </div>
-                  </div>
-                  <div class="loan-card__image">
-                    <a href="loandetails.html"
-                      ><img src="../../assets/images/thumbnail.jpg" alt=""
-                    /></a>
-                  </div>
-                  <div class="loan-card__info">
-                    <div class="loan-card__loanamount">
-                      $23,500.00
-                    </div>
-                    <div class="row">
-                      <div class="loan-card__interestrate">
-                        <i class="fa fa-search-dollar"></i>3.20%
-                      </div>
-                      <div class="loan-card__loantenure">
-                        <i class="far fa-clock"></i>5 years
-                      </div>
-                    </div>
-                    <div class="loan-card__loantitle">
-                      Second-hand Toyota Prius
-                    </div>
-                  </div>
-                  <div class="loan-card__actions">
-                    <div class="loan-card__buttons">
-                      <button class="btn btn-primary" type="button">
-                        Invest
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-3">
-              <div class="loans-carousel__cell">
-                <div class="loan-card ">
-                  <div class="loan-card__badges-list">
-                    <div class="loan-card__badge loan-card__badge--studyloan">
-                      Study loan
-                    </div>
-                  </div>
-                  <div class="loan-card__image">
-                    <a href="loandetails.html"
-                      ><img src="../../assets/images/thumbnail.jpg" alt=""
-                    /></a>
-                  </div>
-                  <div class="loan-card__info">
-                    <div class="loan-card__loanamount">
-                      $4,500.00
-                    </div>
-                    <div class="row">
-                      <div class="loan-card__interestrate">
-                        <i class="fa fa-search-dollar"></i>2.30%
-                      </div>
-                      <div class="loan-card__loantenure">
-                        <i class="far fa-clock"></i>1 year
-                      </div>
-                    </div>
-                    <div class="loan-card__loantitle">
-                      One semester of NTU 2019 tuition fees
-                    </div>
-                  </div>
-                  <div class="loan-card__actions">
-                    <div class="loan-card__buttons">
-                      <button class="btn btn-primary" type="button">
-                        Invest
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-3">
-              <div class="loans-carousel__cell">
-                <div class="loan-card ">
-                  <div class="loan-card__badges-list">
-                    <div class="loan-card__badge loan-card__badge--SMEloan">
-                      SME loan
-                    </div>
-                  </div>
-                  <div class="loan-card__image">
-                    <a href="loandetails.html"
-                      ><img src="../../assets/images/thumbnail.jpg" alt=""
-                    /></a>
-                  </div>
-                  <div class="loan-card__info">
-                    <div class="loan-card__loanamount">
-                      $35,300.00
-                    </div>
-                    <div class="row">
-                      <div class="loan-card__interestrate">
-                        <i class="fa fa-search-dollar"></i>3.50%
-                      </div>
-                      <div class="loan-card__loantenure">
-                        <i class="far fa-clock"></i>6 years
-                      </div>
-                    </div>
-                    <div class="loan-card__loantitle">
-                      To purchase kitchen equipment for new cafe
-                    </div>
-                  </div>
-                  <div class="loan-card__actions">
-                    <div class="loan-card__buttons">
-                      <button class="btn btn-primary" type="button">
+                      <button class="btn btn-primary" type="button" (click)=goToLoan(loan.id)>
                         Invest
                       </button>
                     </div>
@@ -264,171 +144,7 @@
             </div>
           </div>
           <!-- ROW #1 OF LOANS --><br />
-
-          <!-- ROW #2 OF LOANS -->
-          <div class="row">
-            <div class="col-md-3">
-              <div class="loans-carousel__cell">
-                <div class="loan-card ">
-                  <div class="loan-card__badges-list">
-                    <div class="loan-card__badge loan-card__badge--carloan">
-                      Car loan
-                    </div>
-                  </div>
-                  <div class="loan-card__image">
-                    <a href="loandetails.html"
-                      ><img src="../../assets/images/thumbnail.jpg" alt=""
-                    /></a>
-                  </div>
-                  <div class="loan-card__info">
-                    <div class="loan-card__loanamount">
-                      $31,800.00
-                    </div>
-                    <div class="row">
-                      <div class="loan-card__interestrate">
-                        <i class="fa fa-search-dollar"></i>3.75%
-                      </div>
-                      <div class="loan-card__loantenure">
-                        <i class="far fa-clock"></i>3 years
-                      </div>
-                    </div>
-                    <div class="loan-card__loantitle">
-                      Partial payment of new Audi A4 car
-                    </div>
-                  </div>
-                  <div class="loan-card__actions">
-                    <div class="loan-card__buttons">
-                      <button class="btn btn-primary" type="button">
-                        Invest
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-3">
-              <div class="loans-carousel__cell">
-                <div class="loan-card ">
-                  <div class="loan-card__badges-list">
-                    <div class="loan-card__badge loan-card__badge--studyloan">
-                      Study loan
-                    </div>
-                  </div>
-                  <div class="loan-card__image">
-                    <a href="loandetails.html"
-                      ><img src="../../assets/images/thumbnail.jpg" alt=""
-                    /></a>
-                  </div>
-                  <div class="loan-card__info">
-                    <div class="loan-card__loanamount">
-                      $4,300.00
-                    </div>
-                    <div class="row">
-                      <div class="loan-card__interestrate">
-                        <i class="fa fa-search-dollar"></i>2.50%
-                      </div>
-                      <div class="loan-card__loantenure">
-                        <i class="far fa-clock"></i>4 years
-                      </div>
-                    </div>
-                    <div class="loan-card__loantitle">
-                      One semester of NUS 2019 tuition fees
-                    </div>
-                  </div>
-                  <div class="loan-card__actions">
-                    <div class="loan-card__buttons">
-                      <button class="btn btn-primary" type="button">
-                        Invest
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-3">
-              <div class="loans-carousel__cell">
-                <div class="loan-card ">
-                  <div class="loan-card__badges-list">
-                    <div class="loan-card__badge loan-card__badge--SMEloan">
-                      SME loan
-                    </div>
-                  </div>
-                  <div class="loan-card__image">
-                    <a href="loandetails.html"
-                      ><img src="../../assets/images/thumbnail.jpg" alt=""
-                    /></a>
-                  </div>
-                  <div class="loan-card__info">
-                    <div class="loan-card__loanamount">
-                      $3,000.00
-                    </div>
-                    <div class="row">
-                      <div class="loan-card__interestrate">
-                        <i class="fa fa-search-dollar"></i>3.10%
-                      </div>
-                      <div class="loan-card__loantenure">
-                        <i class="far fa-clock"></i>2 years
-                      </div>
-                    </div>
-                    <div class="loan-card__loantitle">
-                      Minor renovations to restaurant
-                    </div>
-                  </div>
-                  <div class="loan-card__actions">
-                    <div class="loan-card__buttons">
-                      <button class="btn btn-primary" type="button">
-                        Invest
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-3">
-              <div class="loans-carousel__cell">
-                <div class="loan-card ">
-                  <div class="loan-card__badges-list">
-                    <div class="loan-card__badge loan-card__badge--SMEloan">
-                      SME loan
-                    </div>
-                  </div>
-                  <div class="loan-card__image">
-                    <a href="loandetails.html"
-                      ><img src="../../assets/images/thumbnail.jpg" alt=""
-                    /></a>
-                  </div>
-                  <div class="loan-card__info">
-                    <div class="loan-card__loanamount">
-                      $4,200.00
-                    </div>
-                    <div class="row">
-                      <div class="loan-card__interestrate">
-                        <i class="fa fa-search-dollar"></i>1.50%
-                      </div>
-                      <div class="loan-card__loantenure">
-                        <i class="far fa-clock"></i>3 years
-                      </div>
-                    </div>
-                    <div class="loan-card__loantitle">
-                      To fund advertising budget for new product
-                    </div>
-                  </div>
-                  <div class="loan-card__actions">
-                    <div class="loan-card__buttons">
-                      <button class="btn btn-primary" type="button">
-                        Invest
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- ROW #2 OF LOANS --><br />
-
+          
           <!-- VIEW MORE LOANS -->
           <div class="row justify-content-center">
             <button type="button" class="btn btn-primary">View more</button>
