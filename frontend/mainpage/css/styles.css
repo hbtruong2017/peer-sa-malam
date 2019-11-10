@@ -267,6 +267,11 @@ h6 {
   color: #fff;
 }
 
+.loan-card__badge--homeloan {
+  background: orange;
+  color: #fff;
+}
+
 /* FILTERS */
 .filter-value__slider {
   margin-top: 15px;
