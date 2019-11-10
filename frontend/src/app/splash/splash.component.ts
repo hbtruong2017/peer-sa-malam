@@ -135,6 +135,7 @@ export class SplashComponent implements OnInit {
       console.log(data);
       if (data.Content.ServiceResponse.ServiceRespHeader.GlobalErrorID == "010000") {
         window.sessionStorage.setItem("customerDetails", JSON.stringify(data.Content.ServiceResponse.CDMCustomer))
+        window.sessionStorage.setItem("name", data.Content.ServiceResponse.CDMCustomer.givenName + " " + data.Content.ServiceResponse.CDMCustomer.familyName)
       } else {
         console.log("Error")
       }

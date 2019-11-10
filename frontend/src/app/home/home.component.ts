@@ -10,24 +10,16 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
   pendingLoanList: any;
+  myName: string;
+  myBalance: any;
+  myAccountNo: any;
 
   constructor(private dataService: DataService, private router: Router) { }
 
   ngOnInit() {
-  //   "AllLoans": [
-  //     {
-  //         "id": 1,
-  //         "borrowerAccount": 777,
-  //         "loanerAccount": null,
-  //         "loanStatus": "pending",
-  //         "imgLink": "www.google.com",
-  //         "loanCategory": "Vehicle",
-  //         "loanDescription": "Buying a Ferrari",
-  //         "amount": 200,
-  //         "interestRate": 5.1,
-  //         "duration": 32
-  //     }
-  // ]
+    this.myName = window.sessionStorage.name;
+    this.myBalance = window.sessionStorage.balance;
+    this.myAccountNo = window.sessionStorage.accountID;
 
     this.dataService.getAllPendingLoans().subscribe((data:any) => {
       console.log(data)

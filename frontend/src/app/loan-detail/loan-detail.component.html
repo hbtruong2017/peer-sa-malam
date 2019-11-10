@@ -4,8 +4,8 @@
     <div class="container">
       <!-- NAVBAR LOGO -->
       <div class="col col-lg-2">
-        <a class="navbar-brand" href="#">
-          <strong>LOGO HERE</strong>
+        <a class="navbar-brand" routerLink="/home">
+            <img src="../../assets/images/peersarmalamlogo.png" width="100%" >
         </a>
       </div>
       <!-- NAVBAR LOGO -->
@@ -40,8 +40,8 @@
       <div class="col-md-auto">
         <div class="row">
           <div class="user_details my-auto">
-            <strong>Xavier Lur</strong><br />
-            <span style="color:#414141;">Account balance: $50,000</span>
+            <strong>{{myName}}</strong><br />
+            <span style="color:#414141;">${{myBalance}}</span>
           </div>
           <button
             class="navbar-toggler"
@@ -300,6 +300,23 @@
                 {{ loanInfo.duration }} years
               </div>
             </div>
+
+            <hr/><br/>
+                        
+                        <div class="row col-12">
+                            <div class="modal-accountnumber">
+                                <strong>Bank account no.</strong><br/>
+                                {{ myAccountNo }}
+                            </div>
+                        </div>
+                        
+                        <div class="row col-12">
+                            <div class="modal-accountbalance">
+                                <strong>Account balance</strong><br/>
+                                <span style="color:#642ab4"><strong>${{ myBalance }}
+                                  </strong></span>
+                            </div>
+                        </div>
           </div>
           <div class="modal-footer">
             <button
@@ -328,59 +345,24 @@
   aria-hidden="true"
 >
   <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Success</h5>
-        <button
-          type="button"
-          class="close"
-          data-dismiss="modal"
-          aria-label="Close"
-        >
-          <span aria-hidden="true">&times;</span>
-        </button>
+      <div class="modal-content">
+          <div class="modal-header" style="border-bottom:none;">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+              <div class="row col-12">
+                  <div class="col text-center">
+                      <h3>Payment Success!</h3><br/>
+                      <h2 style="color:#642ab4">${{loanAmount}}</h2>
+                      <p>has been deducted from your account</p><br/>
+                      <p>Remaining account balance: ${{balanceAfter}}</p><br/>
+                       <button type="button" class="btn btn-primary">Back to home</button>
+                  </div>
+              </div><br/>
+          </div>
       </div>
-      <div class="modal-body">
-        <div class="row col-12">
-          <div class="modal-loanitem">
-            <strong>Loan item</strong><br />
-            {{ loanInfo.loanDescription }}
-          </div>
-        </div>
-
-        <div class="row col-12">
-          <div class="modal-loanamount">
-            <strong>Loan amount</strong><br />
-            <span class="returns-text"
-              >${{ loanInfo.amount.toLocaleString() }}</span
-            >
-          </div>
-        </div>
-
-        <div class="row col-12">
-          <div class="modal-interestrate">
-            <strong>Annual interest rate</strong><br />
-            {{ loanInfo.interestRate }}%
-          </div>
-        </div>
-
-        <div class="row col-12">
-          <div class="modal-loanperiod">
-            <strong>Loan period</strong><br />
-            {{ loanInfo.duration }} years
-          </div>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button
-          type="button"
-          class="btn btn-primary"
-          data-dismiss="modal"
-        >
-          Confirm
-        </button>
-      </div>
-    </div>
   </div>
 </div>
 <!-- SUCCESS LOAN MODAL -->

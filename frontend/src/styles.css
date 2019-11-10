@@ -911,7 +911,7 @@ color: #686868;
   margin:0;
 }
 
-.modal-loanitem, .modal-loanamount, .modal-interestrate, .modal-loanperiod {
+.modal-loanitem, .modal-loanamount, .modal-interestrate, .modal-loanperiod, .modal-accountbalance, .modal-accountnumber {
   margin-bottom:20px;
 }
 

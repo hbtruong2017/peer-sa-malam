@@ -17,13 +17,21 @@ export class LoanDetailComponent implements OnInit {
   borrowerName: string;
   loanAmount: any;
   loanCategory: any;
+  balanceAfter: any;
+  myName: string;
+  myBalance: any;
+  myAccountNo: any;
 
+  
   constructor(private router: Router, private dataService: DataService, private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.route.queryParams.subscribe(params => {
       this.loanId = params['id']
     })
+    this.myName = window.sessionStorage.name;
+    this.myBalance = window.sessionStorage.balance;
+    this.myAccountNo = window.sessionStorage.accountID;
     this.dataService.getLoanInfoByLoanId(this.loanId).subscribe((data: any) => {
       this.loanInfo = data.loanInfo[0];
       this.loanAmount = this.loanInfo.amount;
@@ -92,6 +100,8 @@ export class LoanDetailComponent implements OnInit {
     });
 
     this.dataService.transferAmount(header, content).subscribe((data: any) => {
+      this.balanceAfter = data.Content.ServiceResponse.BalanceAfter._content_;
+      window.sessionStorage.setItem("balance", this.balanceAfter)
       this.updateLoanStatus();
     })
   }
@@ -100,7 +110,7 @@ export class LoanDetailComponent implements OnInit {
     let statusReq = {
       loanerAccount: window.sessionStorage.getItem("accountID"),
       loanId: this.loanId,
-      loanStatus: "complete"
+      loanStatus: "active"
     }
 
     this.dataService.setLoanStatus(statusReq).subscribe((data: any) => {

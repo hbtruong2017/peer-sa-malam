@@ -14,11 +14,18 @@ import { LocationStrategy } from '@angular/common';
 export class SubmitLoanComponent implements OnInit {
   loanForm: FormGroup;
   loanList: any;
+  myName: string;
+  myBalance: any;
+  myAccountNo: any;
 
   constructor(private formBuilder: FormBuilder, private router: Router, private dataService: DataService) { }
 
   ngOnInit() {
     var customerDetails = JSON.parse(window.sessionStorage.getItem("customerDetails"));
+    
+    this.myName = window.sessionStorage.name;
+    this.myBalance = window.sessionStorage.balance;
+    this.myAccountNo = window.sessionStorage.accountID;
 
     this.loanForm = this.formBuilder.group({
       firstname: [customerDetails.givenName, Validators.required],
@@ -86,7 +93,6 @@ export class SubmitLoanComponent implements OnInit {
 
     }, error => {
       console.log(error)
-
     })
   }
 
@@ -102,5 +108,9 @@ export class SubmitLoanComponent implements OnInit {
 
     $('#submitbutton').toggle('slow');
     $('#loadingbutton').toggle('slow');
+  }
+
+  gotoHome() {
+    this.router.navigate(["/home"]);
   }
 }
