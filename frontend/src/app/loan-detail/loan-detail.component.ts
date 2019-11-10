@@ -20,6 +20,7 @@ export class LoanDetailComponent implements OnInit {
     this.dataService.getLoanInfoByLoanId(this.loanId).subscribe((data: any) => {
       this.loanInfo = data.loanInfo[0];
       console.log(this.loanInfo)
+      
     })
   }
 

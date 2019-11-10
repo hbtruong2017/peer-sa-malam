@@ -210,28 +210,26 @@
                         <div class="row col-12">
                             <div class="modal-loanitem">
                                 <strong>Loan item</strong><br/>
-                                Second-hand Toyota Prius with 1.3L engine
-                            </div>
+                                {{loanInfo.loanDescription}}                            </div>
                         </div>
                         
                         <div class="row col-12">
                             <div class="modal-loanamount">
                                 <strong>Loan amount</strong><br/>
-                                <span class="returns-text">$23,500.00</span>
+                                <span class="returns-text">${{loanInfo.amount.toLocaleString()}}</span>
                             </div>
                         </div>
                         
                         <div class="row col-12">
                             <div class="modal-interestrate">
                                 <strong>Annual interest rate</strong><br/>
-                                3.20%
-                            </div>
+                                {{loanInfo.interestRate}}                            </div>
                         </div>
                         
                         <div class="row col-12">
                             <div class="modal-loanperiod">
                                 <strong>Loan period</strong><br/>
-                                5 years
+                                {{loanInfo.duration}} years
                             </div>
                         </div>
                     </div>
