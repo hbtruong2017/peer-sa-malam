@@ -94,13 +94,13 @@
     <!-- NAVBAR --><br /><br />
   
     <!-- LOAN DETAILS & SIDEBAR -->
-    <div class="container">
+    <div *ngIf="loanInfo" class="container">
         <div class="row">
             <div class="col-9">
                 <div class="loan">
                 <div class="row">
                     <div class="publisheddate align-self-center">
-                        <span>Posted 2 weeks ago in <a href="">Car Loan</a></span>
+                        <span>Posted 2 weeks ago in <a href="">{{loanInfo.loanCategory}}</a></span>
                     </div>
                     <div class="cta ml-auto">
                          <button class="btn btn-primary" data-toggle="modal" data-target="#fundloan">Fund loan</button>
@@ -108,24 +108,24 @@
                 </div><br/>
                 <div class="row">
                     <div class="loanamount">
-                        <h2>$23,500</h2>
+                        <h2>${{loanInfo.amount.toLocaleString()}}</h2>
                     </div>
                     <div class="loandetails ml-auto align-self-center">
-                        <span class="interestrate"><i class="fa fa-search-dollar"></i>3.20%</span>
-                        <span class="loanperiod"><i class="far fa-clock"></i>5 years</span>
+                        <span class="interestrate"><i class="fa fa-search-dollar"></i>{{loanInfo.interestRate}}%</span>
+                        <span class="loanperiod"><i class="far fa-clock"></i>{{loanInfo.duration}} years</span>
                     </div>
                 </div><br/>
                 <div class="row">
                     <div class="loantitle">
-                        <h5>Second-hand Toyota Prius with 1.3L engine</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur enim augue, porttitor vel purus nec, fringilla sodales nibh. Donec sagittis nibh facilisis lacus sollicitudin condimentum. Aenean eget consectetur risus.</p>
+                        <h5>{{loanInfo.loanDescription}}</h5>
+                        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur enim augue, porttitor vel purus nec, fringilla sodales nibh. Donec sagittis nibh facilisis lacus sollicitudin condimentum. Aenean eget consectetur risus.</p>
                             
                         <p>In et dolor massa. Etiam pretium lacus eget ligula auctor, nec sollicitudin quam euismod. Mauris accumsan bibendum pellentesque. Vestibulum et magna nisi.</p>
                         
-                        <p>Donec risus felis, vehicula vitae purus aliquet, posuere cursus justo.</p>
+                        <p>Donec risus felis, vehicula vitae purus aliquet, posuere cursus justo.</p> -->
                     </div>
                     <div class="loanimage ml-auto">
-                        <img src="../../assets/images/thumbnail.jpg" width="200px" height="200px" alt="">
+                        <img src="{{loanInfo.imgLink}}" width="200px" height="200px" alt="">
                     </div>
                 </div><br/><hr/><br/>
                 <div class="returns">
