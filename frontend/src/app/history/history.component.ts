@@ -17,21 +17,21 @@ export class HistoryComponent implements OnInit {
   constructor(private router: Router, private dataService: DataService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.dataService.getBorrowerPendingLoans(555).subscribe((data:any) => {
+    this.dataService.getBorrowerPendingLoans(111).subscribe((data:any) => {
       console.log(data);
       this.borrowerPendingLoanList = data.borrowedLoans.reverse();
     }, error => {
       console.log(error)
     })
 
-    this.dataService.getBorrowerActiveLoans(5717).subscribe((data:any) => {
+    this.dataService.getBorrowerActiveLoans(222).subscribe((data:any) => {
       console.log(data);
       this.borrowerActiveLoanList = data.borrowedLoans.reverse();
     }, error => {
       console.log(error)
     })
 
-      this.dataService.getBorrowerDefaultedLoans(444).subscribe((data:any) => {
+      this.dataService.getBorrowerDefaultedLoans(333).subscribe((data:any) => {
         console.log(data);
         this.borrowerDefaultedLoanList = data.borrowedLoans.reverse();
       }, error => {
