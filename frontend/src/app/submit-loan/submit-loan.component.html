@@ -110,12 +110,12 @@
                         <fieldset disabled>
                             <div class="row">
                                 <div class="col">
-                                    <h6 class="font-weight-light">First Name</h6>
+                                    <h6 class="font-weight-light" style="margin-left: 12px;">First Name</h6>
                                     <input class="form-control" id="firstname" required="firstname" placeholder="Truong"
                                         formControlName="firstname">
                                 </div>
                                 <div class="col">
-                                    <h6 class="font-weight-light">Last Name</h6>
+                                    <h6 class="font-weight-light" style="margin-left: 12px;">Last Name</h6>
                                     <input class="form-control" id="lastname" required="lastname" placeholder="Hai Bang"
                                         formControlName="lastname">
                                 </div>
@@ -126,14 +126,14 @@
                             <div class="row">
                             <fieldset disabled>
                                 <div class="col">
-                                    <h6 class="font-weight-light">Job Title</h6>
+                                    <h6 class="font-weight-light" style="margin-left: 12px;">Job Title</h6>
                                     <input class="form-control" id="jobtitle" required="jobtitle"
                                         placeholder="Senior Engineer" formControlName="jobtitle">
                                 </div>
                         </fieldset>
 
                         <div class="col">
-                            <h6 class="font-weight-light">Company</h6>
+                            <h6 class="font-weight-light" style="margin-left: 12px;">Company</h6>
                             <input class="form-control" id="company" required="company" placeholder=""
                                 formControlName="company">
                         </div>
@@ -141,7 +141,7 @@
                     <fieldset disabled>
                         <div class="row">
                             <div class="col">
-                                <h6 class="font-weight-light">Address</h6>
+                                <h6 class="font-weight-light" style="margin-left: 12px;">Address</h6>
                                 <input class="form-control" id="address" required="address" placeholder=""
                                     formControlName="address">
                             </div>
@@ -151,11 +151,11 @@
 
                     <div class="row">
                         <div class="col-4">
-                            <h6 class="font-weight-light">Years on job</h6>
+                            <h6 class="font-weight-light" style="margin-left: 12px;">Years on job</h6>
                             <input class="form-control" type="number" value="2" id="yearsonjob" formControlName="years">
                         </div>
                         <div class="col">
-                            <h6 class="font-weight-light">Phone Number</h6>
+                            <h6 class="font-weight-light" style="margin-left: 12px;">Phone Number</h6>
                             <input class="form-control" id="phonenumber" required="required" placeholder=""
                                 formControlName="phonenumber">
                         </div>
@@ -164,7 +164,7 @@
                     <div class="row">
                         <div class="col">
 
-                            <h6 class="font-weight-light">Account Number</h6>
+                            <h6 class="font-weight-light" style="margin-left: 12px;">Account Number</h6>
                             <fieldset disabled>
                                 <input class="form-control" id="accountno" required="required"
                                     placeholder="1234 5678 898" formControlName="accountnumber">
@@ -278,10 +278,11 @@
         </div>
     </div>
     <br>
-    <button class="btn btn-outline-success float-right" type="button"  data-toggle="modal"
-    data-target="#successmodal" id="submitbutton" style="margin-bottom: 10px" (click)="submitLoan()"
-        >Submit Loan
-    </button>
+    <div class="row justify-content-end"style="margin-right: 5px;">
+    <button class="btn btn-outline-success" type="button"  data-toggle="modal"
+    data-target="#successmodal" id="submitbutton" (click)="submitLoan()"
+    >Submit Loan
+    </button></div>
 
     <!-- <button class="btn btn-outline-success float-right" type="button" id="loadingbutton" disabled
         style="margin-bottom: 10px" (click)="submitLoan()">
