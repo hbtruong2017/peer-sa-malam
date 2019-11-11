@@ -1,4 +1,4 @@
-# Peer sar malam
+# PEER SAR MALAM
 
 A peer-to-peer money lending marketplace
 
