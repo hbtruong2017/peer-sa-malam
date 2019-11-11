@@ -46,7 +46,7 @@ export class LoanDetailComponent implements OnInit {
       })
     })
     this.dataService.getAllPendingLoans().subscribe((data: any) => {
-      this.pendingLoanList = data.allLoans.reverse();
+      this.pendingLoanList = data.allLoans.splice(0, 5);
     }, error => {
       console.log(error)
     })

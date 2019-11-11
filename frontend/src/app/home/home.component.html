@@ -134,7 +134,7 @@
                       </div>
                     </div>
                     <div class="loan-card__loantitle">
-                      {{loan.loanDescription}}
+                      {{loan.loanDescription.slice(0,19)}}...
                     </div>
                   </div>
                   <div class="loan-card__actions">
@@ -276,7 +276,9 @@
         <!-- <a href="http://tbankonline.com" target="_blank" class="banner__body">
             <div class="banner__image" style="background-image: url('../../assets/images/tbankbanner.jpg')"></div>
         </a> -->
-        <img src="../../assets/images/tbankbanner.jpg" width="100%" (click)="gotoTbank()">
+        <a href="http://tbankonline.com/SMUtBank_RIB2/#/login?redirect=%2F" target="_blank" class="banner__body">
+          <img src="../../assets/images/tbankbanner.jpg" width="100%">
+        </a>
     </div>1
 </div>
 <!-- TBANK BANNER --><br/>
