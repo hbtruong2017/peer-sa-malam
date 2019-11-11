@@ -13,6 +13,19 @@ npm install
 3. Run the project:
 ng serve
 
+*Generate Angular Documentation
+
+cd frontend
+
+npm i -g @compodoc/compodoc
+
+compodoc -p tsconfig.json
+
+compodoc -s tsconfig.json
+
+Navigate to http://127.0.0.1:8080 to view documentation
+
+
 # Running Backend Web Services
 
 ## Importing database
