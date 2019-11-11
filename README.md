@@ -1,12 +1,8 @@
-Peer sar malam
+# Peer sar malam
 
 A peer-to-peer money lending marketplace
 
-Log in credentials:
-userid: hbtruong.2017
-PIN: 123456
-
-How to run the project
+# Running Frontend Angular App
 
 1. Navigate to the frontend folder: 
 cd frontend
@@ -17,7 +13,7 @@ npm install
 3. Run the project:
 ng serve
 
-# How to Run
+# Running Backend Web Services
 
 ## Importing database
 1. Run your wamp
