@@ -4,7 +4,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { environment } from '../../environments/environment'
 import { DataService } from '../service/data.service';
-
+/**
+ * The Splash Component for landing page
+ */
 @Component({
   selector: 'app-splash',
   templateUrl: './splash.component.html',
@@ -18,6 +20,8 @@ export class SplashComponent implements OnInit {
   constructor(private formBuilder: FormBuilder, private router: Router, private dataService: DataService) { }
 
   ngOnInit() {
+    window.sessionStorage.clear();
+
     this.loginForm = this.formBuilder.group({
       username: ['', Validators.required],
       pin: ['', Validators.required]
@@ -75,6 +79,9 @@ export class SplashComponent implements OnInit {
     }
   }
 
+  /**
+   * Generate new One-Time Password for the user to be able to access Peer-Sar-Malam portal.
+   */
   requestOTP() {
     let headerObj = {
       Header: {
@@ -92,10 +99,12 @@ export class SplashComponent implements OnInit {
       }
     })
   }
-
+  /** 
+   * For the user to key in his/her username, PIN number & One-Time Password to login the portal. 
+   */
   login() {
-    let otp = "" + this.otpForm.get("otp1").value +  this.otpForm.get('otp2').value +  this.otpForm.get('otp3').value +
-    this.otpForm.get('otp4').value +  this.otpForm.get('otp5').value +  this.otpForm.get('otp6').value;
+    let otp = "" + this.otpForm.get("otp1").value + this.otpForm.get('otp2').value + this.otpForm.get('otp3').value +
+      this.otpForm.get('otp4').value + this.otpForm.get('otp5').value + this.otpForm.get('otp6').value;
     let headerObj = {
       Header: {
         serviceName: "loginCustomer",
@@ -111,15 +120,17 @@ export class SplashComponent implements OnInit {
         window.sessionStorage.setItem("PIN", this.loginForm.get("pin").value)
         this.getCustomerDetails();
         this.getCustomerAccounts();
-        this.router.navigate(["/home"]).then(()=>{
+        this.router.navigate(["/home"]).then(() => {
           window.location.reload(true);
         })
       } else {
         console.log("Error")
-      }      
+      }
     })
   }
-
+  /**
+   * Retrieve all pieces of information about the customer, based on his/her given userID and PIN number. 
+   */
   getCustomerDetails() {
     let headerObj = {
       Header: {
@@ -141,7 +152,9 @@ export class SplashComponent implements OnInit {
       }
     })
   }
-
+  /**
+   * Retrieve all pieces of information about the customer's bank account. 
+   */
   getCustomerAccounts() {
     let headerObj = {
       Header: {

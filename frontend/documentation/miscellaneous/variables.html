@@ -223,10 +223,24 @@
   LOGIN_CUSTOMER_URL: TBANK_API_URL,
   GET_CUSTOMER_DETAILS: TBANK_API_URL,
   GET_CUSTOMER_ACCOUNTS: TBANK_API_URL,
-  GET_CUSTOMER_URL: SERVER_URL + &quot;/getCustInfo/:customerId&quot;,
+  ADD_BENEFICIARY_URL: TBANK_API_URL,
+  CREDIT_TRANSFER_URL: TBANK_API_URL,
+  GET_CUSTOMER_URL: SERVER_URL + &quot;/getCustInfo/&quot;,
 
   // Home page
   GET_ALL_PENDING_LOANS_URL: SERVER_URL + &quot;/getAllLoan/pending&quot;,
+
+  // Borrower&#x27;s pending loans
+  GET_BORROWER_PENDING_LOANS_URL: SERVER_URL + &quot;/getBorrowerLoans/pending-&quot;,
+
+  // Borrower&#x27;s active loans
+  GET_BORROWER_ACTIVE_LOANS_URL: SERVER_URL + &quot;/getBorrowerLoans/active-&quot;,
+
+  // Borrower&#x27;s defaulted loans
+  GET_BORROWER_DEFAULTED_LOANS_URL: SERVER_URL + &quot;/getBorrowerLoans/defaulted-&quot;,
+
+   // Borrower&#x27;s complete loans
+   GET_BORROWER_COMPLETE_LOANS_URL: SERVER_URL + &quot;/getBorrowerLoans/complete-&quot;,
 
   // Loan details page
   GET_LOAN_DETAILS_FOR_LOANER_URL: SERVER_URL + &quot;/getLoanerLoans/&quot;,
@@ -236,7 +250,6 @@
 
   GET_LOAN_INFO_BY_LOAN_ID: SERVER_URL + &quot;/getLoanInfoByLoanId/&quot;
   // GET_LOAN_INFO_BY_LOAN_ID: SERVER_URL + &quot;/getLoanInfoByLoanId/&quot;
-
 
 }</code>
                         </td>

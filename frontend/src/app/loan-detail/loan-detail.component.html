@@ -79,7 +79,7 @@
                   class="dropdown-menu"
                   aria-labelledby="navbarDropdownMenuLink"
                 >
-                  <a class="dropdown-item" href="#">Activity</a>
+                  <a class="dropdown-item" routerLink="/history">History</a>
                   <a class="dropdown-item" href="#">Edit Profile</a>
                   <a class="dropdown-item" href="#">Log Out</a>
                 </div>
@@ -159,17 +159,17 @@
               <div class="col text-center">
                 <br />
                 <p><strong>Principal amount</strong></p>
-                <span class="returns-text">$23,500.00</span>
+                <span class="returns-text">$2,500</span>
               </div>
               <div class="col text-center">
                 <br />
                 <p><strong>Interest earned per month</strong></p>
-                <span class="returns-text">$32.69</span>
+                <span class="returns-text">$2.67</span>
               </div>
               <div class="col text-center">
                 <br />
                 <p><strong>Overall interest earned</strong></p>
-                <span class="returns-text">$1,961.36</span>
+                <span class="returns-text">$128.11</span>
               </div>
             </div>
           </div>
@@ -358,7 +358,7 @@
                       <h2 style="color:#642ab4">${{loanAmount}}</h2>
                       <p>has been deducted from your account</p><br/>
                       <p>Remaining account balance: ${{balanceAfter}}</p><br/>
-                       <button type="button" class="btn btn-primary">Back to home</button>
+                       <button type="button" class="btn btn-primary" data-dismiss="modal" routerLink="/home">Back to home</button>
                   </div>
               </div><br/>
           </div>

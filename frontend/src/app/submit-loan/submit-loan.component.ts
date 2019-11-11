@@ -6,6 +6,9 @@ import { environment } from '../../environments/environment'
 import { DataService } from '../service/data.service';
 import { LocationStrategy } from '@angular/common';
 
+/**
+* Submit Loan component for Loan Request
+*/
 @Component({
   selector: 'app-submit-loan',
   templateUrl: './submit-loan.component.html',
@@ -22,7 +25,7 @@ export class SubmitLoanComponent implements OnInit {
 
   ngOnInit() {
     var customerDetails = JSON.parse(window.sessionStorage.getItem("customerDetails"));
-    
+
     this.myName = window.sessionStorage.name;
     this.myBalance = window.sessionStorage.balance;
     this.myAccountNo = window.sessionStorage.accountID;
@@ -71,6 +74,9 @@ export class SubmitLoanComponent implements OnInit {
     // this.loanForm.setValue({"phonenumber": customerDetails.phone.localNumber})
   }
 
+  /**
+* Submit Loan to peer Sar Malam web service
+*/
   submitLoan() {
     let loanRequest = {
       borrowerAccount: this.loanForm.get("accountnumber").value,
@@ -96,16 +102,21 @@ export class SubmitLoanComponent implements OnInit {
     })
   }
 
+  /**
+* Check for loan category
+*/
   loancategory_func() {
-    var loan_cat = (document.getElementById('loancategory')  as HTMLInputElement).value;
+    var loan_cat = (document.getElementById('loancategory') as HTMLInputElement).value;
     if (loan_cat == "Others: please specify")
       document.getElementById("showothers").style.display = "block";
     else
       document.getElementById("showothers").style.display = "none";
   }
 
+  /**
+* Handle submit button
+*/
   clickHandler() {
-
     $('#submitbutton').toggle('slow');
     $('#loadingbutton').toggle('slow');
   }

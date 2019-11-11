@@ -2,7 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
 import { DataService } from '../service/data.service';
 import { Router } from '@angular/router';
-
+/**
+ * The home component to show home page after log in
+ */
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -30,10 +32,16 @@ export class HomeComponent implements OnInit {
     })
   }
 
+/**
+ * Function to redirect to loan detail page
+ */
   goToLoan(id: number) {
     this.router.navigate(['/loan'], { queryParams: { id: id } })
   }
 
+  /**
+ * Function to redirect to tBank
+ */
   gotoTbank() {
     window.location.href = "http://tbankonline.com/SMUtBank_RIB2/#/login?redirect=%2F";
   }
